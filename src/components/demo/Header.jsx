@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
-import Profile from "../../../public/profile.jpg";
+import Profile from "/profile.jpg";
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
         />
         <h1 className="text-2xl font-semibold">Hola, soy Tomás Langer</h1>
         <p className="text-md mb-4">Desarrollador web de Valparaíso, Chile</p>
-        <p className="text-md text-slate-400 text-pretty">
+        <p className="text-md text-slate-400 text-pretty px-10">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum magnam,
           repellendus dolorum amet deleniti accusantium repudiandae iure quos
           totam repellat omnis odio ad corrupti illo assumenda quod obcaecati

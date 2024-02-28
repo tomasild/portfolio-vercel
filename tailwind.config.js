@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   prefix: "",
   theme: {
@@ -71,7 +71,14 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      backgroundImage: theme => ({
+        'proesthetic-fit': "url('/clinica.jpg')",
+        'angin': "url('/angin.png')",
+        'fx': "url('/angin.png')",
+        'groovelist': "url('/angin.png')",
+        'otro-proyecto': "url('/angin.png')",
+      }),
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
