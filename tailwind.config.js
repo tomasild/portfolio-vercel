@@ -71,14 +71,14 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      backgroundImage: theme => ({
-        'proesthetic-fit': "url('/clinica.jpg')",
-        'angin': "url('/angin.png')",
-        'fx': "url('/angin.png')",
-        'groovelist': "url('/angin.png')",
-        'otro-proyecto': "url('/angin.png')",
+      backgroundImage: (theme) => ({
+        "proesthetic-fit": "url('/clinica.jpg')",
+        angin: "url('/angin.png')",
+        fx: "url('/angin.png')",
+        groovelist: "url('/angin.png')",
+        "otro-proyecto": "url('/angin.png')",
       }),
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar-hide"), require('tailwind-scrollbar'),],
 };

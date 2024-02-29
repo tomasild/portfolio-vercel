@@ -36,16 +36,17 @@ export function ExpAndProjects() {
 
   return (
     <Carousel
-      className="w-full px-4 md:max-w-lg lg:max-w-xl"
+      className="w-auto container md:max-w-lg lg:w-full"
       opts={{
         align: "start",
         loop: true,
       }}
     >
-      <CarouselContent className="py-4 w-full">
+      <h2 className="text-center pb-4 text-lg font-semibold">Experiencia y proyectos</h2>
+      <CarouselContent className=" w-auto">
         {projects.map((project, index) => (
           <CarouselItem key={index}>
-            <Card className="overflow-hidden">
+            <div className="overflow-hidden">
               {/* Apply background class and aspect ratio directly to CardContent, with rounded corners */}
               <CardContent
                 className={`relative aspect-video ${project.bgClass} bg-contain bg-center flex justify-center items-center rounded-lg`}
@@ -60,12 +61,12 @@ export function ExpAndProjects() {
                   </p>
                 </div>
               </CardContent>
-            </Card>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="ml-8" />
+      <CarouselNext className="mr-8"/>
     </Carousel>
   );
 }
