@@ -68,11 +68,11 @@ function ContactForm() {
       <label htmlFor="message">Mensaje:</label>
       <Textarea id="message" name="message" required></Textarea>
 
-      <div className="flex  justify-between">
-        <Button className="w-1/2" type="submit" disabled={isLoading}>
+      <div className="flex justify-between">
+        <Button className="w-full mb-2" type="submit" disabled={isLoading}>
           {isLoading ? "Enviando..." : "Enviar"}
         </Button>
-        {message && <p className="text-left ml-2">{message}</p>}
+        {message && <p className="text-left ml-3">{message}</p>}
       </div>
     </form>
   );
