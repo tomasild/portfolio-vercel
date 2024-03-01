@@ -36,27 +36,27 @@ export function ExpAndProjects() {
 
   return (
     <Carousel
-      className="w-auto container md:max-w-lg lg:w-full"
+      className="w-auto md:max-w-lg lg:w-full h-full flex justify-center items-center flex-col"
       opts={{
         align: "start",
         loop: true,
       }}
     >
       <h2 className="text-center pb-4 text-lg font-semibold">Experiencia y proyectos</h2>
-      <CarouselContent className=" w-auto">
+      <CarouselContent className="w-auto">
         {projects.map((project, index) => (
           <CarouselItem key={index}>
             <div className="overflow-hidden">
               {/* Apply background class and aspect ratio directly to CardContent, with rounded corners */}
               <CardContent
-                className={`relative aspect-video ${project.bgClass} bg-contain bg-center flex justify-center items-center rounded-lg`}
+                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg`}
               >
                 {/* Overlay with title and subtitle, ensuring it respects the card's rounded corners */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-40 rounded-lg">
-                  <h5 className="text-lg text-white font-bold text-center">
+                  <h5 className="text-xl font-semibold text-white font-bold text-center">
                     {project.title}
                   </h5>
-                  <p className="text-sm text-white mt-2 text-center">
+                  <p className="text-md text-white mt-2 text-center">
                     {project.subtitle}
                   </p>
                 </div>
@@ -65,8 +65,8 @@ export function ExpAndProjects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="ml-8" />
-      <CarouselNext className="mr-8"/>
+      <CarouselPrevious className="ml-2 sm:ml-2 md:ml-5 lg:ml-10" />
+      <CarouselNext className="mr-2 sm:mr-2 md:mr-5 lg:mr-10"/>
     </Carousel>
   );
 }
