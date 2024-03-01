@@ -25,6 +25,10 @@
     --input: 0 0% 89.8%;
     --ring: 0 72.2% 50.6%;
     --radius: 0.5rem;
+    --scrollbar-width: 8px;
+    --scrollbar-track-color: rgba(0, 0, 0, 0);
+    --scrollbar-thumb-color: rgba(255, 255, 255, .7);
+    --scrollbar-thumb-hover-color: rgba(255, 255, 255, 1);
   }
 
   .dark {
@@ -58,4 +62,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.range-slider {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23555' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E") #333;
+}
+
+
+/* Estilos personalizados para la barra de scroll */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width); /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color); 
+  border-radius: 10px;
+  transition: background-color 0.2s ease; /* Transición suave */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color); /* Color al pasar el ratón */
 }

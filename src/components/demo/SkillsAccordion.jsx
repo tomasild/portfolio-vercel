@@ -93,7 +93,7 @@ export function SkillsAccordion() {
 
       {skillsData.map((skill, index) => (
         <AccordionItem key={index} value={`item-${index + 1}`}>
-          <AccordionTrigger>{skill.title}</AccordionTrigger>
+          <AccordionTrigger className="tracking-wider">{skill.title}</AccordionTrigger>
           <AccordionContent>
             <div className="flex flex-col items-left">
               {/* Icono */}

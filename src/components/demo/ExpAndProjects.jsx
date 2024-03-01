@@ -53,7 +53,7 @@ export function ExpAndProjects() {
               >
                 {/* Overlay with title and subtitle, ensuring it respects the card's rounded corners */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-40 rounded-lg">
-                  <h5 className="text-xl font-semibold text-white font-bold text-center">
+                  <h5 className="text-xl font-semibold text-white text-center">
                     {project.title}
                   </h5>
                   <p className="text-md text-white mt-2 text-center">

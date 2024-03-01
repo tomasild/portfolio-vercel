@@ -66,25 +66,38 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        'spin-reverse': {
-          from: { transform: 'rotate(360deg)' },
-          to: { transform: 'rotate(0deg)' },
+        "spin-reverse": {
+          from: { transform: "rotate(360deg)" },
+          to: { transform: "rotate(0deg)" },
+        },
+        moveBackground: {
+          from: {
+            backgroundPosition: "0 0",
+          },
+          to: {
+            backgroundPosition: "100% 0",
+          },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'spin-slow': 'spin 6s linear infinite',
-        'spin-reverse': 'spin-reverse 5s linear infinite',
+        "spin-slow": "spin 6s linear infinite",
+        "spin-reverse": "spin-reverse 5s linear infinite",
+        "moveBackground": "moveBackground 20s linear infinite",
       },
       backgroundImage: (theme) => ({
         "proesthetic-fit": "url('/clinica.jpg')",
-        angin: "url('/angin.png')",
-        fx: "url('/angin.png')",
-        groovelist: "url('/angin.png')",
+        "angin": "url('/angin.png')",
+        "fx": "url('/angin.png')",
+        "groovelist": "url('/angin.png')",
         "otro-proyecto": "url('/angin.png')",
       }),
     },
   },
-  plugins: [require("tailwindcss-animate"), require("tailwind-scrollbar-hide"), require('tailwind-scrollbar'),],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("tailwind-scrollbar-hide"),
+    require("tailwind-scrollbar"),
+  ],
 };
