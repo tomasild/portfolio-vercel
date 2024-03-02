@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 
 const FormacionItem = ({ icon, title, description, details }) => (
-  <div className="flex relative pb-6 ">
+  <div className="flex relative pb-6">
     <div
       className="flex-shrink-0 w-10 h-10 rounded-md bg-primary inline-flex items-center justify-center text-white text-xl relative"
       aria-hidden="true"
@@ -17,7 +17,7 @@ const FormacionItem = ({ icon, title, description, details }) => (
     </div>
     <div className="flex-grow pl-4">
       <h2 className="font-medium text-md mb-1 tracking-wider">{title}</h2>
-      <p className="leading-relaxed text-sm ">{description}</p>
+      <p className="leading-relaxed text-sm">{description}</p>
       <span className="text-sm">{details}</span>
     </div>
   </div>
