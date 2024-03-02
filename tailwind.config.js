@@ -78,6 +78,27 @@ module.exports = {
             backgroundPosition: "100% 0",
           },
         },
+        desplazamientoSatelite: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100vw)' },
+        },
+        orbitaSinusoidal: {
+          '0%': {
+            transform: 'translateX(0vw) translateY(0)',
+          },
+          '25%': {
+            transform: 'translateX(25vw) translateY(-10vw)',
+          },
+          '50%': {
+            transform: 'translateX(50vw) translateY(0)',
+          },
+          '75%': {
+            transform: 'translateX(75vw) translateY(10vw)',
+          },
+          '100%': {
+            transform: 'translateX(100vw) translateY(0)',
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -85,6 +106,8 @@ module.exports = {
         "spin-slow": "spin 6s linear infinite",
         "spin-reverse": "spin-reverse 5s linear infinite",
         "moveBackground": "moveBackground 20s linear infinite",
+        "satelite": 'desplazamientoSatelite 5s linear infinite',
+        'orbita-sinusoidal': 'orbitaSinusoidal 20s linear infinite',
       },
       backgroundImage: (theme) => ({
         "proesthetic-fit": "url('/clinica.jpg')",
@@ -92,6 +115,7 @@ module.exports = {
         "fx": "url('/angin.png')",
         "groovelist": "url('/angin.png')",
         "otro-proyecto": "url('/angin.png')",
+        "noche": "url('/noche.jpg')",
       }),
     },
   },

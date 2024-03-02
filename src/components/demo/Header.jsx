@@ -10,7 +10,7 @@ function Header() {
         <img
           src={Profile} // Reemplaza con la ruta de tu imagen
           alt="Tomás Langer"
-          className="rounded-xl w-16 h-16 mb-4"
+          className="rounded-xl w-36 h-auto lg:w-28 mb-4"
         />
         <h1 className="text-2xl font-semibold">Hola, soy Tomás Langer</h1>
         <p className="text-md text-gray-300">

@@ -13,20 +13,7 @@ import ContactForm from "./components/demo/ContactForm";
 function App() {
   return (
     <ThemeProvider>
-      <div className="flex flex-col items-center justify-center space-y-4 w-full h-auto overflow-auto mx-auto sm:hidden">
-        <Header />
-        <ExpAndProjects />
-        <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 w-full h-full p-4 overflow-y-hidden scrollbar-hide border border-white">
-          <SkillsAccordion />
-          {/* Añade `style` para rotar el ícono */}
-          <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-10 animate-spin-slow z-10 " />
-          <PiGearFineBold className="text-[7rem] text-white absolute bottom-16 -right-14 animate-spin-reverse z-10" />
-        </Card>
-        <ContactForm />
-        <Formacion />
-      </div>
-
-      <div className="grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full">
+       <div className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden">
         <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-white glass">
           <Header />
         </Card>
@@ -47,6 +34,30 @@ function App() {
         <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-white overflow-y-scroll rounded-r-md z-50 glass">
           <ContactForm />
           <PiGearFineBold className="text-[7rem] text-white absolute -top-16 -left-16 animate-spin-reverse z-10" />
+        </Card>
+      </div>
+
+
+      <div className="flex flex-col w-full h-auto space-y-10 lg:hidden">
+        <Card className="flex">
+          <Header />
+        </Card>
+        <Card className="flex justify-center items-center">
+          <ExpAndProjects />
+        </Card>
+        <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 flex w-full h-full p-4 scrollbar-hide overflow-hidden">
+          <SkillsAccordion />
+          <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
+          <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
+        </Card>
+        <Card className="flex justify-center items-center">
+          Algo funcional o interesante
+        </Card>
+        <Card className="overflow-y-scroll rounded-r-md ">
+          <Formacion />
+        </Card>
+        <Card className="flex overflow-y-scroll rounded-r-md z-50">
+          <ContactForm />
         </Card>
       </div>
     </ThemeProvider>
