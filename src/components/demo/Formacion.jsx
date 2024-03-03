@@ -28,7 +28,7 @@ const Formacion = () => {
     <section aria-labelledby="formacionTitulo" className="pt-4">
       <h2
         id="formacionTitulo"
-        className="text-lg text-white text-center justify-center pb-4 font-semibold"
+        className="text-lg text-white text-center justify-center pb-4 font-semibold "
       >
         Formación
       </h2>

@@ -1,7 +1,7 @@
-// Modificación en el componente App para el SkillsAccordion
-
 import React from "react";
-import Header from "./components/demo/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/demo/About";
+import AboutOpen from "./components/pages/AboutOpen"; // Asegúrate de que esta importación sea correcta
 import { ExpAndProjects } from "./components/demo/ExpAndProjects";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Card } from "./components/ui/card";
@@ -13,53 +13,65 @@ import ContactForm from "./components/demo/ContactForm";
 function App() {
   return (
     <ThemeProvider>
-       <div className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden">
-        <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-white glass">
-          <Header />
-        </Card>
-        <Card className="col-span-2 row-span-4 col-start-1 row-start-4 container flex justify-center items-center border border-white glass">
-          <ExpAndProjects />
-        </Card>
-        <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 flex w-full h-full p-4 scrollbar-hide border border-white overflow-hidden glass">
-          <SkillsAccordion />
-          <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
-          <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
-        </Card>
-        <Card className="col-span-2 glass row-span-2 col-start-3 row-start-6 border border-white flex justify-center items-center">
-          Algo funcional o interesante
-        </Card>
-        <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-white overflow-y-scroll rounded-r-md glass">
-          <Formacion />
-        </Card>
-        <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-white overflow-y-scroll rounded-r-md z-50 glass">
-          <ContactForm />
-          <PiGearFineBold className="text-[7rem] text-white absolute -top-16 -left-16 animate-spin-reverse z-10" />
-        </Card>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <div className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden">
+                  <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-white glass">
+                    <About />
+                  </Card>
+                  <Card className="col-span-2 row-span-4 col-start-1 row-start-4 container flex justify-center items-center border border-white glass">
+                    <ExpAndProjects />
+                  </Card>
+                  <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 flex w-full h-full p-4 scrollbar-hide border border-white overflow-hidden glass">
+                    <SkillsAccordion />
+                    <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
+                    <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
+                  </Card>
+                  <Card className="col-span-2 glass row-span-2 col-start-3 row-start-6 border border-white flex justify-center items-center">
+                    Algo funcional o interesante
+                  </Card>
+                  <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-white overflow-y-scroll rounded-r-md glass">
+                    <Formacion />
+                  </Card>
+                  <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-white overflow-y-scroll rounded-r-md z-50 glass">
+                    <ContactForm />
+                    <PiGearFineBold className="text-[7rem] text-white absolute -top-16 -left-16 animate-spin-reverse z-10" />
+                  </Card>
+                </div>
 
-
-      <div className="flex flex-col w-full h-auto space-y-10 lg:hidden">
-        <Card className="flex">
-          <Header />
-        </Card>
-        <Card className="flex justify-center items-center">
-          <ExpAndProjects />
-        </Card>
-        <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 flex w-full h-full p-4 scrollbar-hide overflow-hidden">
-          <SkillsAccordion />
-          <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
-          <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
-        </Card>
-        <Card className="flex justify-center items-center">
-          Algo funcional o interesante
-        </Card>
-        <Card className="overflow-y-scroll rounded-r-md ">
-          <Formacion />
-        </Card>
-        <Card className="flex overflow-y-scroll rounded-r-md z-50">
-          <ContactForm />
-        </Card>
-      </div>
+                {/* MOBILE */}
+                <div className="flex flex-col w-full h-auto space-y-16 lg:hidden">
+                  <Card className="flex scrollAn">
+                    <About />
+                  </Card>
+                  <Card className="flex justify-center items-center scrollAn">
+                    <ExpAndProjects />
+                  </Card>
+                  <Card className="relative flex w-full h-full p-4 scrollbar-hide overflow-hidden scrollAn">
+                    <SkillsAccordion />
+                    <PiGearFineBold className="text-[8rem] text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
+                    <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
+                  </Card>
+                  <Card className="flex justify-center items-center scrollAn">
+                    Algo funcional o interesante
+                  </Card>
+                  <Card className="overflow-y-scroll rounded-r-md scrollAn">
+                    <Formacion />
+                  </Card>
+                  <Card className="flex overflow-y-scroll pb-24">
+                    <ContactForm />
+                  </Card>
+                </div>
+              </>
+            }
+          />
+          <Route path="/aboutOpen" element={<AboutOpen />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
