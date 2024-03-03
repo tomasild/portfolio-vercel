@@ -64,8 +64,8 @@ export function ExpAndProjects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="ml-2 sm:ml-2 md:ml-5 lg:ml-10" />
-      <CarouselNext className="mr-2 sm:mr-2 md:mr-5 lg:mr-10"/>
+      <CarouselPrevious className="ml-4 sm:ml-4 md:ml-10 lg:ml-10 rounded-md" />
+      <CarouselNext className="mr-4 sm:mr-4 md:mr-10 lg:mr-10 rounded-md"/>
     </Carousel>
   );
 }

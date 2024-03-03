@@ -44,7 +44,7 @@ function ContactForm() {
 
   return (
     <form
-      className="w-full p-4 space-y-2 overflow-y-hidden z-50 absolute"
+      className="w-full p-4 space-y-2 overflow-y-hidden z-50 absolute pb-16 lg:pb-0"
       onSubmit={handleSubmit}
     >
       <h2 className="font-semibold text-center text-lg">Contáctame</h2>
