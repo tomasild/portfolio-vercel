@@ -26,13 +26,13 @@ function AboutOpen() {
   ];
 
   return (
-    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/2 flex flex-col mx-auto h-[100vh] overflow-y-auto scrollbar-hide lg:scrollbar-default pb-12 bg-custom_bg ">
+    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
       <Button
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="absolute top-0 left-0 m-4 bg-secondary"
+        className="absolute top-0 left-0 m-4 bg-secondary  z-50"
       >
-        <TiArrowBack />
+        <TiArrowBack className="text-xl" />
       </Button>
       <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty">
         <img
@@ -40,7 +40,7 @@ function AboutOpen() {
           alt="Tomás Langer posando"
           className="rounded-xl w-36 h-auto lg:w-28 mb-4"
         />
-        <h1 className="text-white text-2xl font-semibold">¡Hola!, soy Tomás Langer</h1>
+        <h1 className="text-white text-2xl font-semibold">¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
         <p className="text-md text-gray-300 py-4">
           Soy desarrollador web con un gran interés general por la tecnología e
           innovación . Me metí en el desarrollo web porque me gusta mucho la
@@ -48,7 +48,7 @@ function AboutOpen() {
           especialmente cuando se trata de hacer sitios web accesibles,
           optimizados y con animaciones atractivas.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-reveal">
+        <p className="text-md text-gray-300 py-4 scroll-scale">
           Antes de sumergirme en el código, estuve inmerso en el área el
           marketing y ventas por más de tres años. Allí aprendí un montón sobre
           trabajar en equipo, proporcionar una excelente experiencia y
@@ -56,17 +56,17 @@ function AboutOpen() {
           priorizar tareas, entre otras cosas, lo que me viene de maravilla
           ahora que soy desarrollador.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-reveal">
+        <p className="text-md text-gray-300 py-4 scroll-scale">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
           eventos tecnológicos, charlas, etc para estar siempre al tanto de las
           últimas novedades e innovaciones del área.
         </p>
-        <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal">
+        <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal scroll-scale">
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="text-center w-20 text-3xl flex justify-start flex-col items-center mx-auto"
+              className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto"
             >
               {badge.icon}
               <div className="text-xs pt-2">{badge.title}</div>
@@ -80,7 +80,7 @@ function AboutOpen() {
           como en lo personal.
         </p>
       </div>
-      <div className="flex space-x-4 p-4 text-white">
+      <div className="flex space-x-4 p-4 text-white pt-12 scroll-reveal">
         <Button className="flex w-full">Abrir CV</Button>
         <div className="flex justify-evenly w-full items-center">
           <a

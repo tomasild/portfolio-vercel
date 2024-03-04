@@ -44,7 +44,7 @@ function ContactForm() {
 
   return (
     <form
-      className="w-full p-4 space-y-2 overflow-y-hidden z-50 absolute pb-16 lg:pb-0"
+      className="w-full px-4 py-2 space-y-2 overflow-y-hidden z-50 lg:absolute pb-16 lg:pb-0"
       onSubmit={handleSubmit}
     >
       <h2 className="font-semibold text-center text-lg">Contáctame</h2>
@@ -54,20 +54,20 @@ function ContactForm() {
         name="_next"
         value="https://tusitio.com/gracias.html"
       />
-      <div className="flex space-x-4">
-        <div className="flex flex-col w-full">
+      <div className="flex space-x-4 pt-5 lg:pt-3">
+        <div className="flex flex-col w-full space-y-2">
           <label htmlFor="name">Nombre</label>
-          <Input className="border-gray-600" type="text" id="name" name="name" required />
+          <Input className="border-gray-700" type="text" id="name" name="name" required />
         </div>
 
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full space-y-2">
           <label htmlFor="email">Email</label>
-          <Input className="border-gray-600" type="email" id="email" name="email" required />
+          <Input className="border-gray-700" type="email" id="email" name="email" required />
         </div>
       </div>
-      <div>
+      <div className="space-y-2">
         <label htmlFor="message">Mensaje</label>
-        <Textarea className="border-gray-600" id="message" name="message" required></Textarea>
+        <Textarea className="border-gray-700" id="message" name="message" required></Textarea>
       </div>
 
       <div className="flex justify-between">

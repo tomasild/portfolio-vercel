@@ -9,18 +9,19 @@ import { SkillsAccordion } from "./components/demo/SkillsAccordion";
 import { PiGearFineBold } from "react-icons/pi";
 import Formacion from "./components/demo/Formacion";
 import ContactForm from "./components/demo/ContactForm";
-import  Layout  from "./components/layout/Layout";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
     <ThemeProvider>
+      {/* <AnimatedBackground /> */}
       <BrowserRouter>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <div className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden bg-transparent">
+                <main className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden bg-transparent">
                   <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-white glass">
                     <About />
                   </Card>
@@ -42,11 +43,11 @@ function App() {
                     <ContactForm />
                     <PiGearFineBold className="text-[7rem] text-white absolute -top-16 -left-16 animate-spin-reverse z-10" />
                   </Card>
-                </div>
+                </main>
 
                 {/* MOBILE */}
                 <Layout>
-                  <main className="flex flex-col w-full h-auto space-y-16 lg:hidden">
+                  <div className="block w-full h-full space-y-16 lg:hidden">
                     <div className="text-white flex">
                       <About />
                     </div>
@@ -64,10 +65,10 @@ function App() {
                     <div className="text-white overflow-y-scroll rounded-r-md scroll-reveal">
                       <Formacion />
                     </div>
-                    <div className="text-white flex overflow-y-scroll scroll-reveal">
+                    <div className="text-white flex scroll-reveal">
                       <ContactForm />
                     </div>
-                  </main>
+                  </div>
                 </Layout>
               </>
             }

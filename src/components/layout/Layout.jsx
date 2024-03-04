@@ -4,7 +4,7 @@ import Header from './Header';
 import Footer from "./Footer"
 
 const Layout = ({ children }) => (
-  <div>
+  <div className='lg:hidden'>
     <Header />
     {children}
     <Footer />

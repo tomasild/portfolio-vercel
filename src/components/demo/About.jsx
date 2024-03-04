@@ -11,21 +11,23 @@ function About() {
           alt="Tomás Langer"
           className="rounded-xl w-36 h-auto lg:w-28 mb-4"
         />
-        <h1 className="text-2xl font-semibold">Hola, soy Tomás Langer</h1>
+        <h1 className="text-2xl font-semibold">Hola, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
         <p className="text-md text-gray-300">
           Desarrollador web de Valparaíso, Chile. Tengo 6 meses de experiencia
           como Frontend Developer, actualmente especializandome en accesibilidad
           e interesado en el desarrollo mobile y Three.js.
+        </p>
+        <div className="self-start w-full"> {/* Ajusta el padding según necesites */}
           <Link
             to="/aboutOpen"
-            className="cursor-pointer hover:underline font-bold ml-2 text-primary"
-            aria-label="Saber más sobre mi" // Añadir un aria-label para describir el propósito del enlace
-            role="link" // Asegurar que se identifica como un enlace para tecnologías de asistencia
-            tabIndex="0" // Hacer el elemento enfocable mediante el teclado
+            className="cursor-pointer hover:underline font-bold text-primary"
+            aria-label="Saber más sobre mi"
+            role="link" 
+            tabIndex="0" 
           >
             Saber más
           </Link>
-        </p>
+        </div>
       </div>
     </div>
   );

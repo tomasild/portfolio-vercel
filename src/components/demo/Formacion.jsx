@@ -2,23 +2,22 @@ import React from "react";
 import {
   FaRocket,
   FaTerminal,
-  FaCubes,
   FaDesktop,
   FaBook,
 } from "react-icons/fa";
 
 const FormacionItem = ({ icon, title, description, details }) => (
-  <div className="flex relative pb-6">
+  <div className="flex relative pb-5 w-full mx-auto">
     <div
-      className="flex-shrink-0 w-10 h-10 rounded-md bg-primary inline-flex items-center justify-center text-white text-xl relative"
+      className="flex-shrink-0 w-8 h-8 lg:w-10 lg:h-10 rounded-md bg-primary inline-flex items-center justify-center text-white text-md lg:text-xl relative"
       aria-hidden="true"
     >
       {icon}
     </div>
     <div className="flex-grow pl-4">
-      <h2 className="font-medium text-md mb-1 tracking-wider">{title}</h2>
-      <p className="leading-relaxed text-sm">{description}</p>
-      <span className="text-sm">{details}</span>
+      <h2 className="font-semibold text-white text-md mb-1 tracking-wider">{title}</h2>
+      <p className="leading-relaxed text-sm text-gray-300" >{description}</p>
+      <span className="text-sm text-primary leading-relaxed font-semibold ">{details}</span>
     </div>
   </div>
 );
