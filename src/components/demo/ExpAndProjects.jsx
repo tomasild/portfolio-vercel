@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -7,8 +7,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { useNavigate } from "react-router-dom";
 
 export function ExpAndProjects() {
+  // Tus proyectos
+  const navigate = useNavigate(); // Hook para navegar
+
+  const handleProjectClick = (title) => {
+    navigate(`/projectOpen/${title}`); // Navegar a ProjectOpen con el título del proyecto
+  };
+
   const projects = [
     {
       title: "Groovelist",
@@ -41,10 +49,16 @@ export function ExpAndProjects() {
         loop: true,
       }}
     >
-      <h2 className="text-center pb-4 text-lg font-semibold">Experiencia y proyectos</h2>
+      <h2 className="text-center pb-4 text-lg font-semibold">
+        Experiencia y proyectos
+      </h2>
       <CarouselContent className="w-auto">
         {projects.map((project, index) => (
-          <CarouselItem key={index}>
+          <CarouselItem
+            key={index}
+            onClick={() => handleProjectClick(project.title)}
+            className="cursor-pointer"
+          >
             <div className="overflow-hidden">
               {/* Apply background class and aspect ratio directly to CardContent, with rounded corners */}
               <CardContent
@@ -65,7 +79,7 @@ export function ExpAndProjects() {
         ))}
       </CarouselContent>
       <CarouselPrevious className="ml-4 sm:ml-4 md:ml-10 lg:ml-10 rounded-md" />
-      <CarouselNext className="mr-4 sm:mr-4 md:mr-10 lg:mr-10 rounded-md"/>
+      <CarouselNext className="mr-4 sm:mr-4 md:mr-10 lg:mr-10 rounded-md" />
     </Carousel>
   );
 }

@@ -55,17 +55,17 @@ function ContactForm() {
         value="https://tusitio.com/gracias.html"
       />
       <div className="flex space-x-4 pt-5 lg:pt-3">
-        <div className="flex flex-col w-full space-y-2">
+        <div className="flex flex-col w-full space-y-1">
           <label htmlFor="name">Nombre</label>
           <Input className="border-gray-700" type="text" id="name" name="name" required />
         </div>
 
-        <div className="flex flex-col w-full space-y-2">
+        <div className="flex flex-col w-full space-y-1">
           <label htmlFor="email">Email</label>
           <Input className="border-gray-700" type="email" id="email" name="email" required />
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="space-y-1">
         <label htmlFor="message">Mensaje</label>
         <Textarea className="border-gray-700" id="message" name="message" required></Textarea>
       </div>

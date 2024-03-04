@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/demo/About";
-import AboutOpen from "./components/pages/AboutOpen"; // Asegúrate de que esta importación sea correcta
+import AboutOpen from "./components/pages/AboutOpen"; 
+import ProjectOpen from "./components/pages/ProjectOpen"; 
 import { ExpAndProjects } from "./components/demo/ExpAndProjects";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { Card } from "./components/ui/card";
@@ -14,7 +15,6 @@ import Layout from "./components/layout/Layout";
 function App() {
   return (
     <ThemeProvider>
-      {/* <AnimatedBackground /> */}
       <BrowserRouter>
         <Routes>
           <Route
@@ -75,6 +75,7 @@ function App() {
           />
 
           <Route path="/aboutOpen" element={<AboutOpen />} />
+          <Route path="/projectOpen/:projectTitle" element={<ProjectOpen />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
