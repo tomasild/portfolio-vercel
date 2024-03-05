@@ -4,11 +4,12 @@ import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { TiArrowBack } from "react-icons/ti";
 import { getProjectDataByTitle } from "../../data/projects";
+import { LuCode2, LuExternalLink  } from "react-icons/lu";
 
 function ProjectsOpen() {
   const navigate = useNavigate();
-  const { projectTitle } = useParams(); // Obtener el título del proyecto de la URL
-  const projectData = getProjectDataByTitle(projectTitle); // Cargar datos del proyecto basado en el título
+  const { projectTitle } = useParams(); 
+  const projectData = getProjectDataByTitle(projectTitle); 
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   useEffect(() => {
@@ -34,13 +35,14 @@ function ProjectsOpen() {
   }
 
   return (
-    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 block mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
+    <main className="w-full md:w-1/2 lg:w-1/3 block mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
       <Button
+        variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="absolute top-0 left-0 m-4 bg-secondary z-50"
+        className="fixed top-0 left-0 m-4 z-50 hover:bg-primary"
       >
-        <TiArrowBack className="text-xl" />
+        <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <div className="block h-auto items-center justify-center p-4 pb-0 tracking-wider text-pretty">
         {/* Carga diferida del video con miniatura */}
@@ -75,8 +77,9 @@ function ProjectsOpen() {
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
+            
               key={index}
-              className="px-4 py-2 bg-primary text-white font-semibold  "
+              className="px-2 py-1"
             >
               {etiqueta}
             </Badge>
@@ -86,19 +89,19 @@ function ProjectsOpen() {
           {projectData.codigoURL && (
             <Button
               onClick={() => window.open(projectData.codigoURL, "_blank")}
-              className="flex w-full justify-center hover:bg-primary"
+              className="flex w-full justify-center bg-secondary hover:bg-primary"
               variant="secondary"
             >
-              Código
+              <LuCode2 className="mr-2 w-4 h-4 font-bold" />Código
             </Button>
           )}
           {projectData.demoURL && (
             <Button
               onClick={() => window.open(projectData.demoURL, "_blank")}
-              className="flex w-full justify-center hover:bg-primary"
+              className="flex w-full justify-center bg-secondary hover:bg-primary"
               variant="secondary"
             >
-              Demo
+              <LuExternalLink className="mr-2 w-4 h-4 font-bold" /> Demo
             </Button>
           )}
         </div>

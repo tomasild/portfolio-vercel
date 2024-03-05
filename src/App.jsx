@@ -11,6 +11,7 @@ import { PiGearFineBold } from "react-icons/pi";
 import Formacion from "./components/demo/Formacion";
 import ContactForm from "./components/demo/ContactForm";
 import Layout from "./components/layout/Layout";
+import ThemeToggle from "./components/demo/ThemeToggle";
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
                     <PiGearFineBold className="text-[7rem] text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
                   </Card>
                   <Card className="col-span-2 glass row-span-2 col-start-3 row-start-6 border border-white flex justify-center items-center">
-                    Algo funcional o interesante
+                    <ThemeToggle />
                   </Card>
                   <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-white overflow-y-scroll rounded-r-md glass">
                     <Formacion />
@@ -73,7 +74,6 @@ function App() {
               </>
             }
           />
-
           <Route path="/aboutOpen" element={<AboutOpen />} />
           <Route path="/projectOpen/:projectTitle" element={<ProjectOpen />} />
         </Routes>

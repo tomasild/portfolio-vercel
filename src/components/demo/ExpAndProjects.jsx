@@ -23,7 +23,9 @@ export function ExpAndProjects() {
       subtitle: "Streaming de Música",
       bgClass: "bg-groovelist",
     },
-    { title: "Angin", subtitle: "Destiladora de gin", bgClass: "bg-angin" },
+    { title: "Angin", 
+      subtitle: "Destiladora de gin", 
+      bgClass: "bg-angin" },
     {
       title: "Proesthetic Fit",
       subtitle: "Clínica estética integral",
@@ -43,16 +45,17 @@ export function ExpAndProjects() {
 
   return (
     <Carousel
-      className="w-auto md:max-w-lg lg:w-full h-full flex justify-center items-center flex-col"
+      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[80%] xl:w-auto"
       opts={{
         align: "start",
         loop: true,
       }}
+      
     >
       <h2 className="text-center pb-4 text-lg font-semibold">
         Experiencia y proyectos
       </h2>
-      <CarouselContent className="w-auto">
+      <CarouselContent>
         {projects.map((project, index) => (
           <CarouselItem
             key={index}
@@ -62,7 +65,7 @@ export function ExpAndProjects() {
             <div className="overflow-hidden">
               {/* Apply background class and aspect ratio directly to CardContent, with rounded corners */}
               <CardContent
-                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg`}
+                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-md`}
               >
                 {/* Overlay with title and subtitle, ensuring it respects the card's rounded corners */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-40 rounded-lg">
@@ -78,8 +81,8 @@ export function ExpAndProjects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="ml-4 sm:ml-4 md:ml-10 lg:ml-10 rounded-md" />
-      <CarouselNext className="mr-4 sm:mr-4 md:mr-10 lg:mr-10 rounded-md" />
+      <CarouselPrevious className="bg-secondary hover:bg-primary rounded-md" />
+      <CarouselNext className="bg-secondary hover:bg-primary rounded-md" />
     </Carousel>
   );
 }

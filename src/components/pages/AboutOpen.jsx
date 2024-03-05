@@ -5,6 +5,7 @@ import { TiArrowBack } from "react-icons/ti";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import Profile from "/profile.jpg";
 import { FaRegLaughBeam } from "react-icons/fa";
+import { LuFileSymlink } from "react-icons/lu";
 import {
   GiMountains,
   GiTechnoHeart,
@@ -28,11 +29,12 @@ function AboutOpen() {
   return (
     <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
       <Button
+        variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="absolute top-0 left-0 m-4 bg-secondary  z-50"
+        className="fixed top-0 left-0 m-4 z-50 hover:bg-primary"
       >
-        <TiArrowBack className="text-xl" />
+        <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty">
         <img
@@ -48,7 +50,7 @@ function AboutOpen() {
           especialmente cuando se trata de hacer sitios web accesibles,
           optimizados y con animaciones atractivas.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-scale">
+        <p className="text-md text-gray-300 py-4 scroll-reveal">
           Antes de sumergirme en el código, estuve inmerso en el área el
           marketing y ventas por más de tres años. Allí aprendí un montón sobre
           trabajar en equipo, proporcionar una excelente experiencia y
@@ -56,7 +58,7 @@ function AboutOpen() {
           priorizar tareas, entre otras cosas, lo que me viene de maravilla
           ahora que soy desarrollador.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-scale">
+        <p className="text-md text-gray-300 py-4 scroll-reveal">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
           eventos tecnológicos, charlas, etc para estar siempre al tanto de las
@@ -80,8 +82,8 @@ function AboutOpen() {
           como en lo personal.
         </p>
       </div>
-      <div className="flex space-x-4 p-4 text-white pt-12 scroll-reveal">
-        <Button className="flex w-full">Abrir CV</Button>
+      <div className="flex space-x-4 p-4 text-white pt-12 ">
+        <Button variant="secondary"  className="flex w-full hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button>
         <div className="flex justify-evenly w-full items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
@@ -89,7 +91,7 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size="32px" className="cursor-pointer text-gray-300 hover:text-white"/>
+            <FaLinkedin size="32px" className="cursor-pointer text-white hover:text-gray-500"/>
           </a>
           <a
             href="https://github.com/tomasild"
@@ -97,7 +99,7 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithubSquare size="32px" className="cursor-pointer text-gray-300 hover:text-white"/>
+            <FaGithubSquare size="32px" className="cursor-pointer text-white hover:text-gray-500"/>
           </a>
         </div>
       </div>

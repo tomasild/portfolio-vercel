@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { FaPaperPlane } from "react-icons/fa";
+import { Loader2, Mail } from "lucide-react";
 
 function ContactForm() {
   const [message, setMessage] = useState("");
@@ -48,8 +48,14 @@ function ContactForm() {
       onSubmit={handleSubmit}
     >
       <h2 className="font-semibold text-center text-lg">Contáctame</h2>
-      <Input className="border-gray-500" type="hidden" name="_captcha" value="false" />
-      <Input className="border-gray-500"
+      <Input
+        className="border-gray-500"
+        type="hidden"
+        name="_captcha"
+        value="false"
+      />
+      <Input
+        className="border-gray-500"
         type="hidden"
         name="_next"
         value="https://tusitio.com/gracias.html"
@@ -57,21 +63,39 @@ function ContactForm() {
       <div className="flex space-x-4 pt-5 lg:pt-3">
         <div className="flex flex-col w-full space-y-1">
           <label htmlFor="name">Nombre</label>
-          <Input className="border-gray-700" type="text" id="name" name="name" required />
+          <Input
+            className="border-gray-700"
+            type="text"
+            id="name"
+            name="name"
+            required
+          />
         </div>
 
         <div className="flex flex-col w-full space-y-1">
           <label htmlFor="email">Email</label>
-          <Input className="border-gray-700" type="email" id="email" name="email" required />
+          <Input
+            className="border-gray-700"
+            type="email"
+            id="email"
+            name="email"
+            required
+          />
         </div>
       </div>
       <div className="space-y-1">
         <label htmlFor="message">Mensaje</label>
-        <Textarea className="border-gray-700" id="message" name="message" required></Textarea>
+        <Textarea
+          className="border-gray-700"
+          id="message"
+          name="message"
+          required
+        ></Textarea>
       </div>
 
       <div className="flex justify-between">
-        <Button className="w-full mt-2" type="submit" disabled={isLoading}>
+        <Button variant="primary" className="w-full mt-2 py-4 bg-secondary hover:bg-primary" type="submit" disabled={isLoading}>
+        {isLoading ? <Loader2 className="h-4 w-4 mr-2 animate-spin font-bold" /> : <Mail className="h-4 w-4 mr-2 font-bold" />}
           {isLoading ? "Enviando..." : "Enviar"}
         </Button>
         {message && <p className="text-left ml-3">{message}</p>}
