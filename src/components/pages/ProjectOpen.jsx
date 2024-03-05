@@ -1,14 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { TiArrowBack } from "react-icons/ti";
-import { useNavigate, useParams } from "react-router-dom";
 import { getProjectDataByTitle } from "../../data/projects";
 
 function ProjectsOpen() {
   const navigate = useNavigate();
   const { projectTitle } = useParams(); // Obtener el título del proyecto de la URL
   const projectData = getProjectDataByTitle(projectTitle); // Cargar datos del proyecto basado en el título
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVideoVisible(true);
+        }
+      },
+      { threshold: 0.5 } // Trigger cuando el 50% del video esté visible
+    );
+
+    const videoElement = document.querySelector("#videoElement");
+    if (videoElement) observer.observe(videoElement);
+
+    return () => {
+      if (videoElement) observer.unobserve(videoElement);
+    };
+  }, []);
 
   if (!projectData) {
     return <div>Proyecto no encontrado</div>; // Manejar el caso de proyecto no encontrado
@@ -23,14 +42,33 @@ function ProjectsOpen() {
       >
         <TiArrowBack className="text-xl" />
       </Button>
-      <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty">
-        <img
-          src={projectData.imagen}
-          alt={projectData.titulo}
-          className="w-full h-full object-cover mb-4 aspect-video"
-        />
+      <div className="block h-auto items-center justify-center p-4 pb-0 tracking-wider text-pretty">
+        {/* Carga diferida del video con miniatura */}
+        <div id="videoElement" className="w-full h-full mb-4 aspect-video tracking-wider text-pretty">
+          {isVideoVisible ? (
+            <video
+              /* controls */
+              playsInline
+              autoPlay
+              muted
+              loop
+              poster={projectData.imagen} // Usar la imagen como poster antes de que el video cargue
+              className="w-full h-full object-cover"
+            >
+              <source src={projectData.videoURL} type="video/mp4" />
+              Tu navegador no soporta el elemento <code>video</code>.
+            </video>
+          ) : (
+            // Miniatura del video
+            <img
+              src={projectData.imagen}
+              alt={`Miniatura de ${projectData.titulo}`}
+              className="w-full h-full object-cover"
+            />
+          )}
+        </div>
         <h1 className="text-white text-2xl font-semibold">
-          {projectData.titulo}
+          {projectData.title}
         </h1>
         <p className="text-md text-gray-300 py-4">{projectData.descripcion1}</p>
         <p className="text-md text-gray-300 py-4">{projectData.descripcion2}</p>
@@ -38,18 +76,18 @@ function ProjectsOpen() {
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
               key={index}
-              variant="primary"
-              className="px-4 py-1 rounded-md"
+              className="px-4 py-2 bg-primary text-white font-semibold  "
             >
               {etiqueta}
             </Badge>
           ))}
         </div>
-        <div className="flex space-x-4 p-4 w-full">
+        <div className="flex space-x-4 py-4 px-0 w-full">
           {projectData.codigoURL && (
             <Button
               onClick={() => window.open(projectData.codigoURL, "_blank")}
-              className="flex w-full justify-center"
+              className="flex w-full justify-center hover:bg-primary"
+              variant="secondary"
             >
               Código
             </Button>
@@ -57,7 +95,8 @@ function ProjectsOpen() {
           {projectData.demoURL && (
             <Button
               onClick={() => window.open(projectData.demoURL, "_blank")}
-              className="flex w-full justify-center"
+              className="flex w-full justify-center hover:bg-primary"
+              variant="secondary"
             >
               Demo
             </Button>
