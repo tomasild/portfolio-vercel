@@ -43,10 +43,10 @@ export function SkillsAccordion() {
         />
       ),
       title: "Backend",
-      description: "En formación",
-      content: ["Node.js", "Express", "SQL"],
-      footer: "",
-      actual: [],
+      description: "",
+      content: [],
+      footer: "En formación",
+      actual: ["Node.js", "Express", "PostgreSQL"],
     },
     {
       icon: (
@@ -99,9 +99,10 @@ export function SkillsAccordion() {
               {/* Icono */}
               <div className="my-2">{skill.icon}</div>
               {/* Descripción */}
-              <p className="my-2">{skill.description}</p>
+              {skill.description && <p className="my-2">{skill.description}</p>}
               {/* Etiquetas de habilidades actuales */}
-              <ul className="flex flex-wrap gap-2 justify-start">
+              {skill.content.length > 0 && (
+                <div><ul className="flex flex-wrap gap-2 justify-start">
                 {skill.content.map((item, idx) => (
                   <li key={idx}>
                     <Badge variant="destructive" className="bg-primary">
@@ -110,6 +111,8 @@ export function SkillsAccordion() {
                   </li>
                 ))}
               </ul>
+              </div>
+              )}
               {/* Footer */}
               {skill.footer && <p className="mt-4">{skill.footer}</p>}
               {/* Lista "En formación", solo si actual no está vacío */}

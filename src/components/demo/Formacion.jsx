@@ -14,10 +14,10 @@ const FormacionItem = ({ icon, title, description, details }) => (
     >
       {icon}
     </div>
-    <div className="flex-grow pl-4">
-      <h2 className="font-semibold text-white text-md mb-1 tracking-wider">{title}</h2>
-      <p className="leading-relaxed text-sm text-gray-300" >{description}</p>
-      <span className="text-sm text-primary leading-relaxed font-semibold ">{details}</span>
+    <div className="flex-grow pl-4 text-sm">
+      <h2 className="font-semibold mb-1 tracking-wider">{title}</h2>
+      <p className="">{description}</p>
+      <span className="text-sm text-primary leading-loose font-semibold">{details}</span>
     </div>
   </div>
 );
