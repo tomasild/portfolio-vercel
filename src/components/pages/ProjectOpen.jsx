@@ -77,9 +77,9 @@ function ProjectsOpen() {
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
-            
+              variant="outline"
               key={index}
-              className="text-white"
+              className="border-2 border-black dark:border-white dark:border"
             >
               {etiqueta}
             </Badge>

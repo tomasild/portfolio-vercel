@@ -2,10 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-body, bg_mobile {
+/* body, bg_mobile {
   background: radial-gradient(ellipse at bottom, #191970 0%, #000000 100%);
   background-position: center;
   background-size: cover;
+} */
+
+h1,h2,h3,h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p,span {
+  font-family: 'Open Sans', sans-serif;
 }
 
 @layer base {
@@ -192,6 +200,4 @@ nav {
     color: rgba(255, 255, 255, 0.9);
   }
 }
-
-
 

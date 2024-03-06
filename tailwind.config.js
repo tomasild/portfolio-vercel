@@ -125,4 +125,19 @@ module.exports = {
     require("tailwind-scrollbar-hide"),
     require("tailwind-scrollbar"),
   ],
+  customFonts: {
+    sources: {
+      poppins: {
+        // Indica la URL de la fuente web
+        src: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap',
+        // Opcional: define los pesos de la fuente disponibles
+        weights: ['300', '400', '500', '600', '700'],
+      },
+      openSans: {
+        src: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap',
+        // Optional: specify desired font weights
+        weights: ['300', '400', '600', '700'],
+      },
+    },
+  },
 };
