@@ -35,12 +35,12 @@ function ProjectsOpen() {
   }
 
   return (
-    <main className="w-full md:w-1/2 lg:w-1/3 block mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
+    <main className="w-full md:w-1/2 lg:w-1/3 block mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default bg-background dark:bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
       <Button
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 hover:bg-primary"
+        className="fixed top-0 left-0 m-4 z-50 text-accent bg-white bg-opacity-90 hover:bg-primary hover:text-white"
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
@@ -69,17 +69,17 @@ function ProjectsOpen() {
             />
           )}
         </div>
-        <h1 className="text-white text-2xl font-semibold">
+        <h1 className="text-black dark:text-white text-2xl font-semibold">
           {projectData.title}
         </h1>
-        <p className="text-md text-gray-300 py-4">{projectData.descripcion1}</p>
-        <p className="text-md text-gray-300 py-4">{projectData.descripcion2}</p>
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">{projectData.descripcion1}</p>
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">{projectData.descripcion2}</p>
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
             
               key={index}
-              className="px-2 py-1"
+              className="text-white"
             >
               {etiqueta}
             </Badge>
@@ -89,7 +89,7 @@ function ProjectsOpen() {
           {projectData.codigoURL && (
             <Button
               onClick={() => window.open(projectData.codigoURL, "_blank")}
-              className="flex w-full justify-center bg-secondary hover:bg-primary"
+              className="flex w-full justify-center text-white  bg-accent hover:bg-primary"
               variant="secondary"
             >
               <LuCode2 className="mr-2 w-4 h-4 font-bold" />Código
@@ -98,7 +98,7 @@ function ProjectsOpen() {
           {projectData.demoURL && (
             <Button
               onClick={() => window.open(projectData.demoURL, "_blank")}
-              className="flex w-full justify-center bg-secondary hover:bg-primary"
+              className="flex w-full justify-center text-background  bg-accent hover:bg-primary"
               variant="secondary"
             >
               <LuExternalLink className="mr-2 w-4 h-4 font-bold" /> Demo

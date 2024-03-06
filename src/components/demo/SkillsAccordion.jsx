@@ -105,7 +105,7 @@ export function SkillsAccordion() {
                 <div><ul className="flex flex-wrap gap-2 justify-start">
                 {skill.content.map((item, idx) => (
                   <li key={idx}>
-                    <Badge variant="destructive" className="bg-primary">
+                    <Badge variant="destructive" className="bg-primary tracking-wide">
                       {item}
                     </Badge>
                   </li>
@@ -121,7 +121,7 @@ export function SkillsAccordion() {
                   <ul className="flex flex-wrap gap-2 justify-start my-2">
                     {skill.actual.map((item, idx) => (
                       <li key={idx}>
-                        <Badge variant="secondary" className="bg-secondary">
+                        <Badge variant="outline" className="bg-secondary tracking-wide border-2 border-black dark:border-white dark:border dark:font-bold">
                           {item}
                         </Badge>
                       </li>

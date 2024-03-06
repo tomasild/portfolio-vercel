@@ -81,8 +81,8 @@ export function ExpAndProjects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="bg-secondary hover:bg-primary rounded-md" />
-      <CarouselNext className="bg-secondary hover:bg-primary rounded-md" />
+      <CarouselPrevious className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white" />
+      <CarouselNext className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white" />
     </Carousel>
   );
 }

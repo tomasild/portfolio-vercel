@@ -12,7 +12,7 @@ function About() {
           className="rounded-xl w-36 h-auto lg:w-28 mb-4"
         />
         <h1 className="text-2xl font-semibold">Hola, soy <span className="font-bold text-primary">Tomás</span></h1>
-        <p className="text-sm leading-relaxed">
+        <p className="text-sm leading-relaxed font-semibold dark:font-normal">
           Desarrollador web de Valparaíso, Chile. Tengo 6 meses de experiencia
           como Frontend Developer, actualmente especializandome en accesibilidad
           e interesado en el desarrollo mobile y Three.js.

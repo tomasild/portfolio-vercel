@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosSunny, IoIosMoon } from "react-icons/io";
 import { useTheme } from "../ThemeProvider"; // Ajusta la ruta según la estructura de tus archivos.
 
 const ThemeToggle = () => {
@@ -15,9 +16,14 @@ const ThemeToggle = () => {
 
   return (
     <button
-      className="cursor-pointer bg-primary px-4 py-2"
+      className="cursor-pointer bg-primary px-4 py-2 flex items-center"
       onClick={toggleTheme}
     >
+      {theme === "light" ? (
+        <IoIosMoon size={20} className="mr-2" />
+      ) : (
+        <IoIosSunny size={20} className="mr-2" />
+      )}
       Toggle Theme
     </button>
   );

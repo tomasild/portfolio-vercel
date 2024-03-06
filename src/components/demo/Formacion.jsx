@@ -15,9 +15,9 @@ const FormacionItem = ({ icon, title, description, details }) => (
       {icon}
     </div>
     <div className="flex-grow pl-4 text-sm">
-      <h2 className="font-semibold mb-1 tracking-wider">{title}</h2>
-      <p className="">{description}</p>
-      <span className="text-sm text-primary leading-loose font-semibold">{details}</span>
+      <h2 className="font-bold dark:font-semibold mb-1 tracking-wider">{title}</h2>
+      <p className="font-semibold dark:font-normal">{description}</p>
+      <span className="text-primary leading-loose font-bold dark:font-semibold">{details}</span>
     </div>
   </div>
 );

@@ -27,12 +27,12 @@ function AboutOpen() {
   ];
 
   return (
-    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
+    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-background dark:bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
       <Button
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 hover:bg-primary"
+        className="fixed top-0 left-0 m-4 z-50 text-accent bg-white bg-opacity-90 hover:bg-primary hover:text-white"
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
@@ -42,15 +42,15 @@ function AboutOpen() {
           alt="Tomás Langer posando"
           className="rounded-xl w-36 h-auto lg:w-28 mb-4"
         />
-        <h1 className="text-white text-2xl font-semibold">¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
-        <p className="text-md text-gray-300 py-4">
+        <h1 className="text-black dark:text-white text-2xl font-semibold">¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">
           Soy desarrollador web con un gran interés general por la tecnología e
           innovación . Me metí en el desarrollo web porque me gusta mucho la
           idea de convertir los conceptos e ideas en proyectos reales,
           especialmente cuando se trata de hacer sitios web accesibles,
           optimizados y con animaciones atractivas.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-reveal">
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
           Antes de sumergirme en el código, estuve inmerso en el área el
           marketing y ventas por más de tres años. Allí aprendí un montón sobre
           trabajar en equipo, proporcionar una excelente experiencia y
@@ -58,7 +58,7 @@ function AboutOpen() {
           priorizar tareas, entre otras cosas, lo que me viene de maravilla
           ahora que soy desarrollador.
         </p>
-        <p className="text-md text-gray-300 py-4 scroll-reveal">
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
           eventos tecnológicos, charlas, etc para estar siempre al tanto de las
@@ -68,14 +68,14 @@ function AboutOpen() {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto"
+              className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto font-medium dark:font-normal text-black dark:text-white"
             >
               {badge.icon}
               <div className="text-xs pt-2">{badge.title}</div>
             </div>
           ))}
         </div>
-        <p className="text-md text-gray-300 py-4 scroll-reveal">
+        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
           En pocas palabras, me gusta combinar mi trabajo en desarrollo web con
           mis intereses personales. Busco constantemente aprender y mejorar,
           manteniendo un ambiente relajado y divertido tanto en lo profesional
@@ -83,7 +83,7 @@ function AboutOpen() {
         </p>
       </div>
       <div className="flex space-x-4 p-4 text-white pt-12 ">
-        <Button variant="secondary"  className="flex w-full hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button>
+        <Button variant="secondary"  className="flex w-full text-white  bg-accent hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button>
         <div className="flex justify-evenly w-full items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
@@ -91,7 +91,7 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size="32px" className="cursor-pointer text-white hover:text-gray-500"/>
+            <FaLinkedin size="32px" className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"/>
           </a>
           <a
             href="https://github.com/tomasild"
@@ -99,7 +99,7 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithubSquare size="32px" className="cursor-pointer text-white hover:text-gray-500"/>
+            <FaGithubSquare size="32px" className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"/>
           </a>
         </div>
       </div>

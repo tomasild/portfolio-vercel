@@ -94,7 +94,7 @@ function ContactForm() {
       </div>
 
       <div className="flex justify-between">
-        <Button variant="primary" className="w-full mt-2 py-4 bg-secondary hover:bg-primary" type="submit" disabled={isLoading}>
+        <Button variant="secondary" className="w-full mt-2 py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary" type="submit" disabled={isLoading}>
         {isLoading ? <Loader2 className="h-4 w-4 mr-2 animate-spin font-bold" /> : <Mail className="h-4 w-4 mr-2 font-bold" />}
           {isLoading ? "Enviando..." : "Enviar"}
         </Button>
