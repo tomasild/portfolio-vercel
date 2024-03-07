@@ -27,7 +27,7 @@ function AboutOpen() {
   ];
 
   return (
-    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-background dark:bg-custom_bg bg-opacity-40 hover:bg-opacity-90 lg:border border-white border-opacity-30 hover:border-opacity-70 transition duration-500 ease-in-out rounded-md my-0 lg:my-4">
+    <main className="text-gray-300 w-full md:w-1/2 lg:w-1/3 flex flex-col mx-auto h-auto lg:h-[calc(100vh-2rem)] scrollbar-hide lg:overflow-auto lg:scrollbar-default pb-12 bg-background rounded-md my-0 lg:my-4 dark:bg-custom_bg1 dark:hover:bg-custom_bg2">
       <Button
         variant="secondary"
         onClick={() => navigate(-1)}

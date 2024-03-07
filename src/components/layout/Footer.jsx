@@ -4,8 +4,8 @@ import { PiGearFineBold } from "react-icons/pi";
 
 function Footer() {
   return (
-    <div className="flex items-center justify-center h-28">
-      <div className="text-white text-md text-center space-y-4 relative">
+    <div className="flex items-center justify-center h-28 bg-white bg-opacity-30 dark:bg-custom_bg1">
+      <div className="text-black dark:text-white text-md text-center space-y-4 relative">
         <p>
           Desarrollado por{" "}
           <span className="text-primary font-semibold">tomas.ild</span>
@@ -19,7 +19,7 @@ function Footer() {
           >
             <FaLinkedin
               size="32px"
-              className="cursor-pointer focus text-white hover:text-primary"
+              className="cursor-pointer focus focus:text-primary active:text-primary bg-black text-white dark:bg-white dark:text-black"
             />
           </a>
           <a
@@ -30,7 +30,7 @@ function Footer() {
           >
             <FaGithubSquare
               size="32px"
-              className="cursor-pointer text-white hover:text-primary"
+              className="cursor-pointer  focus:text-primary active:text-primary bg-black text-white dark:bg-white dark:text-black"
             />
           </a>
         </div>

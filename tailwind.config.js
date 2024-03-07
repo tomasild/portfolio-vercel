@@ -23,7 +23,8 @@ module.exports = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        custom_bg: 'rgba(17, 25, 40, 1)',
+        custom_bg1: 'rgba(2, 8, 23, 0.5)',
+        custom_bg2: 'rgba(2, 8, 23, 0.9)',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
