@@ -5,8 +5,8 @@ export const skillsData = [
   {
     icon: <IoLogoReact size={40} className="" aria-label="Frontend Skills" role="img" />,
     title: "Frontend",
-    description: "Habilidades relacionadas con el desarrollo de la interfaz de usuario",
-    content: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind", "Shadcn"],
+    description: "Habilidades relacionadas",
+    content: ["HTML5", "CSS3", "JavaScript", "React.js", "Tailwind", "Shadcn", "Bootstrap"],
     footer: "Enfocado en aprender",
     actual: ["Next.js", "React Native", "Three.js"],
   },

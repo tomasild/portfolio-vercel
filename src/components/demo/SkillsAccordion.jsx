@@ -26,12 +26,16 @@ export function SkillsAccordion() {
         "HTML5",
         "CSS3",
         "JavaScript",
+        "Axios",
         "React.js",
-        "Tailwind",
+        "Redux toolkit",
+        "Tailwind CSS",
         "Shadcn",
+        "Bootstrap",
+        "Animaciones"
       ],
       footer: "Enfocado en aprender",
-      actual: ["Next.js", "React Native", "Three.js"],
+      actual: ["Next.js", "React Native", "Three.js", "GSAP"],
     },
     {
       icon: (
@@ -45,37 +49,18 @@ export function SkillsAccordion() {
       title: "Backend",
       description: "",
       content: [],
-      footer: "En formación",
+      footer: "Desarrollando proyectos para aprender",
       actual: ["Node.js", "Express", "PostgreSQL"],
-    },
-    {
-      icon: (
-        <IoPeople size={40} className="" aria-label="Soft Skills" role="img" />
-      ),
-      title: "Soft Skills",
-      description: "Habilidades interpersonales y de comunicación",
-      content: [
-        "Trabajo en equipo",
-        "Comunicación efectiva",
-        "Resolución de problemas",
-        "Creativo",
-        "Responsable",
-        "Proactivo",
-        "Puntual",
-        "Servicio al cliente",
-      ],
-      footer: "",
-      actual: [],
     },
     {
       icon: (
         <IoBuild size={40} className="" aria-label="Other Skills" role="img" />
       ),
-      title: "Other Skills",
+      title: "Otras habilidades",
       description: "Otras habilidades relevantes",
       content: [
         "Git",
-        "a11y",
+        "a11y (Accesibilidad)",
         "WCAG",
         "VPAT",
         "Postman",
@@ -83,7 +68,28 @@ export function SkillsAccordion() {
         "WooCommerce",
       ],
       footer: "Planeando aprender",
-      actual: ["Integraciones de IA", "Cloud", "Blockchain"],
+      actual: ["Integraciones de IA", "AWS", "Azure", "Web3"],
+    },
+    {
+      icon: (
+        <IoPeople size={40} className="" aria-label="Soft Skills" role="img" />
+      ),
+      title: "Habilidades blandas",
+      description: "Habilidades interpersonales y de comunicación",
+      content: [
+        "Trabajo en equipo",
+        "Comunicación efectiva",
+        "Propositivo",
+        "Resolución de problemas",
+        "Creativo",
+        "Responsable",
+        "Proactivo",
+        "Puntual",
+        "Centrado en el usuario",
+        "Atención personalizada",
+      ],
+      footer: "",
+      actual: [],
     },
   ];
 

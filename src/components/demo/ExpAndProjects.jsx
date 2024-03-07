@@ -23,15 +23,13 @@ export function ExpAndProjects() {
       subtitle: "Streaming de Música",
       bgClass: "bg-groovelist",
     },
-    { title: "Angin", 
-      subtitle: "Destiladora de gin", 
-      bgClass: "bg-angin" },
+    { title: "Angin", subtitle: "Destiladora de gin", bgClass: "bg-angin" },
     {
       title: "Proesthetic Fit",
       subtitle: "Clínica estética integral",
       bgClass: "bg-proesthetic-fit",
     },
-    {
+    /*  {
       title: "Empresa de Efectos Especiales",
       subtitle: "Efectos visuales y prácticos",
       bgClass: "bg-fx",
@@ -40,21 +38,18 @@ export function ExpAndProjects() {
       title: "Otro Proyecto",
       subtitle: "Descripción del proyecto",
       bgClass: "bg-otro-proyecto",
-    },
+    }, */
   ];
 
   return (
     <Carousel
-      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[80%] xl:w-auto"
+      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[70%] xl:w-full p-4"
       opts={{
         align: "start",
         loop: true,
       }}
-      
     >
-      <h2 className="text-center pb-4 text-lg font-semibold">
-        Experiencia y proyectos
-      </h2>
+      <h2 className="text-center font-semibold text-lg pb-4">Experiencia</h2>
       <CarouselContent>
         {projects.map((project, index) => (
           <CarouselItem
@@ -63,20 +58,16 @@ export function ExpAndProjects() {
             className="cursor-pointer"
           >
             <div className="overflow-hidden">
-              {/* Apply background class and aspect ratio directly to CardContent, with rounded corners */}
               <CardContent
                 className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-md`}
               >
-                {/* Overlay with title and subtitle, ensuring it respects the card's rounded corners */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 bg-black bg-opacity-40 rounded-lg">
-                  <h5 className="text-xl font-semibold text-white text-center">
-                    {project.title}
-                  </h5>
-                  <p className="text-md text-white mt-2 text-center">
-                    {project.subtitle}
-                  </p>
-                </div>
+                {/* Contenido del proyecto (imagen, etc.) */}
               </CardContent>
+              {/* Título y descripción fuera del contenedor */}
+              <div className="mt-2">
+                <h3 className="font-bold text-center tracking-wide">{project.title}</h3>
+                <p className="text-sm text-center">{project.subtitle}</p>
+              </div>
             </div>
           </CarouselItem>
         ))}

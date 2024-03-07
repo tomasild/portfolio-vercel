@@ -4,11 +4,11 @@ import { PiGearFineBold } from "react-icons/pi";
 
 function Footer() {
   return (
-    <div className="flex items-center justify-center h-28 bg-white bg-opacity-30 dark:bg-custom_bg1">
+    <div className="flex items-center justify-center h-28 bg-white bg-opacity-60 dark:bg-custom_bg1">
       <div className="text-black dark:text-white text-md text-center space-y-4 relative">
-        <p>
+        <p className="font-semibold">
           Desarrollado por{" "}
-          <span className="text-primary font-semibold">tomas.ild</span>
+          <span className="text-primary font-bold">tomas.ild</span>
         </p>
         <div className="flex justify-center space-x-4 items-center h-full">
           <a

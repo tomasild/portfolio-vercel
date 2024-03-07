@@ -7,12 +7,30 @@ export const projectsData = [
     imagen: "/noche.jpg",
     bgClass: "bg-groovelist",
     descripcion1:
-      "Groovelist es una plataforma de streaming de música que permite a los usuarios explorar, descubrir y disfrutar de una amplia variedad de géneros musicales de todo el mundo.",
+      "Mi experiencia en Groovelist fue fundamental para potenciar una plataforma que va más allá del simple streaming de música, centrándose en el licensing musical. Durante mi tiempo en el equipo, tuve el honor de liderar la migración del frontend, contribuyendo significativamente al éxito continuo de la plataforma.",
     descripcion2:
-      "La plataforma ofrece características personalizadas para mejorar la experiencia de escucha, incluyendo listas de reproducción personalizadas, estaciones de radio y recomendaciones basadas en las preferencias musicales.",
-    etiquetas: ["React", "HTML", "CSS", "Tailwind CSS", "Atomic Design", "Auth", "API REST", "JSON"],
-    codigoURL: "https://github.com/groovelist",
-    demoURL: "https://groovelist.com",
+      "Inicié mi labor con un análisis detallado de la aplicación existente, desarrollada en PHP, identificando sus componentes y funcionalidades clave. Este proceso estratégico me llevó a implementar el Atomic Design, facilitando la migración a React y asegurando una arquitectura más robusta y eficiente.",
+    descripcion3:
+      "Durante mi contribución a Groovelist, utilice mis habilidades en el desarrollo de la interfaz de usuario y la implementación de tecnologías clave, como React, Atomic Design, y Tailwind CSS, para lograr una plataforma visualmente atractiva y funcional. Estas decisiones estratégicas no solo mejoraron la estética de la plataforma, sino que también contribuyeron a su usabilidad y accesibilidad",
+    descripcion4:
+      "Además, mi enfoque en la gestión eficiente del estado con Redux Toolkit, la implementación segura de autenticación mediante Amazon Cognito, y la integración fluida de servicios backend a través de Axios, resultaron elementos cruciales para el éxito continuo de Groovelist.",
+    descripcion5:
+      "Este proyecto fue un hito clave en mi carrera al liderar la migración del frontend en Groovelist. Aprendí y exploré nuevas tecnologías sobre la marcha, destacando mi capacidad para enfrentar desafíos tecnológicos. Esta experiencia fortaleció mi conjunto de habilidades y reafirmó mi compromiso con el crecimiento profesional",
+    etiquetas: [
+      "React",
+      "Redux toolkit",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS",
+      "Atomic Design",
+      "API REST",
+      "JSON",
+      "Axios",
+    ],
+    codigoURL:
+      "https://github.com/GrooveList/frontend-groovelist-react/tree/tomas-dev",
+    demoURL: "",
   },
   {
     title: "Angin",
@@ -24,8 +42,8 @@ export const projectsData = [
     descripcion2:
       "Nuestro gin es el resultado de la destilación cuidadosa de botánicos seleccionados, ofreciendo una experiencia de sabor excepcional para los aficionados al gin.",
     etiquetas: ["WordPress", "CSS", "HTML", "a11y"],
-    codigoURL: "https://github.com/angin",
-    demoURL: "https://angin.com",
+    codigoURL: "",
+    demoURL: "https://angin.cl/",
   },
   {
     title: "Proesthetic Fit",
@@ -37,8 +55,8 @@ export const projectsData = [
     descripcion2:
       "Nuestros servicios incluyen tratamientos faciales, corporales, estéticos y de recuperación, diseñados para satisfacer las necesidades individuales de nuestros clientes.",
     etiquetas: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    codigoURL: "https://github.com/proestheticfit",
-    demoURL: "https://proestheticfit.com",
+    codigoURL: "https://github.com/tomasild/clinica_estetica",
+    demoURL: "https://tomasild.github.io/clinica_estetica/",
   },
   /* {
     title: "Empresa de Efectos Especiales",

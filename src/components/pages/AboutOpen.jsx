@@ -23,7 +23,7 @@ function AboutOpen() {
     { icon: <GiDogBowl />, title: "Amante de los perros" },
     { icon: <GiBookmark />, title: "Entusiasta del aprendizaje" },
     { icon: <GiMountains />, title: "Disfruto de la naturaleza" },
-    { icon: <FaRegLaughBeam />, title: "Siempre alegre" },
+    { icon: <FaRegLaughBeam />, title: "Alegre" },
   ];
 
   return (
@@ -32,7 +32,7 @@ function AboutOpen() {
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 text-accent bg-white bg-opacity-90 hover:bg-primary hover:text-white"
+        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-50 hover:border-none hover:bg-primary "
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>

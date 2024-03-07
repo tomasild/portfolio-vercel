@@ -40,7 +40,7 @@ function ProjectsOpen() {
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 text-accent bg-white bg-opacity-90 hover:bg-primary hover:text-white"
+        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-50 hover:border-none hover:bg-primary "
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
@@ -72,8 +72,11 @@ function ProjectsOpen() {
         <h1 className="text-black dark:text-white text-2xl font-semibold">
           {projectData.title}
         </h1>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">{projectData.descripcion1}</p>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">{projectData.descripcion2}</p>
+        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">{projectData.descripcion1}</p>
+        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">{projectData.descripcion2}</p>
+        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">{projectData.descripcion3}</p>
+        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">{projectData.descripcion4}</p>
+        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">{projectData.descripcion5}</p>
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
@@ -101,7 +104,7 @@ function ProjectsOpen() {
               className="flex w-full justify-center text-white  bg-accent hover:bg-primary "
               variant="secondary"
             >
-              <LuExternalLink className="mr-2 w-4 h-4 font-bold" /> Demo
+              <LuExternalLink className="mr-2 w-4 h-4 font-bold" /> Deploy
             </Button>
           )}
         </div>

@@ -12,8 +12,9 @@ import Formacion from "@/components/demo/Formacion";
 import ContactForm from "@/components/demo/ContactForm";
 import Layout from "@/components/layout/Layout";
 import ThemeToggle from "@/components/demo/ThemeToggle";
-import { Novatrix, Velustro } from "uvcanvas";
+import { Novatrix, Velustro, Tranquiluxe  } from "uvcanvas";
 import Stars from "@/components/demo/Stars";
+import { HashLink as Link } from "react-router-hash-link";
 
 function AppContent() {
   const { theme } = useTheme() || {};
@@ -52,14 +53,14 @@ function AppContent() {
 
               {/* MOBILE */}
               <Layout>
-                <div className="block w-full h-full space-y-16 lg:hidden bg-white dark:bg-custom_bg1 dark:text-white">
-                  <div className="flex">
+                <div className="block w-full h-full space-y-16 lg:hidden bg-white bg-opacity-20 dark:bg-custom_bg1 dark:text-white">
+                  <div className="flex" id="sobre-mi">
                     <About />
                   </div>
-                  <div className=" flex justify-center items-center scroll-reveal">
+                  <div className=" flex justify-center items-center scroll-reveal "id="experiencia">
                     <ExpAndProjects />
                   </div>
-                  <div className=" relative flex w-full h-full p-4 scrollbar-hide overflow-hidden scroll-reveal">
+                  <div className=" relative flex w-full h-full p-4 scrollbar-hide overflow-hidden scroll-reveal" id="skills">
                     <SkillsAccordion />
                     <PiGearFineBold className="text-[8rem] dark:text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
                     <PiGearFineBold className="text-[7rem] dark:text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
@@ -67,10 +68,10 @@ function AppContent() {
                   <div className=" flex justify-center items-center scroll-reveal">
                     <ThemeToggle />
                   </div>
-                  <div className=" overflow-y-scroll rounded-r-md scroll-reveal">
+                  <div className=" overflow-y-scroll rounded-r-md scroll-reveal" id="educacion">
                     <Formacion />
                   </div>
-                  <div className="flex scroll-reveal">
+                  <div className="flex scroll-reveal" id="contacto">
                     <ContactForm />
                   </div>
                 </div>
