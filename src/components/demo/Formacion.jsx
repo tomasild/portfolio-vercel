@@ -1,63 +1,73 @@
 import React from "react";
 import {
-  FaRocket,
-  FaTerminal,
-  FaDesktop,
-  FaBook,
-} from "react-icons/fa";
+  Table,
+  TableBody,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { FaDesktop, FaTerminal, FaBook, FaRocket } from "react-icons/fa";
 
-const FormacionItem = ({ icon, title, description, details }) => (
-  <div className="flex relative pt-4 w-full mx-auto ">
-    <div
-      className="flex-shrink-0 w-8 h-8 lg:w-10 lg:h-10 rounded-md bg-primary inline-flex items-center justify-center text-white text-md lg:text-xl relative"
-      aria-hidden="true"
-    >
-      {icon}
-    </div>
-    <div className="flex-grow pl-4">
-      <h2 className="mb-2 tracking-wider">{title}</h2>
-      <p className="font-semibold dark:font-normal text-sm">{description}</p>
-      <span className="text-primary leading-loose font-bold dark:font-semibold text-sm">{details}</span>
-    </div>
-  </div>
-);
+const formacionData = [
+  {
+    icon: <FaDesktop />,
+    title: "Frontend",
+    description: "Me especializo en el desarrollo frontend, donde adquiero habilidades esenciales como el uso de empaquetadores, design systems, testing, accesibilidad, entre otros. Actualmente, estoy cursando programas educativos en Platzi, @FaztCode y @midudev.",
+    details: "En curso: Cursos en Platzi, @FaztCode y @midudev",
+    year: "En curso: 2023",
+  },
+  {
+    icon: <FaBook />,
+    title: "Inglés",
+    description: "Actualmente perfeccionando mi inglés a través de clases particulares y complementando mi desarrollo con herramientas de estudio y aplicaciones especializadas",
+    details: "En curso: A partir de Enero del 2024",
+    year: "En curso: 2023",
+  },
+  {
+    icon: <FaTerminal />,
+    title: "Fullstack Developer",
+    description: "Certificado del programa One de Alura Latam | Oracle Next Education",
+    details: "Período: 2022-2023",
+    year: "2022-2023",
+  },
+  {
+    icon: <FaRocket />,
+    title: "Ing. en Marketing",
+    description: "Titulado con distinciones del Instituto profesional DuocUC",
+    details: "Período: 2012-2017",
+    year: "2012-2017",
+  },
+];
 
-const Formacion = () => {
+export function Formacion() {
   return (
-    <section aria-labelledby="formacionTitulo" className="p-4">
-      <h2
-        id="formacionTitulo"
-        className="text-center pb-4 font-semibold"
-      >
-        Formación
-      </h2>
-      <div className="space-y-4 lg:space-y-5 divide-y divide-black dark:divide-gray-400">
-        <FormacionItem
-          icon={<FaRocket />}
-          title="Ingeniería en Marketing"
-          description="Instituto profesional DuocUC"
-          details="Titulado el año 2017 con distinción"
-        />
-        <FormacionItem
-          icon={<FaTerminal />}
-          title="Fullstack Developer"
-          description="Certificado del programa One de Oracle Next Education en conjunto con Alura Latam"
-          details="14-02-2023"
-        />
-        <FormacionItem
-          icon={<FaDesktop />}
-          title="Frontend"
-          description="Formandome en la utilizacion de herramientas fundamentales, como empaquetadores, design systems, testing, manejo correcto de APIs, optimización del rendimiento, etc."
-          details="Platzi, @fazt, @midudev (En formación)"
-        />
-        <FormacionItem
-          icon={<FaBook />}
-          title="Inglés"
-          description="Actualmente con clases particulares y complementando con herramientas y apps de aprendizaje."
-        />
-      </div>
+    <section className="p-4">
+      <h2 className="text-lg leading-relaxed font-semibold text-center pb-4">Formación</h2>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead>Nombre</TableHead>
+            <TableHead>Descripción</TableHead>
+            <TableHead className="text-right">Año</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {formacionData.map((item, index) => (
+            <TableRow key={index} className="border-gray-400">
+              
+              <TableCell style={{ verticalAlign: 'top' }} className="font-bold dark:font-semibold">{item.title}</TableCell>
+              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed font-semibold dark:font-normal w-[90%] lg:w-auto xl:w-auto text-pretty text-sm">{item.description}</TableCell>
+              <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed font-semibold dark:font-normal">
+                {item.year || "-"}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </section>
   );
-};
+}
 
 export default Formacion;

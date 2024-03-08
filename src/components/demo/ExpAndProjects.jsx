@@ -29,16 +29,6 @@ export function ExpAndProjects() {
       subtitle: "Clínica estética integral",
       bgClass: "bg-proesthetic-fit",
     },
-    /*  {
-      title: "Empresa de Efectos Especiales",
-      subtitle: "Efectos visuales y prácticos",
-      bgClass: "bg-fx",
-    },
-    {
-      title: "Otro Proyecto",
-      subtitle: "Descripción del proyecto",
-      bgClass: "bg-otro-proyecto",
-    }, */
   ];
 
   return (
@@ -59,13 +49,14 @@ export function ExpAndProjects() {
           >
             <div className="overflow-hidden">
               <CardContent
-                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-md`}
+                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg`}
               >
-                {/* Contenido del proyecto (imagen, etc.) */}
               </CardContent>
               {/* Título y descripción fuera del contenedor */}
               <div className="mt-2">
-                <h3 className="font-bold text-center tracking-wide">{project.title}</h3>
+                <h3 className="font-bold text-center tracking-wide">
+                  {project.title}
+                </h3>
                 <p className="text-sm text-center">{project.subtitle}</p>
               </div>
             </div>

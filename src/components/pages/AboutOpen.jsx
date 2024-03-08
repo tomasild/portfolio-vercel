@@ -32,7 +32,7 @@ function AboutOpen() {
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-50 hover:border-none hover:bg-primary "
+        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-40 hover:border-none hover:bg-primary"
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>

@@ -18,7 +18,6 @@ import { HashLink as Link } from "react-router-hash-link";
 
 function AppContent() {
   const { theme } = useTheme() || {};
-  console.log("Current Theme:", theme);
 
   return (
     <div>
