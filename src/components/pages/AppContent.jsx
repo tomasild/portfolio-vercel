@@ -12,9 +12,10 @@ import Formacion from "@/components/demo/Formacion";
 import ContactForm from "@/components/demo/ContactForm";
 import Layout from "@/components/layout/Layout";
 import ThemeToggle from "@/components/demo/ThemeToggle";
-import { Novatrix, Velustro, Tranquiluxe  } from "uvcanvas";
+import { Novatrix, Velustro, Tranquiluxe } from "uvcanvas";
 import Stars from "@/components/demo/Stars";
 import { HashLink as Link } from "react-router-hash-link";
+import News from "../demo/News";
 
 function AppContent() {
   const { theme } = useTheme() || {};
@@ -26,7 +27,7 @@ function AppContent() {
           path="/"
           element={
             <>
-              <main className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden bg-transparent">
+              <main className="lg:grid grid-cols-6 grid-rows-7 gap-4 p-4 h-[100vh] w-full hidden bg-transparent ">
                 <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-accent dark:border-white neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <About />
                 </Card>
@@ -38,8 +39,8 @@ function AppContent() {
                   <PiGearFineBold className="text-[8rem] text-accent absolute -bottom-10 -right-1 animate-spin-slow z-10 dark:text-white" />
                   <PiGearFineBold className="text-[7rem] text-accent absolute bottom-10 -right-16 animate-spin-reverse z-10 dark:text-white" />
                 </Card>
-                <Card className="col-span-2 row-span-2 col-start-3 row-start-6 border border-accent dark:border-white flex justify-center items-center neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
-                  <ThemeToggle />
+                <Card className="col-span-2 row-span-2 col-start-3 row-start-6 border border-accent dark:border-white  neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm overflow-hidden">
+                  <News />
                 </Card>
                 <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-accent dark:border-white overflow-y-scroll rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <Formacion />
@@ -56,18 +57,27 @@ function AppContent() {
                   <div className="flex" id="sobre-mi">
                     <About />
                   </div>
-                  <div className=" flex justify-center items-center scroll-reveal "id="experiencia">
+                  <div
+                    className=" flex justify-center items-center scroll-reveal "
+                    id="experiencia"
+                  >
                     <ExpAndProjects />
                   </div>
-                  <div className=" relative flex w-full h-full p-4 scrollbar-hide overflow-hidden scroll-reveal" id="skills">
+                  <div
+                    className=" relative flex w-full h-full p-4 scrollbar-hide overflow-hidden scroll-reveal"
+                    id="skills"
+                  >
                     <SkillsAccordion />
                     <PiGearFineBold className="text-[8rem] dark:text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
                     <PiGearFineBold className="text-[7rem] dark:text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
                   </div>
                   <div className=" flex justify-center items-center scroll-reveal">
-                    <ThemeToggle />
+                    <News />
                   </div>
-                  <div className=" overflow-y-scroll rounded-r-md scroll-reveal" id="educacion">
+                  <div
+                    className=" overflow-y-scroll rounded-r-md scroll-reveal"
+                    id="educacion"
+                  >
                     <Formacion />
                   </div>
                   <div className="flex scroll-reveal" id="contacto">

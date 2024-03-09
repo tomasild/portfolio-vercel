@@ -40,7 +40,7 @@ function AboutOpen() {
         <img
           src={Profile}
           alt="Tomás Langer posando"
-          className="rounded-xl w-36 h-auto lg:w-28 mb-4"
+          className="rounded-xl w-36 h-auto lg:w-44 mb-4"
         />
         <h1 className="text-black dark:text-white text-2xl font-semibold">¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
         <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">

@@ -8,28 +8,14 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useNavigate } from "react-router-dom";
+import { projectsData } from "@/data/projects";
 
 export function ExpAndProjects() {
-  // Tus proyectos
-  const navigate = useNavigate(); // Hook para navegar
+  const navigate = useNavigate();
 
   const handleProjectClick = (title) => {
-    navigate(`/projectOpen/${title}`); // Navegar a ProjectOpen con el título del proyecto
+    navigate(`/projectOpen/${title}`);
   };
-
-  const projects = [
-    {
-      title: "Groovelist",
-      subtitle: "Streaming de Música",
-      bgClass: "bg-groovelist",
-    },
-    { title: "Angin", subtitle: "Destiladora de gin", bgClass: "bg-angin" },
-    {
-      title: "Proesthetic Fit",
-      subtitle: "Clínica estética integral",
-      bgClass: "bg-proesthetic-fit",
-    },
-  ];
 
   return (
     <Carousel
@@ -41,7 +27,7 @@ export function ExpAndProjects() {
     >
       <h2 className="text-center font-semibold text-lg pb-4">Experiencia</h2>
       <CarouselContent>
-        {projects.map((project, index) => (
+        {projectsData.map((project, index) => (
           <CarouselItem
             key={index}
             onClick={() => handleProjectClick(project.title)}
@@ -49,10 +35,11 @@ export function ExpAndProjects() {
           >
             <div className="overflow-hidden">
               <CardContent
-                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg`}
+                className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg border`}
               >
+                {/* Agregar la lógica para mostrar la imagen del proyecto */}
+                <img src={project.imagen} alt={project.title} />
               </CardContent>
-              {/* Título y descripción fuera del contenedor */}
               <div className="mt-2">
                 <h3 className="font-bold text-center tracking-wide">
                   {project.title}

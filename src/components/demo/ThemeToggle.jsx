@@ -16,8 +16,8 @@ const ThemeToggle = () => {
   return (
     <Button
       variant="primary"
-      className={`cursor-pointer px-4 py-2 flex items-center justify-center ${
-        theme === "light" ? "bg-accent text-white" : "bg-primary text-white"
+      className={`cursor-pointer p-2 flex neon rounded-md ${
+        theme === "light" ? "bg-accent text-white" : "bg-white text-black"
       }`} // Clases dinamicas
       onClick={toggleTheme}
     >
@@ -28,7 +28,7 @@ const ThemeToggle = () => {
         </>
       ) : (
         <>
-          <IoIosSunny size={20} /> 
+          <IoIosSunny size={25} /> 
           <span className="ml-2">Modo claro</span> 
         </>
       )}

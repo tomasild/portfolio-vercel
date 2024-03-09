@@ -213,7 +213,9 @@ nav {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(ellipse at bottom, #020817e6 0%, #090a0f 100%);
+  /* background: radial-gradient(ellipse at bottom, #020817e6 0%, #090a0f 100%); */
+  background-image: url("./public/noche.jpg");
+  background-size: contain;
   overflow: hidden;
   display: flex;
   align-items: center;
