@@ -13,7 +13,7 @@ const useNews = () => {
       // Obtener noticias almacenadas en caché
       const storedNews = getCachedNews();
       // Obtener la última actualización
-      const { lastUpdate } = getLastUpdate();
+      const lastUpdate  = getLastUpdate();
       // Obtener la fecha y hora actual
       const now = new Date();
 
