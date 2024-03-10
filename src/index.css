@@ -1,76 +1,295 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+
+h1,h2,h3,h4 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p,span {
+  font-family: 'Open Sans', sans-serif;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 48, 100%, 93.14%;
     --foreground: 222.2 84% 4.9%;
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 225, 72.73%, 56.86%;
     --primary-foreground: 210 40% 98%;
- 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
-    --accent: 210 40% 96.1%;
+    --accent: 0, 0%, 20%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
- 
+    --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+
+    --scrollbar-width: 8px;
+    --scrollbar-track-color: rgba(255, 255, 255, 1);
+    --scrollbar-thumb-color: #333333;
+    --scrollbar-thumb-hover-color: rgba(255, 255, 255, 1);
+    --shooting-time: 3000ms;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 224.3 76.3% 48%;
+    
+    --scrollbar-width: 8px;
+    --scrollbar-track-color: rgba(0, 0, 0, 0);
+    --scrollbar-thumb-color: rgba(255, 255, 255, .7);
+    --scrollbar-thumb-hover-color: rgba(255, 255, 255, 1);
+    --shooting-time: 3000ms;
+
+    --color-interactive: 140, 100, 255;
+    --circle-size: 80%;
+    --blending: hard-light;
   }
 }
- 
-@layer base {
-  * {
-    @apply border-border;
+
+
+
+/* Estilos personalizados para la barra de scroll */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width); /* Ancho de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color); 
+  border-radius: 10px;
+  transition: background-color 0.2s ease; /* Transición suave */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color); /* Color al pasar el ratón */
+}
+
+
+/* NEON */
+
+.neon{
+  border: 1px solid rgba(255, 255, 255, .3);
+  transition: all 0.5s ease-in-out;
+}
+
+.neon:hover {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+}
+
+.neonAlways {
+  box-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
+}
+
+
+/* Animacion de entrada y salida con scroll */
+
+@keyframes show  {
+  from {
+    opacity: 0;
+    scale: 50%; 
   }
-  body {
-    @apply bg-background text-foreground;
+  to {
+    opacity: 1;
+    scale: 100%;
   }
+}
+
+.scroll-scale {
+  view-timeline-name: --scrollY;
+  view-timeline-axis: black;
+
+  animation-timeline: --scrollY;
+  animation-name: show;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+
+@keyframes show2  {
+  from {
+    opacity: 0;
+    scale: 10%; 
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+.scroll-scale2 {
+  view-timeline-name: --scrollY;
+  view-timeline-axis: black;
+
+  animation-timeline: --scrollY;
+  animation-name: show2;
+
+  animation-range: entry 5% cover 25%;
+  animation-fill-mode: both;
+}
+
+/* Animacion de entrada y salida con scroll para Cards */
+
+@keyframes reveal  {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scroll-reveal {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+
+
+/* NAVBAR ANIMATION */
+
+nav {	
+  z-index: 100;
+  color:white;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  font-size: 12px;
+  background: rgba(2, 8, 23, 0.6);
+
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 350px;
+}
+
+@keyframes enhance-header{
+  to {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background: rgba(2, 8, 23, 0.4);
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+
+/* shooting stars */
+.noche {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: radial-gradient(ellipse at bottom, #020817e6 0%, #090a0f 100%); */
+  background-image: url("/noche.png");
+  background-size: contain;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.night {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateZ(45deg);
+  z-index: -1;
+}
+
+.shooting_star {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(-45deg, #5f91ff, rgba(0, 0, 255, 0));
+  border-radius: 999px;
+  filter: drop-shadow(0 0 6px #699bff);
+  animation: tail 3000ms ease-in-out infinite, shooting 3000ms ease-in-out infinite;
+}
+
+.shooting_star::before, .shooting_star::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(-45deg, rgba(0, 0, 255, 0), #5f91ff, rgba(0, 0, 255, 0));
+  transform: translateX(50%) rotateZ(45deg);
+  border-radius: 100%;
+  animation: shining 3000ms ease-in-out infinite;
+}
+
+.shooting_star::after {
+  transform: translateX(50%) rotateZ(-45deg);
+}
+
+.shooting_star:nth-child(1) { top: 50%; left: 50%; animation-delay: 7606ms; }
+.shooting_star:nth-child(2) { top: 50%; left: 50%; animation-delay: 4683ms; }
+.shooting_star:nth-child(3) { top: 50%; left: 50%; animation-delay: 1003ms; }
+.shooting_star:nth-child(4) { top: 50%; left: 50%; animation-delay: 6762ms; }
+.shooting_star:nth-child(5) { top: 50%; left: 50%; animation-delay: 9624ms; }
+.shooting_star:nth-child(6) { top: 50%; left: 50%; animation-delay: 4318ms; }
+.shooting_star:nth-child(7) { top: 50%; left: 50%; animation-delay: 8534ms; }
+.shooting_star:nth-child(8) { top: 50%; left: 50%; animation-delay: 3880ms; }
+.shooting_star:nth-child(9) { top: 50%; left: 50%; animation-delay: 9274ms; }
+.shooting_star:nth-child(10) { top: 50%; left: 50%; animation-delay: 3279ms; }
+.shooting_star:nth-child(11) { top: 50%; left: 50%; animation-delay: 3713ms; }
+.shooting_star:nth-child(12) { top: 50%; left: 50%; animation-delay: 961ms; }
+.shooting_star:nth-child(13) { top: 50%; left: 50%; animation-delay: 7257ms; }
+.shooting_star:nth-child(14) { top: 50%; left: 50%; animation-delay: 5655ms; }
+.shooting_star:nth-child(15) { top: 50%; left: 50%; animation-delay: 7806ms; }
+.shooting_star:nth-child(16) { top: 50%; left: 50%; animation-delay: 5085ms; }
+.shooting_star:nth-child(17) { top: 50%; left: 50%; animation-delay: 698ms; }
+.shooting_star:nth-child(18) { top: 50%; left: 50%; animation-delay: 8208ms; }
+.shooting_star:nth-child(19) { top: 50%; left: 50%; animation-delay: 9823ms; }
+.shooting_star:nth-child(20) { top: 50%; left: 50%; animation-delay: 3742ms; }
+
+@keyframes tail {
+  0%, 100% { width: 0; }
+  30% { width: 100px; }
+}
+
+@keyframes shining {
+  0%, 100% { width: 0; }
+  50% { width: 30px; }
+}
+
+@keyframes shooting {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(300px); }
 }

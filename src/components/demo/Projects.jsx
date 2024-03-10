@@ -6,8 +6,8 @@ import {
     CardTitle,
   } from "@/components/ui/card";
   import { Badge } from "@/components/ui/badge";
-  import Clinica from "../../../public/clinica.jpg"
-  import Angin from "../../../public/angin.png"
+  import Clinica from "/clinica.jpg"
+  import Angin from "/angin.png"
   
   function Projects() {
     // Reemplazar con los datos reales de los proyectos

@@ -46,9 +46,9 @@ function SkillsCards() {
 
   // Renderizado de cada card utilizando map
   return (
-    <div className="grid grid-cols-2 gap-4 p-4">
+    <div className="flex flex-col md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 gap-4">
       {skillsData.map((skill, index) => (
-        <Card key={index}>
+        <Card className="h-auto" key={index}>
           <div className="mt-4 ml-6">{skill.icon}</div>
           <CardHeader>
             <CardTitle>{skill.title}</CardTitle>
