@@ -1,12 +1,16 @@
 import axios from "axios";
 
-/* const API_KEY = import.meta.env.VITE_NEWS_API_KEY; */
-const API_KEY = "f2b8804ca23e402081c6d4eb42465a47";
+const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 
 const fetchNews = async () => {
   try {
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=ar&category=technology&apiKey=${API_KEY}`
+      `https://newsapi.org/v2/top-headlines?country=us&category=technology`,
+      {
+        headers: {
+          'X-Api-Key': API_KEY,
+        },
+      }
     );
     return response.data.articles;
   } catch (error) {
