@@ -1,5 +1,7 @@
+// hooks/useNews.js
+
 import { useState, useEffect } from "react";
-import { fetchNews } from "@/services/newsApi";
+import { fetchNews } from "../../api/fetchNews";
 
 const useNews = () => {
   const [news, setNews] = useState([]);
@@ -7,18 +9,23 @@ const useNews = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const storedNews = getCachedNews();
+      try {
+        const storedNews = getCachedNews();
 
-      if (storedNews.length > 0) {
-        setNews(storedNews);
-      } else {
-        const newsData = await fetchNews();
-        setNews(newsData);
-        setCachedNews(newsData);
+        if (storedNews.length > 0) {
+          setNews(storedNews);
+        } else {
+          const newsData = await fetchNews();
+          setNews(newsData);
+          setCachedNews(newsData);
+        }
+      } catch (error) {
+        console.error("Error fetching news:", error);
       }
     };
 
-    const getCachedNews = () => JSON.parse(sessionStorage.getItem("cachedNews")) || [];
+    const getCachedNews = () =>
+      JSON.parse(sessionStorage.getItem("cachedNews")) || [];
 
     const setCachedNews = (data) => {
       sessionStorage.setItem("cachedNews", JSON.stringify(data));

@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 import useNews from "@/hooks/useNews";
 
 const News = () => {
   const { news, currentIndex, showNewsByIndex } = useNews();
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const showNextNews = () => {
     showNewsByIndex((currentIndex + 1) % news.length);
@@ -15,9 +16,29 @@ const News = () => {
     showNewsByIndex(newIndex);
   };
 
+  useEffect(() => {
+    const checkRequestLimit = async () => {
+      // Hacer una solicitud para verificar el límite de solicitudes
+      const response = await fetch("URL_PARA_VERIFICAR_LIMITE", {
+        headers: {
+          "X-Api-Key": "TU_API_KEY", // Reemplaza con tu clave de API
+        },
+      });
+
+      if (!response.ok) {
+        setErrorMessage("Se ha superado el límite de solicitudes hoy.");
+      }
+    };
+
+    checkRequestLimit();
+  }, []); // Se ejecuta solo una vez al montar el componente
+
   return (
     <section className="p-4 block">
       <h2 className="text-lg font-semibold text-center">Noticias Tech</h2>
+      {errorMessage && (
+        <div className="mb-4 font-semibold dark:font-normal">{errorMessage}</div>
+      )}
       {news.length > 0 && (
         <div className="flex flex-col justify-between h-full">
           <div className="flex mb-4">
