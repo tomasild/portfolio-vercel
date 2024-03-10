@@ -26,20 +26,20 @@ function About() {
         </div>
       </div>
       <div className="flex w-full space-x-2 p-4">
-        <Button
-          variant="secondary"
-          className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
+        <Link
+          to="/aboutOpen"
+          className="w-full"
+          aria-label="Saber más sobre mi"
+          role="link"
+          tabIndex="0"
         >
-          <Link
-            to="/aboutOpen"
-            className=""
-            aria-label="Saber más sobre mi"
-            role="link"
-            tabIndex="0"
+          <Button
+            variant="secondary"
+            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
           >
             Saber más sobre mi
-          </Link>
-        </Button>
+          </Button>
+        </Link>
         <ThemeToggle />
       </div>
     </div>

@@ -83,7 +83,8 @@ function AboutOpen() {
         </p>
       </div>
       <div className="flex space-x-4 p-4 text-white pt-12 ">
-        <Button variant="secondary"  className="flex w-full text-white  bg-accent hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button>
+        {/* <Button variant="secondary"  className="flex w-full text-white  bg-accent hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button> */}
+        <p className="flex w-full -tracking-wider justify-end text-black dark:text-white font-semibold">tomas.ild.work@gmail.com</p>
         <div className="flex justify-evenly w-full items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
