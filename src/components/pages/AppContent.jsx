@@ -39,9 +39,9 @@ function AppContent() {
                   <PiGearFineBold className="text-[8rem] text-accent absolute -bottom-10 -right-1 animate-spin-slow z-10 dark:text-white" />
                   <PiGearFineBold className="text-[7rem] text-accent absolute bottom-10 -right-16 animate-spin-reverse z-10 dark:text-white" />
                 </Card>
-                <Card className="col-span-2 row-span-2 col-start-3 row-start-6 border border-accent dark:border-white  neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm overflow-hidden">
+                {/* <Card className="col-span-2 row-span-2 col-start-3 row-start-6 border border-accent dark:border-white  neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm overflow-hidden">
                   <News />
-                </Card>
+                </Card> */}
                 <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-accent dark:border-white overflow-y-scroll rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <Formacion />
                 </Card>
@@ -71,9 +71,9 @@ function AppContent() {
                     <PiGearFineBold className="text-[8rem] dark:text-white absolute -bottom-10 -right-1 animate-spin-slow z-10" />
                     <PiGearFineBold className="text-[7rem] dark:text-white absolute bottom-10 -right-16 animate-spin-reverse z-10" />
                   </div>
-                  <div className=" flex justify-center items-center scroll-reveal">
+                  {/* <div className=" flex justify-center items-center scroll-reveal">
                     <News />
-                  </div>
+                  </div> */}
                   <div
                     className=" overflow-y-scroll rounded-r-md scroll-reveal"
                     id="educacion"
