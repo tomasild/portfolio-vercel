@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { TiArrowBack } from "react-icons/ti";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import Profile from "/profile.jpg";
+import Profile from "/profile.webp";
 import { FaRegLaughBeam } from "react-icons/fa";
 import { LuFileSymlink } from "react-icons/lu";
 import {
@@ -32,7 +32,7 @@ function AboutOpen() {
         variant="secondary"
         onClick={() => navigate(-1)}
         aria-label="Volver atrás"
-        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-40 hover:border-none hover:bg-primary"
+        className="fixed top-0 left-0 m-4 z-50 text-white bg-accent border border-white border-opacity-40 hover:border-none hover:bg-primary transition-all duration-300"
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
@@ -40,31 +40,33 @@ function AboutOpen() {
         <img
           src={Profile}
           alt="Tomás Langer posando"
-          className="rounded-xl w-36 h-auto lg:w-44 mb-4"
+          className="rounded-xl w-36 h-auto lg:w-44 mb-4 "
         />
-        <h1 className="text-black dark:text-white text-2xl font-semibold">¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span></h1>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4">
+        <h1 className="text-black dark:text-white text-2xl font-semibold ">
+          ¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span>
+        </h1>
+        <p className="text-sm text-black dark:text-white py-4 ">
           Soy desarrollador web con un gran interés general por la tecnología e
           innovación . Me metí en el desarrollo web porque me gusta mucho la
           idea de convertir los conceptos e ideas en proyectos reales,
           especialmente cuando se trata de hacer sitios web accesibles,
           optimizados y con animaciones atractivas.
         </p>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
-          Antes de sumergirme en el código, estuve inmerso en el área el
+        <p className="text-sm text-black dark:text-white py-4">
+          Antes de sumergirme en el código, estuve inmerso en el área de
           marketing y ventas por más de tres años. Allí aprendí un montón sobre
           trabajar en equipo, proporcionar una excelente experiencia y
           satisfacer las necesidades de los usuarios, resolver conflictos,
           priorizar tareas, entre otras cosas, lo que me viene de maravilla
           ahora que soy desarrollador.
         </p>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
+        <p className="text-sm text-black dark:text-white py-4 scroll-reveal">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
-          eventos tecnológicos, charlas, etc para estar siempre al tanto de las
+          eventos tecnológicos, charlas, etc., para estar siempre al tanto de las
           últimas novedades e innovaciones del área.
         </p>
-        <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal scroll-scale">
+        <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal">
           {badges.map((badge, index) => (
             <div
               key={index}
@@ -75,16 +77,18 @@ function AboutOpen() {
             </div>
           ))}
         </div>
-        <p className="text-md font-medium dark:font-normal text-black dark:text-white py-4 scroll-reveal">
+        <p className="text-sm text-black dark:text-white py-4 scroll-reveal">
           En pocas palabras, me gusta combinar mi trabajo en desarrollo web con
           mis intereses personales. Busco constantemente aprender y mejorar,
           manteniendo un ambiente relajado y divertido tanto en lo profesional
           como en lo personal.
         </p>
       </div>
-      <div className="flex space-x-4 p-4 text-white pt-12 ">
+      <div className="flex space-x-4 p-4 text-white pt-12 animate-fadeIn">
         {/* <Button variant="secondary"  className="flex w-full text-white  bg-accent hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button> */}
-        <p className="flex w-full -tracking-wider justify-end text-black dark:text-white font-semibold">tomas.ild.work@gmail.com</p>
+        <p className="flex w-full -tracking-wider justify-end text-black dark:text-white font-semibold">
+          tomas.ild.work@gmail.com
+        </p>
         <div className="flex justify-evenly w-full items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
@@ -92,7 +96,10 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size="32px" className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"/>
+            <FaLinkedin
+              size="32px"
+              className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"
+            />
           </a>
           <a
             href="https://github.com/tomasild"
@@ -100,7 +107,10 @@ function AboutOpen() {
             rel="noopener noreferrer"
             aria-label="GitHub"
           >
-            <FaGithubSquare size="32px" className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"/>
+            <FaGithubSquare
+              size="32px"
+              className="cursor-pointer bg-accent hover:text-accent hover:bg-white dark:text-white dark:hover:text-accent"
+            />
           </a>
         </div>
       </div>

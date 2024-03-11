@@ -25,7 +25,7 @@ export function ExpAndProjects() {
         loop: true,
       }}
     >
-      <h2 className="text-center font-semibold text-lg pb-4">Experiencia</h2>
+      <h2 className="text-center font-semibold text-lg pb-2">Experiencia</h2>
       <CarouselContent>
         {projectsData.map((project, index) => (
           <CarouselItem
@@ -37,11 +37,9 @@ export function ExpAndProjects() {
               <CardContent
                 className={`relative aspect-square ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg border`}
               >
-                {/* Agregar la lógica para mostrar la imagen del proyecto */}
-                <img src={project.imagen} alt={project.title} />
               </CardContent>
-              <div className="mt-2">
-                <h3 className="font-bold text-center tracking-wide">
+              <div className="pt-1">
+                <h3 className="font-semibold text-center tracking-wide">
                   {project.title}
                 </h3>
                 <p className="text-sm text-center">{project.subtitle}</p>

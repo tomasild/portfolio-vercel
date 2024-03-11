@@ -4,10 +4,10 @@ export const projectsData = [
   {
     title: "Groovelist",
     subtitle: "Streaming de Música",
-    imagen: "/groovelist.png",
-    imagen2: "/groovelist2.png",
-    imagen3: "/groovelist3.png",
-    imagen_mobile: "/groovelist-mobile.png",
+    imagen: "/groovelist.webp",
+    imagen2: "/groovelist2.webp",
+    imagen3: "/groovelist3.webp",
+    imagen_mobile: "/groovelist-mobile.webp",
     bgClass: "bg-groovelist",
     descripcion1:
       "Mi experiencia en Groovelist fue fundamental para potenciar una plataforma que va más allá del simple streaming de música, centrándose en el licensing musical. Durante mi tiempo en el equipo, tuve el honor de liderar la migración del frontend, contribuyendo significativamente al éxito continuo de la plataforma.",
@@ -32,16 +32,16 @@ export const projectsData = [
       "Axios",
     ],
     codigoURL:
-      "https://github.com/GrooveList/frontend-groovelist-react/tree/tomas-dev",
+      "",
     demoURL: "",
   },
   {
     title: "Angin",
     subtitle: "Destiladora de gin",
-    imagen: "/angin.png",
-    imagen2: "/angin2.png",
-    imagen3: "/angin3.png",
-    imagen_mobile: "/angin-mobile.png",
+    imagen: "/angin.webp",
+    imagen2: "/angin2.webp",
+    imagen3: "/angin3.webp",
+    imagen_mobile: "/angin-mobile.webp",
     bgClass: "bg-angin",
     descripcion1:
       "Mi contribución en Angin se enfocó en el desarrollo web, iniciando la implementación de WordPress solicitado por el cliente para destacar la destiladora de gin artesanal. Utilicé WordPress, CSS y HTML para mejorar la presencia en línea y proporcionar una experiencia accesible.",
@@ -56,10 +56,10 @@ export const projectsData = [
   {
     title: "Proesthetic Fit",
     subtitle: "Clínica estética integral",
-    imagen: "/clinica.jpg",
-    imagen2: "/clinica2.png",
-    imagen3: "/clinica3.png",
-    imagen_mobile: "/clinica-mobile.png",
+    imagen: "/clinica.webp",
+    imagen2: "/clinica2.webp",
+    imagen3: "/clinica3.webp",
+    imagen_mobile: "/clinica-mobile.webp",
     bgClass: "bg-proesthetic-fit",
     descripcion1:
       "En mi rol en Proesthetic Fit, me centré en el desarrollo web para fortalecer la presencia en línea de la clínica estética integral. Utilicé HTML, CSS y JavaScript, junto con Bootstrap, para crear un sitio web interactivo y visualmente atractivo.",

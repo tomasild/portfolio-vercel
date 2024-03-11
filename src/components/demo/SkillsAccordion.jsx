@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { IoLogoReact, IoServer, IoPeople, IoBuild } from "react-icons/io5";
 import { skillsData } from "@/data/skills";
 
+
 export function SkillsAccordion() {
   return (
     <Accordion type="single" collapsible className="w-full z-50">

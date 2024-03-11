@@ -1,31 +1,46 @@
 import React from "react";
-import Profile from "/profile.jpg";
+import Profile from "/profile.webp";
 import { Link } from "react-router-dom";
 import ThemeToggle from "@/components/demo/ThemeToggle";
 import { Button } from "@/components/ui/button";
+
 function About() {
   return (
-    <div className="w-full">
-      <div className="w-full lg:flex p-4 lg:space-x-4">
+    <article className="w-full">
+      <header className="w-full md:block lg:block xl:flex p-4 space-x-4">
         <img
-          src={Profile} // Reemplaza con la ruta de tu imagen
-          alt="Tomás Langer"
+          src={Profile}
+          alt="Tomás Langer - Desarrollador Web"
           className="rounded-xl w-44 h-44 lg:w-32 lg:h-32 mb-4 mx-auto"
         />
         <div className="flex flex-col">
-          <h1 className="text-xl font-semibold">
-            Hola, soy <span className="font-bold text-primary">Tomás</span>
-          </h1>
-          <p className="text-sm  font-semibold dark:font-normal">
-            Desarrollador web de Valparaíso, Chile, con 6 meses de experiencia
-            en Frontend. Especializado en accesibilidad y creación de
-            experiencias atractivas para proporcionar una excelente experiencia
-            al usuario. Fusiono mi pasión por el desarrollo web con un enfoque
-            auténtico y significativo.
+          <h1 className="text-lg font-semibold">Hola, soy Tomás</h1>
+          <p className="text-sm">
+            <strong className="text-primary" g>
+              Desarrollador web
+            </strong>{" "}
+            de Valparaíso, Chile, con
+            <strong className="text-primary">
+              {" "}
+              6 meses de experiencia
+            </strong>{" "}
+            como
+            <strong className="text-primary"> Frontend Developer</strong>.
+            Especializado en
+            <strong className="text-primary">accesibilidad</strong> y creación
+            de
+            <strong className="text-primary">
+              {" "}
+              experiencias atractivas
+            </strong>{" "}
+            para proporcionar una excelente
+            <strong className="text-primary"> experiencia al usuario</strong>.
+            Fusiono mi pasión por el desarrollo web con un enfoque auténtico y
+            significativo.
           </p>
         </div>
-      </div>
-      <div className="flex w-full space-x-2 p-4">
+      </header>
+      <section className="flex w-full space-x-2 p-4">
         <Link
           to="/aboutOpen"
           className="w-full"
@@ -41,8 +56,8 @@ function About() {
           </Button>
         </Link>
         <ThemeToggle />
-      </div>
-    </div>
+      </section>
+    </article>
   );
 }
 

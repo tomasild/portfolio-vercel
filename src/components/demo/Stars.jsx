@@ -1,12 +1,12 @@
 import React, { useMemo } from "react";
 
 const Stars = () => {
-  const numStars = 20;
+  const numStars = 15;
 
-  const getRandomPosition = () => ({
+  const getRandomPosition = useMemo(() => () => ({
     top: `${Math.random() * 100}%`,
     left: `${Math.random() * 100}%`,
-  });
+  }), []);
 
   const stars = useMemo(
     () =>
@@ -14,7 +14,10 @@ const Stars = () => {
         <div
           key={index}
           className="shooting_star"
-          style={getRandomPosition()}
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
         ></div>
       )),
     [numStars]

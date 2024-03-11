@@ -32,11 +32,11 @@ function ProjectsOpen() {
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
-      <div className="block h-auto items-center justify-center p-4 pb-0 tracking-wider text-pretty">
-        <div className="w-full h-auto mb-4 aspect-w-16 aspect-h-9 tracking-wider text-pretty">
-        <h1 className="text-black dark:text-white text-2xl font-semibold text-center">
+      <article className="block h-auto items-center justify-center p-4 pb-0 tracking-wider text-pretty">
+        <h1 className="text-black dark:text-white text-2xl font-semibold text-center mb-4">
           {projectData.title}
         </h1>
+        <div className="w-full h-auto aspect-w-16 aspect-h-9 tracking-wider text-pretty">
           <img
             src={images[imageIndex]}
             alt={`Imagen ${imageIndex + 1}`}
@@ -55,26 +55,25 @@ function ProjectsOpen() {
             ))}
           </div>
         </div>
-        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">
-          {projectData.descripcion1}
-        </p>
-        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">
-          {projectData.descripcion2}
-        </p>
-        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">
-          {projectData.descripcion3}
-        </p>
+        <section className="py-2">
+          {[projectData.descripcion1, projectData.descripcion2, projectData.descripcion3].map((descripcion, index) => (
+            <p key={index} className="text-sm text-black dark:text-white py-2">
+              {descripcion}
+            </p>
+          ))}
+        </section>
         <img
           className="w-[60%] h-auto mx-auto py-2"
           src={projectData.imagen_mobile}
-          alt="vista de la app en un dispositivo movil"
+          alt="vista de la app en un dispositivo móvil"
         />
-        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">
-          {projectData.descripcion4}
-        </p>
-        <p className="text-sm font-medium dark:font-normal text-black dark:text-white py-2">
-          {projectData.descripcion5}
-        </p>
+        <section className="py-2">
+          {[projectData.descripcion4, projectData.descripcion5].map((descripcion, index) => (
+            <p key={index} className="text-sm text-black dark:text-white py-2">
+              {descripcion}
+            </p>
+          ))}
+        </section>
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (
             <Badge
@@ -107,7 +106,7 @@ function ProjectsOpen() {
             </Button>
           )}
         </div>
-      </div>
+      </article>
     </main>
   );
 }

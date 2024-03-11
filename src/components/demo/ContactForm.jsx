@@ -10,7 +10,7 @@ function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true); // Activar indicador de carga
+    setIsLoading(true);
     const formData = new FormData(e.target);
 
     fetch("https://formsubmit.co/ajax/tomas.ild.work@gmail.com", {
@@ -23,48 +23,47 @@ function ContactForm() {
     })
       .then((response) => response.json())
       .then((data) => {
-        setIsLoading(false); // Desactivar indicador de carga
+        setIsLoading(false);
         if (data.success) {
           setMessage("Mensaje enviado con éxito.");
         } else {
           setMessage("Hubo un error al enviar el mensaje.");
         }
-        // Limpia los campos del formulario
         e.target.reset();
-        // Limpia el mensaje después de 10 segundos
         setTimeout(() => setMessage(""), 10000);
       })
       .catch(() => {
-        setIsLoading(false); // Desactivar indicador de carga en caso de error
+        setIsLoading(false);
         setMessage("Hubo un error al enviar el mensaje.");
-        // Limpia el mensaje después de 10 segundos
         setTimeout(() => setMessage(""), 10000);
       });
   };
 
   return (
     <form
-      className="w-full px-4 py-2 space-y-2 overflow-y-hidden z-50 lg:absolute pb-16 lg:pb-0"
+      className="w-full px-4 py-2 space-y-2 overflow-y-hidden z-50 contact-form"
       onSubmit={handleSubmit}
     >
-      <h2 className="font-semibold text-center text-lg">Contáctame</h2>
+      <h2 className="font-semibold text-center text-lg form-heading">
+        Contáctame
+      </h2>
       <Input
-        className="border-gray-500"
+        className="border-gray-400 hidden"
         type="hidden"
         name="_captcha"
         value="false"
       />
       <Input
-        className="border-gray-500"
+        className="border-gray-400 hidden"
         type="hidden"
         name="_next"
-        value="https://tusitio.com/gracias.html"
+        value="https://www.tomasild.com/"
       />
-      <div className="flex space-x-4 pt-5 lg:pt-3">
-        <div className="flex flex-col w-full space-y-1">
+      <div className="flex space-x-2 pt-5 lg:pt-3 form-fields">
+        <div className="flex flex-col w-full space-y-1 form-field">
           <label htmlFor="name">Nombre</label>
           <Input
-            className="border-gray-700"
+            className="border-gray-400"
             type="text"
             id="name"
             name="name"
@@ -72,10 +71,10 @@ function ContactForm() {
           />
         </div>
 
-        <div className="flex flex-col w-full space-y-1">
+        <div className="flex flex-col w-full space-y-1 form-field">
           <label htmlFor="email">Email</label>
           <Input
-            className="border-gray-700"
+            className="border-gray-400"
             type="email"
             id="email"
             name="email"
@@ -83,22 +82,33 @@ function ContactForm() {
           />
         </div>
       </div>
-      <div className="space-y-1">
+      <div className="space-y-1 form-field">
         <label htmlFor="message">Mensaje</label>
         <Textarea
-          className="border-gray-700"
+          className="border-gray-400"
           id="message"
           name="message"
           required
         ></Textarea>
       </div>
 
-      <div className="flex justify-between">
-        <Button variant="secondary" className="w-full mt-2 py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary" type="submit" disabled={isLoading}>
-        {isLoading ? <Loader2 className="h-4 w-4 mr-2 animate-spin font-bold" /> : <Mail className="h-4 w-4 mr-2 font-bold" />}
+      <div className="flex justify-between form-actions">
+        <Button
+          variant="secondary"
+          className={`w-full mt-2 py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary${
+            isLoading ? " disabled" : ""
+          }`}
+          type="submit"
+          disabled={isLoading}
+        >
+          {isLoading ? (
+            <Loader2 className="h-4 w-4 mr-2 animate-spin font-bold" />
+          ) : (
+            <Mail className="h-4 w-4 mr-2 font-bold" />
+          )}
           {isLoading ? "Enviando..." : "Enviar"}
         </Button>
-        {message && <p className="text-left ml-3">{message}</p>}
+        {message && <p className="text-left ml-3 form-message">{message}</p>}
       </div>
     </form>
   );

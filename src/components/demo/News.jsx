@@ -57,7 +57,7 @@ const News = () => {
           </div>
         </div>
       )}
-      <div className="flex space-x-4">
+      <div className="flex space-x-2">
         <Button
           className="py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary w-full flex items-center justify-center"
           variant="secondary"

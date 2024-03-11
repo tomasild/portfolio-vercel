@@ -57,9 +57,9 @@ export function Formacion() {
           {formacionData.map((item, index) => (
             <TableRow key={index} className="border-gray-400">
               
-              <TableCell style={{ verticalAlign: 'top' }} className="font-bold dark:font-semibold">{item.title}</TableCell>
-              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed font-semibold dark:font-normal w-[90%] lg:w-auto xl:w-auto text-pretty text-sm">{item.description}</TableCell>
-              <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed font-semibold dark:font-normal">
+              <TableCell style={{ verticalAlign: 'top' }} className="font-semibold">{item.title}</TableCell>
+              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed  w-[90%] lg:w-auto xl:w-auto text-pretty">{item.description}</TableCell>
+              <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed">
                 {item.year || "-"}
               </TableCell>
             </TableRow>
