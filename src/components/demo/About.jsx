@@ -26,8 +26,8 @@ function About() {
             </strong>{" "}
             como
             <strong className="text-primary"> Frontend Developer</strong>.
-            Especializado en
-            <strong className="text-primary">accesibilidad</strong> y creación
+            Especializandome en
+            <strong className="text-primary"> accesibilidad</strong> y creación
             de
             <strong className="text-primary">
               {" "}
@@ -35,7 +35,7 @@ function About() {
             </strong>{" "}
             para proporcionar una excelente
             <strong className="text-primary"> experiencia al usuario</strong>.
-            Fusiono mi pasión por el desarrollo web con un enfoque auténtico y
+            Combino mi gusto por el desarrollo web con un enfoque auténtico y
             significativo.
           </p>
         </div>
