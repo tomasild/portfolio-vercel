@@ -13,7 +13,6 @@ import Layout from "@/components/layout/Layout";
 import { Novatrix, Velustro, Tranquiluxe } from "uvcanvas";
 import Stars from "@/components/demo/Stars";
 import { HashLink as Link } from "react-router-hash-link";
-import News from "../demo/News";
 
 function AppContent() {
   const { theme } = useTheme() || {};
@@ -32,14 +31,11 @@ function AppContent() {
                 <Card className="col-span-2 row-span-4 col-start-1 row-start-4 container flex justify-center items-center border border-accent dark:border-white neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <ExpAndProjects />
                 </Card>
-                <Card className="relative col-span-2 row-span-5 col-start-3 row-start-1 flex w-full h-full p-4 border border-accent dark:border-white overflow-y-auto overflow-x-hidden neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
-                  <SkillsAccordion />
-                </Card>
-                <Card className="col-span-2 row-span-2 col-start-3 row-start-6 border border-accent dark:border-white  neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm overflow-hidden">
-                  <News />
-                </Card>
-                <Card className="col-span-2 row-span-4 col-start-5 row-start-1 border border-accent dark:border-white overflow-y-scroll rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
+                <Card className="relative col-span-2 row-span-7 col-start-3 row-start-1 flex w-full h-full p-4 border border-accent dark:border-white overflow-y-auto overflow-x-hidden neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <Formacion />
+                </Card>
+                <Card className="col-span-2 p-4 row-span-4 col-start-5 row-start-1 border border-accent dark:border-white overflow-y-scroll rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
+                  <SkillsAccordion />
                 </Card>
                 <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-accent dark:border-white overflow-y-scroll rounded-r-md z-50 neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <ContactForm />
@@ -48,7 +44,7 @@ function AppContent() {
 
               {/* MOBILE */}
               <Layout>
-                <div className="block w-full h-full space-y-16 lg:hidden bg-white bg-opacity-20 dark:bg-custom_bg1 dark:text-white">
+                <div className="block w-full h-full space-y-16 lg:hidden bg-white bg-opacity-30 dark:bg-custom_bg1 dark:text-white">
                   <div className="flex" id="sobre-mi">
                     <About />
                   </div>
@@ -63,9 +59,6 @@ function AppContent() {
                     id="skills"
                   >
                     <SkillsAccordion />
-                  </div>
-                  <div className=" flex justify-center items-center scroll-reveal">
-                    <News />
                   </div>
                   <div
                     className=" overflow-y-scroll rounded-r-md scroll-reveal"

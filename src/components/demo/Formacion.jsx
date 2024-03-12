@@ -43,23 +43,23 @@ const formacionData = [
 
 export function Formacion() {
   return (
-    <section className="p-4">
+    <section className="">
       <h2 className="text-lg leading-relaxed font-semibold text-center pb-4">Formación</h2>
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Nombre</TableHead>
-            <TableHead>Descripción</TableHead>
-            <TableHead className="text-right">Año</TableHead>
+            <TableHead className="text-primary font-bold dark:text-white">Nombre</TableHead>
+            <TableHead className="text-primary font-bold dark:text-white">Descripción</TableHead>
+            <TableHead  className="text-primary font-bold dark:text-white text-right">Año</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {formacionData.map((item, index) => (
             <TableRow key={index} className="border-gray-400">
               
-              <TableCell style={{ verticalAlign: 'top' }} className="font-semibold">{item.title}</TableCell>
-              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed  w-[90%] lg:w-auto xl:w-auto text-pretty">{item.description}</TableCell>
-              <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed">
+              <TableCell style={{ verticalAlign: 'top' }} className="font-semibold py-4">{item.title}</TableCell>
+              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed  w-[90%] lg:w-auto xl:w-auto text-pretty py-4">{item.description}</TableCell>
+              <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed py-4">
                 {item.year || "-"}
               </TableCell>
             </TableRow>

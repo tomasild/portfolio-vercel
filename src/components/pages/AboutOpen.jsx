@@ -13,6 +13,7 @@ import {
   GiDogBowl,
   GiBookmark,
 } from "react-icons/gi";
+import CV from "/cv-tomasild.pdf";
 
 function AboutOpen() {
   const navigate = useNavigate();
@@ -43,7 +44,8 @@ function AboutOpen() {
           className="rounded-xl w-36 h-auto lg:w-44 mb-4 "
         />
         <h1 className="text-black dark:text-white text-2xl font-semibold ">
-          ¡Hola!, soy <span className="font-bold text-primary">Tomás Langer</span>
+          ¡Hola!, soy{" "}
+          <span className="font-bold text-primary">Tomás Langer</span>
         </h1>
         <p className="text-sm text-black dark:text-white py-4 ">
           Soy desarrollador web con un gran interés general por la tecnología e
@@ -63,8 +65,8 @@ function AboutOpen() {
         <p className="text-sm text-black dark:text-white py-4 scroll-reveal">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
-          eventos tecnológicos, charlas, etc., para estar siempre al tanto de las
-          últimas novedades e innovaciones del área.
+          eventos tecnológicos, charlas, etc., para estar siempre al tanto de
+          las últimas novedades e innovaciones del área.
         </p>
         <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal">
           {badges.map((badge, index) => (
@@ -85,11 +87,20 @@ function AboutOpen() {
         </p>
       </div>
       <div className="flex space-x-4 p-4 text-white pt-12 animate-fadeIn">
-        {/* <Button variant="secondary"  className="flex w-full text-white  bg-accent hover:bg-primary"><LuFileSymlink className="mr-2 w-5 h-5 font-bold"/> Abrir CV</Button> */}
-        <p className="flex w-full -tracking-wider justify-end text-black dark:text-white font-semibold">
-          tomas.ild.work@gmail.com
-        </p>
-        <div className="flex justify-evenly w-full items-center">
+        <Button
+          variant="secondary"
+          className="flex w-[80%] text-white bg-accent hover:bg-primary"
+        >
+          <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center"
+          >
+            <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
+          </a>
+        </Button>
+        <div className="flex justify-evenly w-[40%] items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
             target="_blank"
