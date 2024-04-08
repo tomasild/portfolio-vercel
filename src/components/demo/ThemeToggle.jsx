@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
-  const themeOrder = ["dark", "light"];
+  const themeOrder = ["light", "dark"];
 
   const toggleTheme = () => {
     const currentIndex = themeOrder.indexOf(theme);
@@ -16,20 +16,20 @@ const ThemeToggle = () => {
   return (
     <Button
       variant="primary"
-      className={`cursor-pointer p-2 flex neon rounded-md ${
-        theme === "light" ? "bg-accent text-white" : "bg-white text-black"
+      className={`cursor-pointer p-2 flex rounded-md ${
+        theme === "light" ? "bg-transparent border-2 border-black text-black" : "bg-white bg-opacity-70 text-black"
       }`} // Clases dinamicas
       onClick={toggleTheme}
     >
       {theme === "light" ? (
         <>
           <IoIosMoon size={20} /> 
-          <span className="ml-2">Modo oscuro</span> 
+          {/* <span className="ml-2">Modo oscuro</span>  */}
         </>
       ) : (
         <>
           <IoIosSunny size={25} /> 
-          <span className="ml-2">Modo claro</span> 
+          {/* <span className="ml-2">Modo claro</span>  */}
         </>
       )}
     </Button>

@@ -2,9 +2,9 @@
 
 export const skillsData = [
   {
-    icon: "Frontend",
+    icon: "frontend",
     title: "Frontend",
-    description: "Habilidades relacionadas con el desarrollo de la interfaz de usuario",
+    description: "",
     content: [
       "HTML5",
       "CSS3",
@@ -21,17 +21,17 @@ export const skillsData = [
     actual: ["Next.js","Jest", "React Native", "Three.js", "GSAP"],
   },
   {
-    icon: "Backend",
+    icon: "backend",
     title: "Backend",
     description: "",
-    content: [],
-    footer: "Desarrollando proyectos para aprender",
-    actual: ["Node.js", "Express", "PostgreSQL"],
+    content: ["Node.js", "Express", "PostgreSQL"],
+    footer: "",
+    actual: [],
   },
   {
-    icon: "Other Skills",
+    icon: "otherSkills",
     title: "Otras habilidades",
-    description: "Otras habilidades relevantes",
+    description: "",
     content: [
       "Git",
       "a11y (Accesibilidad)",
@@ -41,13 +41,13 @@ export const skillsData = [
       "Wordpress",
       "WooCommerce",
     ],
-    footer: "Planeando aprender",
-    actual: ["Integraciones de IA", "AWS", "Azure", "Web3"],
+    footer: "Desarrollando proyectos",
+    actual: ["Integraciones de IA con Node y HuggingFace", "Web3", "Blockchain"],
   },
   {
-    icon: "Soft Skills",
+    icon: "softSkills",
     title: "Habilidades blandas",
-    description: "Habilidades interpersonales y de comunicación",
+    description: "",
     content: [
       "Trabajo en equipo",
       "Comunicación efectiva",

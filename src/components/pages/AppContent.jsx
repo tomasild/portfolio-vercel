@@ -44,7 +44,7 @@ function AppContent() {
 
               {/* MOBILE */}
               <Layout>
-                <div className="block w-full h-full space-y-16 lg:hidden bg-white bg-opacity-30 dark:bg-custom_bg1 dark:text-white">
+                <div className="block w-full h-full space-y-16 lg:hidden bg-white bg-opacity-50 dark:bg-custom_bg1 dark:text-white">
                   <div className="flex" id="sobre-mi">
                     <About />
                   </div>

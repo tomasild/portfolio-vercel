@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
 const Stars = () => {
-  const numStars = 15;
+  const numStars = 10;
 
   const getRandomPosition = useMemo(() => () => ({
     top: `${Math.random() * 100}%`,

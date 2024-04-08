@@ -59,9 +59,9 @@ function ContactForm() {
         name="_next"
         value="https://www.tomasild.com/"
       />
-      <div className="flex space-x-2 pt-5 lg:pt-3 form-fields">
+      <div className="flex space-x-2 pt-4 lg:pt-0 form-fields">
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="name">Nombre</label>
+          <label htmlFor="name" className="text-sm">Nombre</label>
           <Input
             className="border-gray-400"
             type="text"
@@ -72,7 +72,7 @@ function ContactForm() {
         </div>
 
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className="text-sm">Email</label>
           <Input
             className="border-gray-400"
             type="email"
@@ -83,7 +83,7 @@ function ContactForm() {
         </div>
       </div>
       <div className="space-y-1 form-field">
-        <label htmlFor="message">Mensaje</label>
+        <label htmlFor="message" className="text-sm">Mensaje</label>
         <Textarea
           className="border-gray-400"
           id="message"

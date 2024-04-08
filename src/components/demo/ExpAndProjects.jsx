@@ -19,7 +19,7 @@ export function ExpAndProjects() {
 
   return (
     <Carousel
-      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[70%] xl:w-full p-4"
+      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[60%] xl:w-full xl:max-w-[50%] p-4"
       opts={{
         align: "start",
         loop: true,

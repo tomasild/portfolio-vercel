@@ -3,6 +3,9 @@ import Profile from "/profile.webp";
 import { Link } from "react-router-dom";
 import ThemeToggle from "@/components/demo/ThemeToggle";
 import { Button } from "@/components/ui/button";
+import { IoNewspaper } from "react-icons/io5";
+import { LuFileSymlink } from "react-icons/lu";
+import CV from "/cv-tomasild.pdf";
 
 function About() {
   return (
@@ -40,21 +43,35 @@ function About() {
           </p>
         </div>
       </header>
-      <section className="flex w-full space-x-2 p-4">
-        <Link
-          to="/aboutOpen"
-          className="w-full"
-          aria-label="Saber más sobre mi"
-          role="link"
-          tabIndex="0"
-        >
+      <section className="flex px-4 space-x-2">
+          <Link
+            to="/aboutOpen"
+            className="w-full"
+            aria-label="Saber más sobre mi"
+            role="link"
+            tabIndex="0"
+          >
+            <Button
+              variant="secondary"
+              className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
+            >
+              <IoNewspaper className="mr-2" size={20} />
+              Conoce más sobre mí
+            </Button>
+          </Link>
           <Button
             variant="secondary"
-            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
+            className="flex w-full text-white bg-accent hover:bg-primary"
           >
-            Saber más sobre mi
+            <a
+              href={CV}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center"
+            >
+              <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
+            </a>
           </Button>
-        </Link>
         <ThemeToggle />
       </section>
     </article>
