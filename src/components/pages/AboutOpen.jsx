@@ -87,19 +87,20 @@ function AboutOpen() {
         </p>
       </div>
       <div className="flex space-x-4 p-4 text-white pt-12 animate-fadeIn">
-        <Button
-          variant="secondary"
-          className="flex w-[80%] text-white bg-accent hover:bg-primary"
+        <a
+          href={CV}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full"
         >
-          <a
-            href={CV}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center"
+          <Button
+            variant="secondary"
+            className="w-full text-white bg-accent hover:bg-primary"
           >
             <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
-          </a>
-        </Button>
+          </Button>
+        </a>
+
         <div className="flex justify-evenly w-[40%] items-center">
           <a
             href="https://www.linkedin.com/in/tomaslangerduran/"
