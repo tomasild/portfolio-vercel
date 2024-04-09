@@ -16,19 +16,21 @@ const ThemeToggle = () => {
   return (
     <Button
       variant="primary"
-      className={`cursor-pointer p-2 flex rounded-md ${
-        theme === "light" ? "bg-transparent border-2 border-black text-black" : "bg-white bg-opacity-70 text-black"
+      className={`cursor-pointer p-2 w-8 h-8 lg:w-full lg:h-full flex rounded-full ${
+        theme === "light"
+          ? "bg-black bg-opacity-60 text-white hover:bg-opacity-100"
+          : "bg-white bg-opacity-70 text-black hover:bg-opacity-100"
       }`} // Clases dinamicas
       onClick={toggleTheme}
     >
       {theme === "light" ? (
         <>
-          <IoIosMoon size={20} /> 
+          <IoIosMoon size={18} />
           {/* <span className="ml-2">Modo oscuro</span>  */}
         </>
       ) : (
         <>
-          <IoIosSunny size={25} /> 
+          <IoIosSunny size={18} />
           {/* <span className="ml-2">Modo claro</span>  */}
         </>
       )}

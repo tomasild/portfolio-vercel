@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { IoNewspaper } from "react-icons/io5";
 import { LuFileSymlink } from "react-icons/lu";
 import CV from "/cv-tomasild.pdf";
+import duck from "../../../public/duck.svg"
 
 const accent =
   "text-primary-foreground bg-primary px-1 mx-1 rounded-md dark:text-primary dark:bg-transparent dark:px-0";
@@ -27,7 +28,7 @@ function About() {
             <strong className={accent}>6 meses de experiencia</strong>
             como
             <strong className={accent}>Frontend Developer.</strong>
-            Especializándome en 
+            Especializándome en
             <strong className={accent}>accesibilidad</strong>y creación de
             <strong className={accent}>paginas modernas y atractivas</strong>
             para proporcionar una excelente
@@ -50,7 +51,7 @@ function About() {
             className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
           >
             <IoNewspaper className="mr-2" size={20} />
-            Conoce más sobre mí
+            Más sobre mí
           </Button>
         </Link>
         <a
@@ -66,7 +67,9 @@ function About() {
             <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
           </Button>
         </a>
-        <ThemeToggle />
+        <div className="flex-1 hidden sm:block lg:block md:block">
+          <ThemeToggle />
+        </div>
       </section>
     </article>
   );

@@ -180,14 +180,13 @@ p,span {
 
 
 /* NAVBAR ANIMATION */
-
 nav {	
   z-index: 100;
   color:white;
   position: sticky;
   top: 0px;
   left: 0px;
-  font-size: 12px;
+  font-size: 10px;
   background: rgba(2, 8, 23, 0.6);
 
   animation: enhance-header linear both;
@@ -195,15 +194,20 @@ nav {
   animation-range: 0 350px;
 }
 
+
+
 @keyframes enhance-header{
   to {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background: rgba(2, 8, 23, 0.4);
-    font-size: 10px;
+    font-size: 9px;
     color: rgba(255, 255, 255, 0.9);
   }
 }
+
+
+/* estrellas */
 
 .noche {
   position: fixed;
@@ -275,4 +279,23 @@ nav {
 @keyframes shooting {
   0% { transform: translateX(0); }
   100% { transform: translateX(300px); }
+}
+
+
+/*  Flip del pato */
+
+.flip-animation {
+  animation: flip 1s ease-in-out; /* Ajusta la duración y el tipo de animación según tus necesidades */
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
