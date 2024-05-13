@@ -14,31 +14,27 @@ const accent =
 function About() {
   return (
     <article className="w-full">
-      <header className="w-full md:block lg:block xl:flex p-4 space-x-4">
-        <img
-          src={Profile}
-          alt="Tomás Langer - Desarrollador Web"
-          className="rounded-xl w-44 h-44 lg:w-32 lg:h-32 mb-4 mx-auto"
-        />
-        <div className="flex flex-col">
-          <h1 className="text-lg font-semibold">Hola, soy Tomás</h1>
-          <p className="text-sm">
-            <strong className={accent}>Desarrollador web</strong>
-            de Chile, con
-            <strong className={accent}>6 meses de experiencia</strong>
-            como
-            <strong className={accent}>Frontend Developer.</strong>
-            Especializándome en
-            <strong className={accent}>accesibilidad</strong>y creación de
-            <strong className={accent}>paginas modernas y atractivas</strong>
-            para proporcionar una excelente
-            <strong className={accent}>experiencia al usuario.</strong>Combino
-            mi gusto por el desarrollo web con un enfoque auténtico y
-            significativo.
-          </p>
-        </div>
-      </header>
-      <section className="flex px-4 space-x-2">
+      <section className="w-full flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
+        <h1 className="md:text-sm lg:text-sm xl:text-sm font-semibold text-primary mb-2"><span className="text-black dark:text-white" >Bienvenido, soy</span> Tomás Langer Durán</h1>
+        <p className="text-sm lg:text-xs xl:text-sm xl:mt-1 text-pretty">
+          Desarrollador Frontend de Chile, me especializo en crear proyectos web modernos, accesibles y visualmente atractivos. Me apasiona la tecnología y estoy comprometido con la mejora continua.
+          <br /> Presiona abajo si quieres saber más
+        </p>
+      </section>
+      <section className="flex p-4 lg:mt-3 xl:mt-3 space-x-2">
+        <a
+          href={CV}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex w-full"
+        >
+          <Button
+            variant="secondary"
+            className="w-full text-white bg-accent hover:bg-primary text-xs"
+          >
+            <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
+          </Button>
+        </a>
         <Link
           to="/aboutOpen"
           className="w-full"
@@ -48,26 +44,13 @@ function About() {
         >
           <Button
             variant="secondary"
-            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary"
+            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary text-xs"
           >
             <IoNewspaper className="mr-2" size={20} />
             Más sobre mí
           </Button>
         </Link>
-        <a
-          href={CV}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex w-full"
-        >
-          <Button
-            variant="secondary"
-            className="w-full text-white bg-accent hover:bg-primary"
-          >
-            <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
-          </Button>
-        </a>
-        <div className="flex-1 hidden sm:block lg:block md:block">
+        <div className="flex-1 hidden sm:flex lg:flex md:flex">
           <ThemeToggle />
         </div>
       </section>
@@ -76,3 +59,10 @@ function About() {
 }
 
 export default About;
+
+
+{/* <img
+          src={Profile}
+          alt="Tomás Langer - Desarrollador Web"
+          className="rounded-xl w-1/2 h-1/2 md:w-1/3 md:h-1/3 lg:w-14 lg:h-14 xl:w-24 xl:h-24 mb-4 lg:mb-2 mx-auto"
+        /> */}

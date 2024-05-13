@@ -16,7 +16,7 @@ const ThemeToggle = () => {
   return (
     <Button
       variant="primary"
-      className={`cursor-pointer p-2 w-8 h-8 lg:w-full lg:h-full flex rounded-full ${
+      className={`cursor-pointer p-2 w-7 h-7 lg:w-9 lg:h-9 flex rounded-full ${
         theme === "light"
           ? "bg-black bg-opacity-60 text-white hover:bg-opacity-100"
           : "bg-white bg-opacity-70 text-black hover:bg-opacity-100"

@@ -59,22 +59,21 @@ function ContactForm() {
         name="_next"
         value="https://www.tomasild.com/"
       />
-      <div className="flex space-x-2 pt-4 lg:pt-0 form-fields">
+      <div className="flex space-x-2 pt-4 lg:pt-0 xl:pt-0 form-fields">
         <div className="flex flex-col w-full space-y-1 form-field">
           <label htmlFor="name" className="text-sm">Nombre</label>
           <Input
-            className="border-gray-400"
+            className="border-gray-400 border-opacity-70"
             type="text"
             id="name"
             name="name"
             required
           />
         </div>
-
         <div className="flex flex-col w-full space-y-1 form-field">
           <label htmlFor="email" className="text-sm">Email</label>
           <Input
-            className="border-gray-400"
+            className="border-gray-400 border-opacity-70"
             type="email"
             id="email"
             name="email"
@@ -85,7 +84,7 @@ function ContactForm() {
       <div className="space-y-1 form-field">
         <label htmlFor="message" className="text-sm">Mensaje</label>
         <Textarea
-          className="border-gray-400"
+          className="border-gray-400 border-opacity-70"
           id="message"
           name="message"
           required
@@ -95,9 +94,8 @@ function ContactForm() {
       <div className="flex justify-between form-actions">
         <Button
           variant="secondary"
-          className={`w-full mt-2 py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary${
-            isLoading ? " disabled" : ""
-          }`}
+          className={`w-full mt-2 py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary${isLoading ? " disabled" : ""
+            }`}
           type="submit"
           disabled={isLoading}
         >

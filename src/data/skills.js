@@ -14,11 +14,12 @@ export const skillsData = [
       "Redux toolkit",
       "Tailwind CSS",
       "Shadcn",
+      "NextUI",
       "Bootstrap",
       "Animaciones"
     ],
-    footer: "Enfocado en aprender",
-    actual: ["Next.js","Jest", "React Native", "Three.js", "GSAP"],
+    footer: "En proceso de aprendizaje",
+    actual: ["Next.js","Testing", "React Native", "Three.js"],
   },
   {
     icon: "backend",
@@ -42,7 +43,7 @@ export const skillsData = [
       "WooCommerce",
     ],
     footer: "Desarrollando proyectos",
-    actual: ["Integraciones de IA con Node y HuggingFace", "Web3", "Blockchain"],
+    actual: ["Integraciones de IA con Node y HuggingFace", "Web3", "Blockchain", "E-commerce",],
   },
   {
     icon: "softSkills",
@@ -54,6 +55,7 @@ export const skillsData = [
       "Propositivo",
       "Resolución de problemas",
       "Creativo",
+      "Detallista",
       "Responsable",
       "Proactivo",
       "Puntual",

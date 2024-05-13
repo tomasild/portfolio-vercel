@@ -3,7 +3,7 @@
 export const projectsData = [
   {
     title: "Groovelist",
-    subtitle: "Streaming de Música",
+    subtitle: "Startup de streaming y licencias musicales",
     imagen: "/groovelist.webp",
     imagen2: "/groovelist2.webp",
     imagen3: "/groovelist3.webp",

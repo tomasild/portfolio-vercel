@@ -37,7 +37,7 @@ export function SkillsAccordion() {
                         <li key={idx}>
                           <Badge
                             variant="destructive"
-                            className="bg-primary tracking-wide"
+                            className="bg-primary tracking-wide text-xs"
                           >
                             {item}
                           </Badge>

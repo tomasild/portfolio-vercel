@@ -14,16 +14,9 @@ const formacionData = [
   {
     icon: <FaDesktop />,
     title: "Frontend",
-    description: "Me especializo en el desarrollo frontend, donde adquiero habilidades esenciales como el uso de empaquetadores, design systems, testing, accesibilidad, entre otros. Actualmente, estoy cursando programas educativos en Platzi, @FaztCode y @midudev.",
+    description: "Me especializo en el desarrollo frontend, donde adquiero habilidades esenciales como el uso de empaquetadores, design systems, testing, accesibilidad, optimización, entre otros. Tengo interés en tecnologias como Three.js y microfrontends",
     details: "En curso: Cursos en Platzi, @FaztCode y @midudev",
-    year: "En curso: 2023",
-  },
-  {
-    icon: <FaBook />,
-    title: "Inglés",
-    description: "Actualmente perfeccionando mi inglés a través de clases particulares y complementando mi desarrollo con herramientas de estudio y aplicaciones especializadas",
-    details: "En curso: A partir de Enero del 2024",
-    year: "En curso: 2023",
+    year: "En curso",
   },
   {
     icon: <FaTerminal />,
@@ -31,6 +24,13 @@ const formacionData = [
     description: "Certificado del programa One de Alura Latam | Oracle Next Education",
     details: "Período: 2022-2023",
     year: "2022-2023",
+  },
+  {
+    icon: <FaBook />,
+    title: "Inglés",
+    description: "Actualmente mejorando mi nivel de inglés (B1) mediante clases particulares y aplicaciones especializadas",
+    details: "En curso: A partir de Enero del 2024",
+    year: "En curso",
   },
   {
     icon: <FaRocket />,
@@ -44,7 +44,7 @@ const formacionData = [
 export function Formacion() {
   return (
     <section className="">
-      <h2 className="text-lg leading-relaxed font-semibold text-center pb-4">Formación</h2>
+      <h2 className="text-lg leading-relaxed font-semibold text-center">Formación</h2>
       <Table>
         <TableHeader>
           <TableRow>
@@ -55,10 +55,9 @@ export function Formacion() {
         </TableHeader>
         <TableBody>
           {formacionData.map((item, index) => (
-            <TableRow key={index} className="border-gray-400">
-              
+            <TableRow key={index} className="border-gray-400 border-opacity-70">
               <TableCell style={{ verticalAlign: 'top' }} className="font-semibold py-4">{item.title}</TableCell>
-              <TableCell style={{ verticalAlign: 'top' }} className="text-sm leading-relaxed  w-[90%] lg:w-auto xl:w-auto text-pretty py-4">{item.description}</TableCell>
+              <TableCell style={{ verticalAlign: 'top' }} className="text-xs xl:text-sm leading-relaxed  w-[90%] lg:w-auto xl:w-auto text-pretty py-4">{item.description}</TableCell>
               <TableCell style={{ verticalAlign: 'top', textAlign: 'right' }} className="w-[20%] text-sm leading-relaxed py-4">
                 {item.year || "-"}
               </TableCell>
