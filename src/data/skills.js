@@ -16,7 +16,7 @@ export const skillsData = [
       "Shadcn",
       "NextUI",
       "Bootstrap",
-      "Animaciones"
+      "Animaciones CSS"
     ],
     footer: "En proceso de aprendizaje",
     actual: ["Next.js","Testing", "React Native", "Three.js"],
@@ -41,6 +41,7 @@ export const skillsData = [
       "Postman",
       "Wordpress",
       "WooCommerce",
+      "Notion",
     ],
     footer: "Desarrollando proyectos",
     actual: ["Integraciones de IA con Node y HuggingFace", "Web3", "Blockchain", "E-commerce",],
@@ -55,10 +56,8 @@ export const skillsData = [
       "Propositivo",
       "Resolución de problemas",
       "Creativo",
-      "Detallista",
       "Responsable",
       "Proactivo",
-      "Puntual",
       "Centrado en el usuario",
       "Atención personalizada",
     ],

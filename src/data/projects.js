@@ -9,6 +9,7 @@ export const projectsData = [
     imagen3: "/groovelist3.webp",
     imagen_mobile: "/groovelist-mobile.webp",
     bgClass: "bg-groovelist",
+    preview: "Lideré la migración del frontend, implementando React y Tailwind CSS, mejorando la usabilidad y estética de esta plataforma de streaming y licencias musicales. Optimicé la gestión del estado con Redux Toolkit y la autenticación con Amazon Cognito.",
     descripcion1:
       "Mi experiencia en Groovelist fue fundamental para potenciar una plataforma que va más allá del simple streaming de música, centrándose en el licensing musical. Durante mi tiempo en el equipo, tuve el honor de liderar la migración del frontend, contribuyendo significativamente al éxito continuo de la plataforma.",
     descripcion2:
@@ -43,6 +44,7 @@ export const projectsData = [
     imagen3: "/angin3.webp",
     imagen_mobile: "/angin-mobile.webp",
     bgClass: "bg-angin",
+    preview: "Desarrollé el sitio web en WordPress para esta destiladora de gin, mejorando la presencia online y accesibilidad (a11y). Actualmente, el sitio está en proceso de optimización y posible migración a tecnologías más modernas.",
     descripcion1:
       "Mi contribución en Angin se enfocó en el desarrollo web, iniciando la implementación de WordPress solicitado por el cliente para destacar la destiladora de gin artesanal. Utilicé WordPress, CSS y HTML para mejorar la presencia en línea y proporcionar una experiencia accesible.",
     descripcion2:
@@ -61,8 +63,9 @@ export const projectsData = [
     imagen3: "/clinica3.webp",
     imagen_mobile: "/clinica-mobile.webp",
     bgClass: "bg-proesthetic-fit",
+    preview:"Fortalecí la presencia en línea de esta clínica estética integral mediante el desarrollo de un sitio web interactivo y visualmente atractivo con HTML, CSS, JavaScript y Bootstrap. Aseguré una presentación efectiva de sus servicios, garantizando una experiencia de usuario fluida y detallada.",
     descripcion1:
-      "En mi rol en Proesthetic Fit, me centré en el desarrollo web para fortalecer la presencia en línea de la clínica estética integral. Utilicé HTML, CSS y JavaScript, junto con Bootstrap, para crear un sitio web interactivo y visualmente atractivo.",
+      "Diseñé un sitio web interactivo y atractivo para esta clínica estética usando HTML, CSS, JavaScript y Bootstrap. Mejoré la presentación de servicios y aseguré una experiencia de usuario fluida y detallada.",
     descripcion2:
       "Participé en la implementación de características clave, desde tratamientos faciales hasta servicios de recuperación, asegurando una presentación efectiva de la variedad de servicios ofrecidos. La atención a los detalles en el desarrollo garantizó una experiencia fluida para los usuarios.",
     etiquetas: ["HTML", "CSS", "JavaScript", "Bootstrap"],

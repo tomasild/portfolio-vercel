@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import { TiArrowBack } from "react-icons/ti";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import Profile from "/profile.webp";
 import { FaRegLaughBeam } from "react-icons/fa";
 import { LuFileSymlink } from "react-icons/lu";
 import {
@@ -19,12 +18,12 @@ function AboutOpen() {
   const navigate = useNavigate();
 
   const badges = [
-    { icon: <GiCoffeeBeans />, title: "Amante del café" },
+    { icon: <GiCoffeeBeans />, title: "Entusiasta del café de especialidad" },
     { icon: <GiTechnoHeart />, title: "Apasionado de la tecnología" },
     { icon: <GiDogBowl />, title: "Amante de los perros" },
-    { icon: <GiBookmark />, title: "Entusiasta del aprendizaje" },
-    { icon: <GiMountains />, title: "Disfruto de la naturaleza" },
-    { icon: <FaRegLaughBeam />, title: "Alegre" },
+    { icon: <GiBookmark />, title: "Autodidacta en constante aprendizaje" },
+    { icon: <GiMountains />, title: "Disfruto de la naturaleza y el trekking" },
+    { icon: <FaRegLaughBeam />, title: "Alegre y motivado" },
   ];
 
   return (
@@ -37,24 +36,19 @@ function AboutOpen() {
       >
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
-      <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty">
-        <img
-          src={Profile}
-          alt="Tomás Langer posando"
-          className="rounded-xl w-36 h-auto lg:w-44 mb-4 "
-        />
-        <h1 className="text-black dark:text-white text-2xl font-semibold ">
+      <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty ">
+        <h1 className="text-black dark:text-white text-2xl font-semibold mt-14">
           ¡Hola!, soy{" "}
           <span className="font-bold text-primary">Tomás Langer</span>
         </h1>
-        <p className="text-sm text-black dark:text-white py-4 ">
+        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 ">
           Soy desarrollador web con un gran interés general por la tecnología e
           innovación . Me metí en el desarrollo web porque me gusta mucho la
           idea de convertir los conceptos e ideas en proyectos reales,
           especialmente cuando se trata de hacer sitios web accesibles,
           optimizados y con animaciones atractivas.
         </p>
-        <p className="text-sm text-black dark:text-white py-4">
+        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4">
           Antes de sumergirme en el código, estuve inmerso en el área de
           marketing y ventas por más de tres años. Allí aprendí un montón sobre
           trabajar en equipo, proporcionar una excelente experiencia y
@@ -62,7 +56,7 @@ function AboutOpen() {
           priorizar tareas, entre otras cosas, lo que me viene de maravilla
           ahora que soy desarrollador.
         </p>
-        <p className="text-sm text-black dark:text-white py-4 scroll-reveal">
+        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 scroll-reveal">
           Cuando no estoy frente al ordenador, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
           eventos tecnológicos, charlas, etc., para estar siempre al tanto de
@@ -75,11 +69,11 @@ function AboutOpen() {
               className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto font-medium dark:font-normal text-black dark:text-white"
             >
               {badge.icon}
-              <div className="text-xs pt-2">{badge.title}</div>
+              <div className="text-xs  sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg pt-2">{badge.title}</div>
             </div>
           ))}
         </div>
-        <p className="text-sm text-black dark:text-white py-4 scroll-reveal">
+        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 scroll-reveal">
           En pocas palabras, me gusta combinar mi trabajo en desarrollo web con
           mis intereses personales. Busco constantemente aprender y mejorar,
           manteniendo un ambiente relajado y divertido tanto en lo profesional
@@ -95,7 +89,7 @@ function AboutOpen() {
         >
           <Button
             variant="secondary"
-            className="w-full text-white bg-accent hover:bg-primary"
+            className="w-full text-white bg-accent hover:bg-primary text-base"
           >
             <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
           </Button>

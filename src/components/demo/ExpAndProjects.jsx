@@ -19,39 +19,42 @@ export function ExpAndProjects() {
   };
 
   return (
-    <Carousel
-      className="w-auto max-w-[70%] md:max-w-[70%] lg:max-w-[100%] xl:max-w-[80%] p-4"
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-    >
-      <h2 className="text-center font-semibold text-lg pb-2">Experiencia</h2>
-      <CarouselContent>
-        {projectsData.map((project, index) => (
-          <CarouselItem
-            key={index}
-            onClick={() => handleProjectClick(project.title)}
-            className="cursor-pointer"
-          >
-            <div className="overflow-hidden">
-              <CardContent
-                className={`relative aspect-square sm:aspect-video lg:aspect-video xl:aspect-video ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg `}
-              >
-              </CardContent>
-              <div className="pt-1 flex items-center justify-center space-x-2">
-                <h3 className="text-md font-semibold text-center tracking-wide hover:text-primary">
-                  {project.title}
-                </h3>
-                <AiFillInfoCircle className="text-primary animate-pulse" />
+    <div className="flex flex-col w-full h-full pt-2">
+      <h2 className="text-center font-semibold text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">Experiencia y proyectos</h2>
+      <Carousel
+        className="w-[70%] lg:w-[80%] mx-auto"
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+      >
+        <CarouselContent>
+          {projectsData.map((project, index) => (
+            <CarouselItem
+              key={index}
+              onClick={() => handleProjectClick(project.title)}
+              className="cursor-pointer"
+            >
+              <div className="overflow-hidden">
+                <div className="pt-1 flex items-center justify-center space-x-2">
+                  <h3 className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold text-center tracking-wide hover:text-primary">
+                    {project.title}
+                  </h3>
+                  <AiFillInfoCircle className="text-primary animate-pulse" />
+                </div>
+                <p className="text-xs sm:text-base md:text-base lg:text-base xl:text-base 2xl:text-medium text-center">{project.subtitle}</p>
+                <CardContent
+                  className={`relative aspect-square sm:aspect-video lg:aspect-video xl:aspect-video ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg my-4`}
+                >
+                </CardContent>
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl text-pretty text-gray-300 font-thin">{project.preview}</p>
               </div>
-              <p className="text-sm text-center">{project.subtitle}</p>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white lg:-left-6 xl:-left-12 -left-8" />
-      <CarouselNext className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white lg:-right-6 xl:-right-12 -right-8" />
-    </Carousel>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white " />
+        <CarouselNext className="bg-secondary hover:bg-primary rounded-md hover:text-background dark:hover:text-white " />
+      </Carousel>
+    </div>
   );
 }

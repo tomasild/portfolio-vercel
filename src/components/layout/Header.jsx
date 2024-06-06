@@ -11,7 +11,7 @@ function Header() {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
-        inline: "nearest", // Esto ayuda a asegurar que la parte superior de la sección sea visible
+        inline: "start", // Esto ayuda a asegurar que la parte superior de la sección sea visible
       });
     }
   };

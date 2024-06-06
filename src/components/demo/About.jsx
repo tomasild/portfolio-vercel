@@ -15,13 +15,13 @@ function About() {
   return (
     <article className="w-full">
       <section className="w-full flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
-        <h1 className="md:text-sm lg:text-sm xl:text-sm font-semibold text-primary mb-2"><span className="text-black dark:text-white" >Bienvenido, soy</span> Tomás Langer Durán</h1>
-        <p className="text-sm lg:text-xs xl:text-sm xl:mt-1 text-pretty">
+        <h1 className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-bold text-primary"><span className="text-black dark:text-white" >Bienvenido, soy</span> Tomás Langer Durán</h1>
+        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl py-4 text-pretty font-thin text-gray-300">
           Desarrollador Frontend de Chile, me especializo en crear proyectos web modernos, accesibles y visualmente atractivos. Me apasiona la tecnología y estoy comprometido con la mejora continua.
           <br /> Presiona abajo si quieres saber más
         </p>
       </section>
-      <section className="flex p-4 lg:mt-3 xl:mt-3 space-x-2">
+      <section className="flex px-4 pb-4 md:mt-0 lg:mt-10 xl:mt-14 space-x-2">
         <a
           href={CV}
           target="_blank"
@@ -30,7 +30,7 @@ function About() {
         >
           <Button
             variant="secondary"
-            className="w-full text-white bg-accent hover:bg-primary text-xs"
+            className="w-full text-white bg-accent hover:bg-primary text-base"
           >
             <LuFileSymlink className="mr-2 w-5 h-5 font-bold" /> Abrir CV
           </Button>
@@ -44,7 +44,7 @@ function About() {
         >
           <Button
             variant="secondary"
-            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary text-xs"
+            className="w-full bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary text-base"
           >
             <IoNewspaper className="mr-2" size={20} />
             Más sobre mí

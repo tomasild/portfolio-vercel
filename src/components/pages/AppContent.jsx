@@ -28,14 +28,14 @@ function AppContent() {
                 <Card className="col-span-2 row-span-3 flex justify-start overflow-auto border border-accent dark:border-white neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <About />
                 </Card>
-                <Card className="col-span-2 row-span-4 col-start-1 row-start-4 container flex justify-center items-center border border-accent dark:border-white neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
-                  <ExpAndProjects />
+                <Card className="col-span-2 row-span-4 col-start-1 row-start-4 p-4 flex justify-start items-start border border-accent dark:border-white neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
+                  <SkillsAccordion />
                 </Card>
                 <Card className="relative col-span-2 row-span-7 col-start-3 row-start-1 flex w-full h-full p-4 border border-accent dark:border-white overflow-y-auto overflow-x-hidden neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <Formacion />
                 </Card>
-                <Card className="col-span-2 p-4 row-span-4 col-start-5 row-start-1 border border-accent dark:border-white overflow-y-scroll rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
-                  <SkillsAccordion />
+                <Card className="col-span-2 p-4 row-span-4 col-start-5 row-start-1 border border-accent justify-start items-start dark:border-white overflow-y-hidden rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
+                  <ExpAndProjects />
                 </Card>
                 <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-accent dark:border-white overflow-y-scroll rounded-r-md z-50 neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <ContactForm />

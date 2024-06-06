@@ -57,7 +57,7 @@ function ProjectsOpen() {
         </div>
         <section className="py-2">
           {[projectData.descripcion1, projectData.descripcion2, projectData.descripcion3].map((descripcion, index) => (
-            <p key={index} className="text-sm text-black dark:text-white py-2">
+            <p key={index} className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2">
               {descripcion}
             </p>
           ))}
@@ -69,7 +69,7 @@ function ProjectsOpen() {
         />
         <section className="py-2">
           {[projectData.descripcion4, projectData.descripcion5].map((descripcion, index) => (
-            <p key={index} className="text-sm text-black dark:text-white py-2">
+            <p key={index} className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2">
               {descripcion}
             </p>
           ))}
@@ -79,7 +79,7 @@ function ProjectsOpen() {
             <Badge
               variant="destructive"
               key={index}
-              className="border-2 border-black dark:border-white dark:border"
+              className="border-2 border-black dark:border-white dark:border text-base"
             >
               {etiqueta}
             </Badge>
@@ -89,7 +89,7 @@ function ProjectsOpen() {
           {projectData.codigoURL && (
             <Button
               onClick={() => window.open(projectData.codigoURL, "_blank")}
-              className="flex w-full justify-center text-white  bg-accent hover:bg-primary"
+              className="flex w-full justify-center text-white text-base bg-accent hover:bg-primary"
               variant="secondary"
             >
               <LuCode2 className="mr-2 w-4 h-4 font-bold" />
@@ -99,7 +99,7 @@ function ProjectsOpen() {
           {projectData.demoURL && (
             <Button
               onClick={() => window.open(projectData.demoURL, "_blank")}
-              className="flex w-full justify-center text-white  bg-accent hover:bg-primary "
+              className="flex w-full justify-center text-white text-base bg-accent hover:bg-primary "
               variant="secondary"
             >
               <LuExternalLink className="mr-2 w-4 h-4 font-bold" /> Deploy

@@ -11,7 +11,7 @@ import { skillsData } from "@/data/skills";
 export function SkillsAccordion() {
   return (
     <Accordion type="single" collapsible className="w-full z-50">
-      <h2 className="text-center text-lg font-semibold">Skills</h2>
+      <h2 className="text-center text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold">Skills</h2>
 
       {skillsData.map((skill, index) => {
         return (
@@ -20,7 +20,7 @@ export function SkillsAccordion() {
             key={index}
             value={`item-${index + 1}`}
           >
-            <AccordionTrigger className="tracking-wider">
+            <AccordionTrigger className="tracking-wider text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">
               {skill.title}
             </AccordionTrigger>
             <AccordionContent>
@@ -37,7 +37,7 @@ export function SkillsAccordion() {
                         <li key={idx}>
                           <Badge
                             variant="destructive"
-                            className="bg-primary tracking-wide text-xs"
+                            className="bg-primary tracking-wide text-base "
                           >
                             {item}
                           </Badge>
@@ -47,7 +47,7 @@ export function SkillsAccordion() {
                   </div>
                 )}
                 {/* Footer */}
-                {skill.footer && <p className="mt-4">{skill.footer}</p>}
+                {skill.footer && <p className="mt-4 text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-300">{skill.footer}</p>}
                 {/* Lista "En formación", solo si actual no está vacío */}
                 {skill.actual.length > 0 && (
                   <div>
@@ -56,7 +56,7 @@ export function SkillsAccordion() {
                         <li key={idx}>
                           <Badge
                             variant="outline"
-                            className="bg-secondary tracking-wide border-2 border-black dark:border-white dark:border dark:font-bold"
+                            className="bg-secondary tracking-wide border-2 border-black dark:border-white dark:border dark:font-bold text-base"
                           >
                             {item}
                           </Badge>
