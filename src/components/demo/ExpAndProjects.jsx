@@ -47,7 +47,7 @@ export function ExpAndProjects() {
                   className={`relative aspect-square sm:aspect-video lg:aspect-video xl:aspect-video ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg my-4`}
                 >
                 </CardContent>
-                <p className="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl text-pretty text-gray-300 font-thin">{project.preview}</p>
+                <p className="text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl text-pretty text-gray-300 font-thin pb-4">{project.preview}</p>
               </div>
             </CarouselItem>
           ))}

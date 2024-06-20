@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { TiArrowBack } from "react-icons/ti";
 import { LuCode2, LuExternalLink } from "react-icons/lu";
-import { getProjectDataByTitle } from "../../data/projects";
+import { getProjectDataByTitle } from "@/data/projects";
 
 function ProjectsOpen() {
   const navigate = useNavigate();
@@ -56,23 +56,38 @@ function ProjectsOpen() {
           </div>
         </div>
         <section className="py-2">
-          {[projectData.descripcion1, projectData.descripcion2, projectData.descripcion3].map((descripcion, index) => (
-            <p key={index} className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2">
+          {[
+            projectData.descripcion1,
+            projectData.descripcion2,
+            projectData.descripcion3,
+          ].map((descripcion, index) => (
+            <p
+              key={index}
+              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2"
+            >
               {descripcion}
             </p>
           ))}
         </section>
-        <img
-          className="w-[60%] h-auto mx-auto py-2"
-          src={projectData.imagen_mobile}
-          alt="vista de la app en un dispositivo móvil"
-        />
+        {projectData.imagen_mobile && (
+          <img
+            className="w-[60%] h-auto mx-auto py-2"
+            src={projectData.imagen_mobile}
+            alt="vista de la app en un dispositivo móvil"
+          />
+        )}
+
         <section className="py-2">
-          {[projectData.descripcion4, projectData.descripcion5].map((descripcion, index) => (
-            <p key={index} className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2">
-              {descripcion}
-            </p>
-          ))}
+          {[projectData.descripcion4, projectData.descripcion5].map(
+            (descripcion, index) => (
+              <p
+                key={index}
+                className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2"
+              >
+                {descripcion}
+              </p>
+            )
+          )}
         </section>
         <div className="flex flex-wrap justify-start gap-2 py-4">
           {projectData.etiquetas.map((etiqueta, index) => (

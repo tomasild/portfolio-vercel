@@ -120,6 +120,7 @@ module.exports = {
         "groovelist-mobile": "url('/groovelist-mobile.webp')",
         "otro-proyecto": "url('/angin.webp')",
         "noche": "url('/noche.webp')",
+        "swapitup": "url('/swap1.webp')",
       }),      
     },
   },

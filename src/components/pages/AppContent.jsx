@@ -34,7 +34,7 @@ function AppContent() {
                 <Card className="relative col-span-2 row-span-7 col-start-3 row-start-1 flex w-full h-full p-4 border border-accent dark:border-white overflow-y-auto overflow-x-hidden neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <Formacion />
                 </Card>
-                <Card className="col-span-2 p-4 row-span-4 col-start-5 row-start-1 border border-accent justify-start items-start dark:border-white overflow-y-hidden rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
+                <Card className="col-span-2 p-4 row-span-4 col-start-5 row-start-1 border border-accent justify-start items-start dark:border-white overflow-y-auto rounded-r-md neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
                   <ExpAndProjects />
                 </Card>
                 <Card className="relative col-span-2 row-span-3 col-start-5 row-start-5 border border-accent dark:border-white overflow-y-scroll rounded-r-md z-50 neon dark:bg-custom_bg1 dark:hover:bg-custom_bg2 dark:backdrop-blur-sm">
