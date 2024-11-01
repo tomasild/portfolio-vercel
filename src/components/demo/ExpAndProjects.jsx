@@ -50,7 +50,7 @@ export function ExpAndProjects() {
                 <CardContent
                   className={`relative aspect-square sm:aspect-video lg:aspect-video xl:aspect-video ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg my-4`}
                 ></CardContent>
-                <p className="text-base text-pretty text-gray-300 font-thin pb-4">
+                <p className="text-base text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black pb-4">
                   {project.preview}
                 </p>
               </div>

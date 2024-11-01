@@ -16,7 +16,7 @@ function About() {
     <article className="w-full h-full">
       <section className="w-full h-[80%] flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
         <h1 className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-bold text-primary"><span className="text-black dark:text-white" >Bienvenido, soy</span> Tomás Langer Durán</h1>
-        <p className="text-base py-4 text-pretty font-thin text-gray-300">
+        <p className="text-base py-4 text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black">
           Desarrollador Frontend de Chile, me especializo en crear proyectos web modernos, accesibles y visualmente atractivos. Me apasiona la tecnología y estoy comprometido con la mejora continua.
           <br /> Presiona abajo si quieres saber más
         </p>
@@ -50,9 +50,9 @@ function About() {
             Más sobre mí
           </Button>
         </Link>
-        {/* <div className="flex-1 hidden sm:flex lg:flex md:flex">
+        <div className="flex-1 hidden sm:flex lg:flex md:flex">
           <ThemeToggle />
-        </div> */}
+        </div>
       </section>
     </article>
   );
