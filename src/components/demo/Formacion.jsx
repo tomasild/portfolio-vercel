@@ -48,9 +48,9 @@ export function Formacion() {
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="text-black dark:text-primary font-extrabold text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl dark:text-white">Nombre</TableHead>
-            <TableHead className="text-black dark:text-primary font-extrabold text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl dark:text-white">Descripción</TableHead>
-            <TableHead  className="text-black dark:text-primary font-extrabold text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl dark:text-white text-right">Año</TableHead>
+            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold text-base dark:text-white">Nombre</TableHead>
+            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold  text-base  dark:text-white">Descripción</TableHead>
+            <TableHead  className="text-black dark:text-primary font-extrabold dark:font-bold text-base dark:text-white text-right">Año</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
