@@ -61,9 +61,9 @@ function ContactForm() {
       />
       <div className="flex space-x-2 pt-4 lg:pt-0 xl:pt-0 form-fields">
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="name" className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">Nombre</label>
+          <label htmlFor="name" className="text-base">Nombre</label>
           <Input
-            className="border-gray-400 border-opacity-70 text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl"
+            className="border-gray-400 border-opacity-70 text-base"
             type="text"
             id="name"
             name="name"
@@ -71,9 +71,9 @@ function ContactForm() {
           />
         </div>
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="email" className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">Email</label>
+          <label htmlFor="email" className="text-base ">Email</label>
           <Input
-            className="border-gray-400 border-opacity-70 text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl"
+            className="border-gray-400 border-opacity-70 text-base "
             type="email"
             id="email"
             name="email"
@@ -82,9 +82,9 @@ function ContactForm() {
         </div>
       </div>
       <div className="space-y-1 form-field">
-        <label htmlFor="message" className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">Mensaje</label>
+        <label htmlFor="message" className="text-base ">Mensaje</label>
         <Textarea
-          className="border-gray-400 border-opacity-70 text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl h-36"
+          className="border-gray-400 border-opacity-70 text-base h-36"
           id="message"
           name="message"
           required

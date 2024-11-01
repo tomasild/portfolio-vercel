@@ -11,9 +11,9 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(() => {
         // Intenta obtener el tema almacenado en el localStorage.
         const storedTheme = localStorage.getItem('theme');
-
-        // Si el tema almacenado está en el array de orden de prioridad, úsalo; de lo contrario, utiliza el primer tema del array.
-        return themeOrder.includes(storedTheme) ? storedTheme : themeOrder[0];
+        
+        // Si hay un tema guardado en el localStorage y está en el array de temas, úsalo; si no, usa 'dark' como predeterminado.
+        return themeOrder.includes(storedTheme) ? storedTheme : 'dark';
     });
 
     // Utiliza el hook useEffect para actualizar el tema en el DOM y almacenar el tema en el localStorage cada vez que cambia.
@@ -36,6 +36,35 @@ export const ThemeProvider = ({ children }) => {
     );
 };
 
-// ...
+// Hook personalizado para acceder al tema
+export const useTheme = () => useContext(ThemeContext);
+
+
+/* import React, { createContext, useContext, useEffect, useState } from 'react';
+
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+    const themeOrder = ['dark', 'light'];
+    const [theme, setTheme] = useState(() => {
+        const storedTheme = localStorage.getItem('theme');
+        return themeOrder.includes(storedTheme) ? storedTheme : themeOrder[0];
+    });
+
+    useEffect(() => {
+        const root = window.document.documentElement;
+        root.classList.remove(...themeOrder);
+        root.classList.add(theme);
+        localStorage.setItem('theme', theme);
+    }, [theme]);
+
+    return (
+        <ThemeContext.Provider value={{ theme, setTheme }}>
+            {children}
+        </ThemeContext.Provider>
+    );
+};
+
 
 export const useTheme = () => useContext(ThemeContext);
+ */

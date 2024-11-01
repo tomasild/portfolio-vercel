@@ -10,7 +10,12 @@ import { skillsData } from "@/data/skills";
 
 export function SkillsAccordion() {
   return (
-    <Accordion type="single" collapsible className="w-full z-50">
+    <Accordion 
+      type="single" 
+      collapsible 
+      className="w-full z-50"
+      defaultValue="item-1" // Esto establece el primer item como abierto por defecto
+    >
       <h2 className="text-center text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold">Skills</h2>
 
       {skillsData.map((skill, index) => {
@@ -20,7 +25,7 @@ export function SkillsAccordion() {
             key={index}
             value={`item-${index + 1}`}
           >
-            <AccordionTrigger className="tracking-wider text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">
+            <AccordionTrigger className="tracking-wider text-base ">
               {skill.title}
             </AccordionTrigger>
             <AccordionContent>

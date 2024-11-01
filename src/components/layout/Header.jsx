@@ -42,16 +42,6 @@ function Header() {
             <img src={duck} alt="Duck" className="h-7 w-7  opacity-70 active:opacity-100" />
           </button>
         </li>
-        {/* <li className="flex-1">
-          <Link
-            smooth
-            to="/#sobre-mi"
-            onClick={() => scrollToSection("sobre-mi")}
-            className="block px-2 sm:px-4 hover:text-primary focus:text-primary font-semibold"
-          >
-            Sobre mí
-          </Link>
-        </li> */}
         <li className="flex-1">
           <Link
             smooth
@@ -92,9 +82,9 @@ function Header() {
             Contacto
           </Link>
         </li>
-        <li className="pr-2 block sm:hidden md:hidden">
+        {/* <li className="pr-2 block sm:hidden md:hidden">
           <ThemeToggle />
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

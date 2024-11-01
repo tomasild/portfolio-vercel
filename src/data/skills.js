@@ -11,16 +11,17 @@ export const skillsData = [
       "JavaScript",
       "TypeScript",
       "Axios",
-      "React",
-      "Redux toolkit",
+      "React.js",
+      "Next.js",
+      "Zustand",
       "Tailwind CSS",
       "Shadcn",
       "NextUI",
-      "Bootstrap",
-      "Animaciones CSS"
+      "Scroll Animations",
+      "View Transitions",
     ],
     footer: "En proceso de aprendizaje",
-    actual: ["Next.js","Testing", "React Native", "Three.js"],
+    actual: ["Testing", "React Native", "Three.js"],
   },
   {
     icon: "backend",
@@ -47,9 +48,9 @@ export const skillsData = [
       "VPAT",
     ],
     footer: "Desarrollando proyectos",
-    actual: ["Integraciones de IA con Node y HuggingFace", "Blockchain y Web3 con Motoko", "E-commerce",],
+    actual: ["Integraciones de IA con Node y HuggingFace", "Shopify",],
   },
-  {
+/*   {
     icon: "softSkills",
     title: "Habilidades blandas",
     description: "",
@@ -66,5 +67,5 @@ export const skillsData = [
     ],
     footer: "",
     actual: [],
-  },
+  }, */
 ];
