@@ -20,7 +20,7 @@ export const skillsData = [
       "Scroll Animations",
       "View Transitions",
     ],
-    footer: "En proceso de aprendizaje",
+    footer: "Próximos pasos",
     actual: ["Testing", "React Native", "Three.js"],
   },
   {
@@ -30,6 +30,22 @@ export const skillsData = [
     content: ["Node.js", "Express", "PostgreSQL"],
     footer: "",
     actual: [],
+  },
+  {
+    icon: "otherSkills",
+    title: "Marketing digital",
+    description: "",
+    content: [
+      "Optimización para Motores de Búsqueda (SEO)",
+      "Marketing en Redes Sociales (SMM)", 
+      "Estrategias de Contenido",
+      "Diseño y Gestión de Experiencias de Usuario (UX/UI):",
+      "Análisis de Datos",
+      "Copywriting",
+      "Storytelling",
+    ],
+    footer: "Próximos pasos",
+    actual: ["Automatización de Marketing", "Desarrollo de Chatbots con IA",],
   },
   {
     icon: "otherSkills",

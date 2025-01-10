@@ -34,7 +34,7 @@ function ProjectsOpen() {
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <article className="block h-auto items-center justify-center p-4 pb-0 tracking-wider text-pretty">
-        <h1 className="text-black dark:text-white text-2xl font-semibold text-center mb-4">
+        <h1 className="text-black dark:text-white text-[2rem] font-semibold text-center mb-4">
           {projectData.title}
         </h1>
         <div className="w-full h-auto aspect-w-16 aspect-h-9 tracking-wider text-pretty">
@@ -58,7 +58,7 @@ function ProjectsOpen() {
           ].map((descripcion, index) => (
             <p
               key={index}
-              className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2"
+              className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 py-2"
             >
               {descripcion}
             </p>
@@ -76,7 +76,7 @@ function ProjectsOpen() {
             (descripcion, index) => (
               <p
                 key={index}
-                className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 py-2"
+                className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 py-2"
               >
                 {descripcion}
               </p>
@@ -88,7 +88,7 @@ function ProjectsOpen() {
             <Badge
               variant="destructive"
               key={index}
-              className="border-2 border-black dark:border-white dark:border text-base"
+              className="border-2 border-black dark:border-white dark:border text-[1rem]  md:text-[1.5rem]"
             >
               {etiqueta}
             </Badge>

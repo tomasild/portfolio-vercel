@@ -44,7 +44,7 @@ function ContactForm() {
       className="w-full px-4 py-2 space-y-4 overflow-y-hidden z-50 contact-form"
       onSubmit={handleSubmit}
     >
-      <h2 className="font-semibold text-center text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl form-heading py-4">
+      <h2 className="font-semibold text-center text-[2rem] form-heading py-4">
         Contáctame
       </h2>
       <Input
@@ -61,9 +61,11 @@ function ContactForm() {
       />
       <div className="flex space-x-2 pt-4 lg:pt-0 xl:pt-0 form-fields">
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="name" className="text-base">Nombre</label>
+          <label htmlFor="name" className="text-[1rem] md:text-[1.5rem] font-semibold">
+            Nombre
+          </label>
           <Input
-            className="border-gray-400 border-opacity-70 text-base"
+            className="border-gray-400 border-opacity-70 text-[1rem] md:text-[1.5rem]"
             type="text"
             id="name"
             name="name"
@@ -71,9 +73,11 @@ function ContactForm() {
           />
         </div>
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="email" className="text-base ">Email</label>
+          <label htmlFor="email" className="text-[1rem] md:text-[1.5rem] font-semibold ">
+            Email
+          </label>
           <Input
-            className="border-gray-400 border-opacity-70 text-base "
+            className="border-gray-400 border-opacity-70 text-[1rem] md:text-[1.5rem] "
             type="email"
             id="email"
             name="email"
@@ -82,9 +86,11 @@ function ContactForm() {
         </div>
       </div>
       <div className="space-y-1 form-field">
-        <label htmlFor="message" className="text-base ">Mensaje</label>
+        <label htmlFor="message" className="text-[1rem] md:text-[1.5rem] font-semibold ">
+          Mensaje
+        </label>
         <Textarea
-          className="border-gray-400 border-opacity-70 text-base h-36"
+          className="border-gray-400 border-opacity-70 text-[1rem] md:text-[1.5rem] h-36"
           id="message"
           name="message"
           required
@@ -94,8 +100,9 @@ function ContactForm() {
       <div className="flex justify-between form-actions">
         <Button
           variant="secondary"
-          className={`w-full mt-2 text-base py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary${isLoading ? " disabled" : ""
-            }`}
+          className={`w-full mt-2 text-base py-4 bg-accent text-white hover:bg-primary dark:bg-secondary dark:hover:bg-primary${
+            isLoading ? " disabled" : ""
+          }`}
           type="submit"
           disabled={isLoading}
         >

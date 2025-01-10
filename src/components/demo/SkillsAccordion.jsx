@@ -10,13 +10,15 @@ import { skillsData } from "@/data/skills";
 
 export function SkillsAccordion() {
   return (
-    <Accordion 
-      type="single" 
-      collapsible 
+    <Accordion
+      type="single"
+      collapsible
       className="w-full z-50"
       defaultValue="item-1" // Esto establece el primer item como abierto por defecto
     >
-      <h2 className="text-center text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold">Skills</h2>
+      <h2 className="text-center text-[2rem] font-semibold">
+        Skills
+      </h2>
 
       {skillsData.map((skill, index) => {
         return (
@@ -25,7 +27,7 @@ export function SkillsAccordion() {
             key={index}
             value={`item-${index + 1}`}
           >
-            <AccordionTrigger className="tracking-wider text-base ">
+            <AccordionTrigger className="tracking-wider text-[1rem] md:text-[1.5rem] ">
               {skill.title}
             </AccordionTrigger>
             <AccordionContent>
@@ -42,7 +44,7 @@ export function SkillsAccordion() {
                         <li key={idx}>
                           <Badge
                             variant="destructive"
-                            className="bg-primary tracking-wide text-base "
+                            className="bg-primary p-1 md:p-3 tracking-wide text-[1rem] md:text-[1.5rem] "
                           >
                             {item}
                           </Badge>
@@ -52,7 +54,11 @@ export function SkillsAccordion() {
                   </div>
                 )}
                 {/* Footer */}
-                {skill.footer && <p className="mt-4 text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-gray-300">{skill.footer}</p>}
+                {skill.footer && (
+                  <p className="mt-4 text-[1rem] md:text-[1.5rem] text-gray-300">
+                    {skill.footer}
+                  </p>
+                )}
                 {/* Lista "En formación", solo si actual no está vacío */}
                 {skill.actual.length > 0 && (
                   <div>
@@ -61,7 +67,7 @@ export function SkillsAccordion() {
                         <li key={idx}>
                           <Badge
                             variant="outline"
-                            className="bg-secondary tracking-wide border-2 border-black dark:border-white dark:border dark:font-bold text-base"
+                            className="bg-secondary tracking-wide p-1 md:p-3 border-2 border-black dark:border-white dark:border dark:font-bold text-[1rem] md:text-[1.5rem]"
                           >
                             {item}
                           </Badge>

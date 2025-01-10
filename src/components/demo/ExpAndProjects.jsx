@@ -20,7 +20,7 @@ export function ExpAndProjects() {
 
   return (
     <div className="flex flex-col w-full h-full pt-2">
-      <h2 className="text-center font-semibold text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl">
+      <h2 className="text-center font-semibold text-[2rem] mx-2">
         Experiencia y proyectos
       </h2>
       <Carousel
@@ -39,18 +39,18 @@ export function ExpAndProjects() {
             >
               <div className="overflow-hidden">
                 <div className="pt-1 flex items-center justify-center space-x-2">
-                  <h3 className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-semibold text-center tracking-wide hover:text-primary">
+                  <h3 className="text-[1rem] md:text-[1.5rem] font-semibold text-center tracking-wide hover:text-primary">
                     {project.title}
                   </h3>
                   <AiFillInfoCircle className="text-primary animate-pulse" />
                 </div>
-                <p className="text-base text-center">
+                <p className="text-[1rem] md:text-[1.5rem] text-center">
                   {project.subtitle}
                 </p>
                 <CardContent
                   className={`relative aspect-square sm:aspect-video lg:aspect-video xl:aspect-video ${project.bgClass} bg-cover bg-center flex justify-center items-center rounded-lg my-4`}
                 ></CardContent>
-                <p className="text-base text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black pb-4">
+                <p className="text-[1rem] md:text-[1.5rem] text-pretty font-normal dark:font-normal dark:text-gray-200 text-black pb-4">
                   {project.preview}
                 </p>
               </div>

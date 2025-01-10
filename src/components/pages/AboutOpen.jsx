@@ -37,30 +37,29 @@ function AboutOpen() {
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty ">
-        <h1 className="text-black dark:text-white text-2xl font-semibold mt-14">
+        <h1 className="text-black dark:text-white text-[2rem] font-semibold mt-14">
           ¡Hola!, soy{" "}
           <span className="font-bold text-primary">Tomás Langer</span>
         </h1>
-        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 ">
+        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4 ">
           Soy desarrollador web con un gran interés general por la tecnología e
-          innovación . Me metí en el desarrollo web porque me gusta mucho la
-          idea de convertir los conceptos e ideas en proyectos reales,
-          especialmente cuando se trata de hacer sitios web accesibles,
-          optimizados y con animaciones atractivas.
+          innovación. Comence mi camino en el desarrollo web porque me gusta
+          mucho la idea de transformar ideas en proyectos reales o productos.
         </p>
-        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4">
+        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4">
           Antes de sumergirme en el código, estuve inmerso en el área de
-          marketing y ventas por más de tres años. Allí aprendí un montón sobre
-          trabajar en equipo, proporcionar una excelente experiencia y
+          marketing y ventas por más de tres años. Allí aprendí bastante sobre
+          como trabajar en equipo, centrarme en como mejorar la experiencia y
           satisfacer las necesidades de los usuarios, resolver conflictos,
-          priorizar tareas, entre otras cosas, lo que me viene de maravilla
-          ahora que soy desarrollador.
+          priorizar tareas, entre otras habilidades.
         </p>
-        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 scroll-reveal">
-          Cuando no estoy frente al ordenador, probablemente me encontrarás
+        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4 scroll-reveal">
+          Cuando no estoy frente a una pantalla, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
-          eventos tecnológicos, charlas, etc., para estar siempre al tanto de
-          las últimas novedades e innovaciones del área.
+          eventos tecnológicos, charlas, entre otros, para estar siempre al
+          tanto de las últimas novedades, tendencias e innovaciones tecnológicas que estan
+          constantemente cambiando nuestro entorno y como nos relaionamos con el
+          mismo.
         </p>
         <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal">
           {badges.map((badge, index) => (
@@ -69,14 +68,16 @@ function AboutOpen() {
               className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto font-medium dark:font-normal text-black dark:text-white"
             >
               {badge.icon}
-              <div className="text-xs  sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg pt-2">{badge.title}</div>
+              <div className="text-xs  sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg pt-2">
+                {badge.title}
+              </div>
             </div>
           ))}
         </div>
         <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 scroll-reveal">
-          En pocas palabras, me gusta combinar mi trabajo en desarrollo web con
-          mis intereses personales. Busco constantemente aprender y mejorar,
-          manteniendo un ambiente relajado y divertido tanto en lo profesional
+          En pocas palabras, me gusta complementar mi trabajo en desarrollo web con
+          mis conocimientos en Marketing e intereses personales. Busco constantemente aprender y mejorar,
+          suelo mantener un ambiente relajado y divertido tanto en lo profesional
           como en lo personal.
         </p>
       </div>

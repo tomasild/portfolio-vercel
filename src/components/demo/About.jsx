@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { IoNewspaper } from "react-icons/io5";
 import { LuFileSymlink } from "react-icons/lu";
 import CV from "/cv-tomasild.pdf";
-import duck from "../../../public/duck.svg"
+import duck from "../../../public/duck.svg";
 
 const accent =
   "text-primary-foreground bg-primary px-1 mx-1 rounded-md dark:text-primary dark:bg-transparent dark:px-0";
@@ -15,10 +15,19 @@ function About() {
   return (
     <article className="w-full h-full">
       <section className="w-full h-[80%] flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
-        <h1 className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl font-bold text-primary"><span className="text-black dark:text-white" >Bienvenido, soy</span> Tomás Langer Durán</h1>
-        <p className="text-base py-4 text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black">
-          Desarrollador Frontend de Chile, me especializo en crear proyectos web modernos, accesibles y visualmente atractivos. Me apasiona la tecnología y estoy comprometido con la mejora continua.
-          <br /> Presiona abajo si quieres saber más
+        <h1 className="text-[2rem] font-bold text-primary">
+          <span className="text-black dark:text-white">Bienvenido, soy</span>{" "}
+          Tomás Langer Durán
+        </h1>
+        <span className="text-black dark:text-white text-[1rem] md:text-[1.5rem] font-bold pt-4">
+          Desarrollador Web | Ingeniero en Marketing.
+        </span>
+        <p className="text-[1rem] md:text-[1.5rem] py-4 text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black">
+          Me especializo en crear sitios web modernos, accesibles, visualmente
+          atractivos y centrados en el usuario. Disfruto trabajar en proyectos
+          donde la creatividad y la tecnología se complementan para generar
+          experiencias memorables que hagan la diferencia tanto para los
+          usuarios como las organizaciones.
         </p>
       </section>
       <section className="flex px-4 pb-4 space-x-2 h-[20%]">
@@ -59,4 +68,3 @@ function About() {
 }
 
 export default About;
-
