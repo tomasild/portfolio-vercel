@@ -16,7 +16,7 @@ export function SkillsAccordion() {
       className="w-full z-50"
       defaultValue="item-1" // Esto establece el primer item como abierto por defecto
     >
-      <h2 className="text-center text-[1.4rem] font-semibold">Habilidades</h2>
+      <h2 className="text-center text-[1.6rem] font-semibold">Habilidades</h2>
 
       {skillsData.map((skill, index) => {
         return (
@@ -25,7 +25,7 @@ export function SkillsAccordion() {
             key={index}
             value={`item-${index + 1}`}
           >
-            <AccordionTrigger className="tracking-wider text-[1rem] font-semibold ">
+            <AccordionTrigger className="tracking-wider text-[1.2rem] font-semibold ">
               {skill.title}
             </AccordionTrigger>
             <AccordionContent>

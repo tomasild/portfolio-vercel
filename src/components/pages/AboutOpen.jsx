@@ -37,7 +37,7 @@ function AboutOpen() {
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty ">
-        <h1 className="text-black dark:text-white text-[1.4rem] font-semibold mt-14">
+        <h1 className="text-black dark:text-white text-[1.6rem] font-semibold mt-14">
           ¡Hola!, soy{" "}
           <span className="font-bold text-primary">Tomás Langer</span>
         </h1>

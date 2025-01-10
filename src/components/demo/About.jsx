@@ -15,14 +15,14 @@ function About() {
   return (
     <article className="w-full h-full">
       <section className="w-full  flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
-        <h1 className="text-[1.4rem] font-bold text-primary">
+        <h1 className="text-[1.6rem] font-bold text-primary">
           <span className="text-black dark:text-white">Bienvenido, soy</span>{" "}
           Tomás Langer Durán
         </h1>
-        <span className="text-black dark:text-white text-[1rem] font-bold pt-4">
+        <span className="text-black dark:text-white text-[1.2rem] font-bold pt-4">
           Desarrollador Web | Ingeniero en Marketing.
         </span>
-        <p className="text-[0.8rem]  py-4 text-pretty font-normal dark:font-normal dark:text-gray-200 text-black">
+        <p className="text-[1rem]  py-4 text-pretty font-normal dark:font-normal dark:text-gray-200 text-black">
           Me dedico a la creación de soluciones web modernas, accesibles y
           con un enfoque centrado en el usuario. Disfruto abordando proyectos
           desafiantes donde la creatividad y la tecnología se complementan para

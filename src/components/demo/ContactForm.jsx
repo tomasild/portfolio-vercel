@@ -44,7 +44,7 @@ function ContactForm() {
       className="w-full px-4 py-2 space-y-4 overflow-y-hidden z-50 contact-form"
       onSubmit={handleSubmit}
     >
-      <h2 className="font-semibold text-center text-[1.5rem] form-heading py-4">
+      <h2 className="font-semibold text-center text-[1.6rem] form-heading py-4">
         Contáctame
       </h2>
       <Input
@@ -61,11 +61,11 @@ function ContactForm() {
       />
       <div className="flex space-x-2 pt-4 lg:pt-0 xl:pt-0 form-fields">
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="name" className="text-[0.8rem] md:text-[1.2rem font-semibold">
+          <label htmlFor="name" className="text-[1rem]  font-semibold">
             Nombre
           </label>
           <Input
-            className="border-gray-400 border-opacity-70 text-[0.8rem] md:text-[1.2rem"
+            className="border-gray-400 border-opacity-70 text-[1rem] md:text-[1.2rem"
             type="text"
             id="name"
             name="name"
@@ -73,11 +73,11 @@ function ContactForm() {
           />
         </div>
         <div className="flex flex-col w-full space-y-1 form-field">
-          <label htmlFor="email" className="text-[0.8rem] md:text-[1.2rem font-semibold ">
+          <label htmlFor="email" className="text-[1rem]  font-semibold ">
             Email
           </label>
           <Input
-            className="border-gray-400 border-opacity-70 text-[0.8rem] md:text-[1.2rem "
+            className="border-gray-400 border-opacity-70 text-[1rem] m "
             type="email"
             id="email"
             name="email"
@@ -86,11 +86,11 @@ function ContactForm() {
         </div>
       </div>
       <div className="space-y-1 form-field">
-        <label htmlFor="message" className="text-[0.8rem] md:text-[1.2rem font-semibold ">
+        <label htmlFor="message" className="text-[1rem]  font-semibold ">
           Mensaje
         </label>
         <Textarea
-          className="border-gray-400 border-opacity-70 text-[0.8rem] md:text-[1.2rem h-36"
+          className="border-gray-400 border-opacity-70 text-[1rem]  h-36"
           id="message"
           name="message"
           required
