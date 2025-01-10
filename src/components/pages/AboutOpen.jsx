@@ -37,29 +37,29 @@ function AboutOpen() {
         <TiArrowBack className="text-md md:text-lg lg:text-xl" />
       </Button>
       <div className="flex flex-col items-center justify-center p-4 pb-0 tracking-wider text-pretty ">
-        <h1 className="text-black dark:text-white text-[2rem] font-semibold mt-14">
+        <h1 className="text-black dark:text-white text-[1.4rem] font-semibold mt-14">
           ¡Hola!, soy{" "}
           <span className="font-bold text-primary">Tomás Langer</span>
         </h1>
-        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4 ">
+        <p className="text-[1rem] text-black dark:text-gray-300 font-light py-4 ">
           Soy desarrollador web con un gran interés general por la tecnología e
           innovación. Comence mi camino en el desarrollo web porque me gusta
           mucho la idea de transformar ideas en proyectos reales o productos.
         </p>
-        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4">
+        <p className="text-[1rem] text-black dark:text-gray-300 font-light py-4">
           Antes de sumergirme en el código, estuve inmerso en el área de
           marketing y ventas por más de tres años. Allí aprendí bastante sobre
           como trabajar en equipo, centrarme en como mejorar la experiencia y
           satisfacer las necesidades de los usuarios, resolver conflictos,
           priorizar tareas, entre otras habilidades.
         </p>
-        <p className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 font-light py-4 scroll-reveal">
+        <p className="text-[1rem] text-black dark:text-gray-300 font-light py-4 scroll-reveal">
           Cuando no estoy frente a una pantalla, probablemente me encontrarás
           disfrutando de la naturaleza, saliendo con amistades y asistiendo a
           eventos tecnológicos, charlas, entre otros, para estar siempre al
-          tanto de las últimas novedades, tendencias e innovaciones tecnológicas que estan
-          constantemente cambiando nuestro entorno y como nos relaionamos con el
-          mismo.
+          tanto de las últimas novedades, tendencias e innovaciones tecnológicas
+          que estan constantemente cambiando nuestro entorno y como nos
+          relaionamos con el mismo.
         </p>
         <div className="text-white flex flex-wrap justify-center gap-5 py-4 w-full mx-auto scroll-reveal">
           {badges.map((badge, index) => (
@@ -68,17 +68,17 @@ function AboutOpen() {
               className="text-center w-20 md:w-24 lg:w-32 text-3xl lg:text-4xl flex justify-start flex-col items-center mx-auto font-medium dark:font-normal text-black dark:text-white"
             >
               {badge.icon}
-              <div className="text-xs  sm:text-sm md:text-sm lg:text-lg xl:text-lg 2xl:text-lg pt-2">
+              <div className="text-xs pt-2">
                 {badge.title}
               </div>
             </div>
           ))}
         </div>
-        <p className="text-base sm:text-xl md:text-xl lg:text-xl xl:text-xl 2xl:text-2xl text-black dark:text-gray-300 font-light py-4 scroll-reveal">
-          En pocas palabras, me gusta complementar mi trabajo en desarrollo web con
-          mis conocimientos en Marketing e intereses personales. Busco constantemente aprender y mejorar,
-          suelo mantener un ambiente relajado y divertido tanto en lo profesional
-          como en lo personal.
+        <p className="text-[1rem] text-black dark:text-gray-300 font-light py-4 scroll-reveal">
+          En pocas palabras, me gusta complementar mi trabajo en desarrollo web
+          con mis conocimientos en Marketing e intereses personales. Busco
+          constantemente aprender y mejorar, suelo mantener un ambiente relajado
+          y divertido tanto en lo profesional como en lo personal.
         </p>
       </div>
       <div className="flex space-x-4 p-4 text-white pt-12 animate-fadeIn">

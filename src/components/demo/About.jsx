@@ -14,20 +14,21 @@ const accent =
 function About() {
   return (
     <article className="w-full h-full">
-      <section className="w-full h-[80%] flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
-        <h1 className="text-[2rem] font-bold text-primary">
+      <section className="w-full  flex-col md:block lg:flex xl:flex px-4 pt-2 lg:pt-3 xl:pt-4">
+        <h1 className="text-[1.4rem] font-bold text-primary">
           <span className="text-black dark:text-white">Bienvenido, soy</span>{" "}
           Tomás Langer Durán
         </h1>
-        <span className="text-black dark:text-white text-[1rem] md:text-[1.5rem] font-bold pt-4">
+        <span className="text-black dark:text-white text-[1rem] font-bold pt-4">
           Desarrollador Web | Ingeniero en Marketing.
         </span>
-        <p className="text-[1rem] md:text-[1.5rem] py-4 text-pretty font-semibold dark:font-normal dark:text-gray-200 text-black">
-          Me especializo en crear sitios web modernos, accesibles, visualmente
-          atractivos y centrados en el usuario. Disfruto trabajar en proyectos
-          donde la creatividad y la tecnología se complementan para generar
-          experiencias memorables que hagan la diferencia tanto para los
-          usuarios como las organizaciones.
+        <p className="text-[0.8rem]  py-4 text-pretty font-normal dark:font-normal dark:text-gray-200 text-black">
+          Me dedico a la creación de soluciones web modernas, accesibles y
+          con un enfoque centrado en el usuario. Disfruto abordando proyectos
+          desafiantes donde la creatividad y la tecnología se complementan para
+          resolver problemas reales y generar experiencias digitales que no solo
+          sean memorables, sino que también impulsan resultados positivos para
+          personas y organizaciones.
         </p>
       </section>
       <section className="flex px-4 pb-4 space-x-2 h-[20%]">

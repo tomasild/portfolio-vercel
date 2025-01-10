@@ -47,19 +47,19 @@ const formacionData = [
 export function Formacion() {
   return (
     <section className="">
-      <h2 className="text-[2rem] leading-relaxed font-semibold text-center mb-4">
+      <h2 className="text-[1.4rem] leading-relaxed font-semibold text-center mb-4">
         Formación
       </h2>
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold text-[1rem] md:text-[1.5rem] dark:text-white">
+            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold text-[1rem] dark:text-white">
               Nombre
             </TableHead>
-            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold  text-[1rem] md:text-[1.5rem]  dark:text-white">
+            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold  text-[1rem]  dark:text-white">
               Descripción
             </TableHead>
-            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold text-[1rem] md:text-[1.5rem] dark:text-white text-right">
+            <TableHead className="text-black dark:text-primary font-extrabold dark:font-bold text-[1rem] dark:text-white text-right">
               Año
             </TableHead>
           </TableRow>
@@ -69,19 +69,19 @@ export function Formacion() {
             <TableRow key={index} className="border-gray-400 border-opacity-70">
               <TableCell
                 style={{ verticalAlign: "top" }}
-                className="font-bold py-4 text-[1rem] md:text-[1.5rem] leading-relaxed"
+                className="font-bold py-4 text-[1rem] leading-relaxed"
               >
                 {item.title}
               </TableCell>
               <TableCell
                 style={{ verticalAlign: "top" }}
-                className="text-[1rem] md:text-[1.5rem] dark:font-normal dark:text-gray-200 text-black leading-relaxed font-bold w-[90%] lg:w-auto xl:w-auto text-pretty py-4"
+                className="text-[0.8rem] dark:font-normal dark:text-gray-200 text-black leading-relaxed font-bold w-[90%] lg:w-auto xl:w-auto text-pretty py-4"
               >
                 {item.description}
               </TableCell>
               <TableCell
                 style={{ verticalAlign: "top", textAlign: "right" }}
-                className="w-[20%] text-[1rem] md:text-[1.5rem] font-bold leading-relaxed py-4"
+                className="w-[20%] text-[1rem] font-bold leading-relaxed py-4"
               >
                 {item.year || "-"}
               </TableCell>

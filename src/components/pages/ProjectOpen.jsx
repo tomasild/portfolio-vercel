@@ -58,7 +58,7 @@ function ProjectsOpen() {
           ].map((descripcion, index) => (
             <p
               key={index}
-              className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 py-2"
+              className="text-[1rem]  text-black dark:text-gray-300 py-2"
             >
               {descripcion}
             </p>
@@ -76,7 +76,7 @@ function ProjectsOpen() {
             (descripcion, index) => (
               <p
                 key={index}
-                className="text-[1rem]  md:text-[1.5rem] text-black dark:text-gray-300 py-2"
+                className="text-[1rem]  text-black dark:text-gray-300 py-2"
               >
                 {descripcion}
               </p>
@@ -88,7 +88,7 @@ function ProjectsOpen() {
             <Badge
               variant="destructive"
               key={index}
-              className="border-2 border-black dark:border-white dark:border text-[1rem]  md:text-[1.5rem]"
+              className="border-2 border-black dark:border-white dark:border text-[1rem] "
             >
               {etiqueta}
             </Badge>
