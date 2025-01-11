@@ -113,7 +113,7 @@ module.exports = {
       },
       backgroundImage: (theme) => ({
         "proesthetic-fit": "url('/clinica.webp')",  // Cambia a la extensión .webp
-        "angin": "url('/angin.webp')",
+        "angin": "url('/angin1.jpg')",
         "fx": "url('/angin.webp')",
         "groovelist": "url('/groovelist.webp')",
         "groovelist2": "url('/groovelist2.webp')",

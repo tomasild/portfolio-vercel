@@ -103,24 +103,32 @@ export const projectsData = [
   },
   {
     title: "Angin",
-    subtitle: "Destiladora de gin",
-    imagen: "/angin.webp",
-    imagen2: "/angin2.webp",
-    imagen3: "/angin3.webp",
-    imagen_mobile: "/angin-mobile.webp",
+    subtitle: "Destiladora de Gin",
+    imagen: "/angin1.jpg",
+    imagen2: "/angin2.jpg",
+    imagen3: "/angin3.jpg",
     bgClass: "bg-angin",
     preview:
-      "Desarrollé el sitio web en WordPress para esta destiladora de gin, mejorando la presencia online y accesibilidad (a11y). Actualmente, el sitio está en proceso de optimización y posible migración a tecnologías más modernas.",
+      "Desarrollo en curso del sitio web para esta destilería artesanal de gin ubicada en el valle del Marga-Marga, Chile. El proyecto emplea tecnologías modernas como Next.js, TypeScript, Tailwind CSS, View Transitions y Animaciones CSS, con un enfoque especial en accesibilidad (a11y) y SEO.",
     descripcion1:
-      "Mi contribución en Angin se enfocó en el desarrollo web, iniciando la implementación de WordPress solicitado por el cliente para destacar la destiladora de gin artesanal. Utilicé WordPress, CSS y HTML para mejorar la presencia en línea y proporcionar una experiencia accesible.",
+      "Mi trabajo en Angin se centra en la creación de un sitio web que refleje fielmente la identidad de esta destilería artesanal de gin. Utilizando Next.js y tecnologías relacionadas, el proyecto busca mejorar la presencia en línea mediante un diseño optimizado y una navegación fluida. Además, se ha implementado un enfoque en accesibilidad (a11y) para garantizar que todos los usuarios puedan disfrutar del contenido.",
     descripcion2:
-      "Me involucré activamente en la optimización del sitio web, asegurando que la información sobre la destilación  se presentara de manera atractiva. La implementación de prácticas de accesibilidad (a11y) fue clave para garantizar la inclusión de todos los visitantes del sitio que es de suma importancia para el cliente.",
+      "El proyecto incorpora una estrategia de storytelling para representar el producto de manera auténtica y personalizada. Esto se logra a través de una presentación visual y narrativa que conecta con los visitantes y refleja la esencia de la destilería. Además, estamos optimizando la estructura SEO del sitio para asegurar su visibilidad y alcance en los motores de búsqueda.",
     descripcion4:
-      "Actualmente, la página se encuentra inmersa en un emocionante proceso de mejora sustancial y evaluación para una posible migración hacia tecnologías más avanzadas, buscando un rendimiento aún más óptimo. Nuestra prioridad es crear una página completamente accesible, implementando prácticas avanzadas de accesibilidad (a11y) para asegurar que la destiladora de gin artesanal sea disfrutada por todos los visitantes. Estamos comprometidos no solo con la estética y la accesibilidad, sino también con la eficiencia del sitio, garantizando una experiencia excepcional en términos de velocidad y funcionalidad.",
-    etiquetas: ["WordPress", "CSS", "HTML", "a11y"],
-    codigoURL: "",
-    demoURL: "https://angin.cl/",
+      "Actuamente me encuentro trabajando con el equipo de Angin para perfeccionar la experiencia digital, asegurándonos de que cada detalle esté alineado con la esencia y los valores de la destilería artesanal. En este proceso, se están implementando mejoras en la interacción visual, el contenido y la integración de animaciones, mientras mantenemos un enfoque firme en la accesibilidad (a11y) y la optimización SEO. El objetivo es ofrecer no solo un sitio web atractivo, sino también una plataforma accesible y eficiente que conecte con los usuarios de manera fluida y personalizada.",
+    etiquetas: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "View Transitions",
+      "Animaciones CSS",
+      "a11y",
+      "SEO",
+    ],
+    codigoURL: "https://github.com/tomasild/angin-next",
+    demoURL: "",
   },
+
   {
     title: "Proesthetic Fit",
     subtitle: "Clínica estética integral",
