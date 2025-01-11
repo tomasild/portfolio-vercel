@@ -2,6 +2,37 @@
 
 export const projectsData = [
   {
+    title: "Marca Personal - Derecho y Tecnología",
+    subtitle: "Web para investigadora en implicancias legales de la IA",
+    imagen: "/lawyer1.jpg",
+    imagen2: "/lawyer2.jpg",
+    imagen3: "/lawyer3.jpg",
+    imagen_mobile: "",
+    bgClass: "bg-legaltech",
+    preview:
+      "Diseñé y desarrollé una página web personalizada para una profesional egresada en Derecho, especializada en Derecho y Tecnología. El sitio refleja su enfoque en la investigación sobre las implicancias legales, éticas y regulatorias de la IA en el sistema legal.",
+    descripcion1:
+      "Este proyecto implicó la creación de una web personalizada para una abogada especializada en Derecho y Tecnología. La página destaca su trabajo en investigación de las implicancias legales, éticas y regulatorias de la inteligencia artificial en el sistema legal. Se priorizó un diseño limpio y profesional que refuerza su marca personal y comunica su expertise de manera clara y efectiva.",
+    descripcion2:
+      "Utilicé tecnologías como Next.js, React, CSS y Tailwind CSS para desarrollar una experiencia de usuario moderna y accesible. Se implementaron prácticas de SEO avanzadas para mejorar la visibilidad del sitio, asegurando que su contenido esté optimizado para motores de búsqueda y accesible para una audiencia amplia.",
+    descripcion3:
+      "La página incluye una estructura modular y componentes reutilizables que facilitan futuras actualizaciones. Aunque ya está disponible en una versión preliminar, el despliegue oficial aún no ha sido realizado, ya que el proyecto sigue en desarrollo. Actualmente, se están trabajando nuevas funcionalidades y secciones adicionales para potenciar la comunicación del perfil profesional y académico de la profesional.",
+    descripcion4:
+      "El enfoque principal del desarrollo fue la personalización, adaptando cada aspecto del diseño y funcionalidad a las necesidades específicas de la profesional. Se buscó crear una representación visual y funcional que reflejara su trayectoria e intereses en el ámbito del Derecho y la Tecnología.",
+    etiquetas: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "CSS",
+      "Tailwind CSS",
+      "Axios",
+      "a11y",
+      "SEO",
+    ],
+    codigoURL: "",
+    demoURL: "https://lawyer-landing-next.vercel.app/",
+  },
+  {
     title: "Groovelist",
     subtitle: "Startup de streaming y licencias musicales",
     imagen: "/groovelist.webp",

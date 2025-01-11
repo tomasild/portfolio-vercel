@@ -121,6 +121,7 @@ module.exports = {
         "otro-proyecto": "url('/angin.webp')",
         "noche": "url('/noche.webp')",
         "swapitup": "url('/swap1.webp')",
+        "legaltech": "url('/lawyer1.jpg')",
       }),      
     },
   },
