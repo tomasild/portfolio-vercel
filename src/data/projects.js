@@ -68,6 +68,33 @@ export const projectsData = [
     demoURL: "",
   },
   {
+    title: "Angin",
+    subtitle: "Destiladora de Gin",
+    imagen: "/angin1.jpg",
+    imagen2: "/angin2.jpg",
+    imagen3: "/angin3.jpg",
+    bgClass: "bg-angin",
+    preview:
+      "Desarrollo en curso del sitio web para esta destilería artesanal de gin ubicada en el valle del Marga-Marga, Chile. El proyecto emplea tecnologías modernas como Next.js, TypeScript, Tailwind CSS, View Transitions y Animaciones CSS, con un enfoque especial en accesibilidad (a11y) y SEO.",
+    descripcion1:
+      "Mi trabajo en Angin se centra en la creación de un sitio web que refleje fielmente la identidad de esta destilería artesanal de gin. Utilizando Next.js y tecnologías relacionadas, el proyecto busca mejorar la presencia en línea mediante un diseño optimizado y una navegación fluida. Además, se ha implementado un enfoque en accesibilidad (a11y) para garantizar que todos los usuarios puedan disfrutar del contenido.",
+    descripcion2:
+      "El proyecto incorpora una estrategia de storytelling para representar el producto de manera auténtica y personalizada. Esto se logra a través de una presentación visual y narrativa que conecta con los visitantes y refleja la esencia de la destilería. Además, estamos optimizando la estructura SEO del sitio para asegurar su visibilidad y alcance en los motores de búsqueda.",
+    descripcion4:
+      "Actuamente me encuentro trabajando con el equipo de Angin para perfeccionar la experiencia digital, asegurándonos de que cada detalle esté alineado con la esencia y los valores de la destilería artesanal. En este proceso, se están implementando mejoras en la interacción visual, el contenido y la integración de animaciones, mientras mantenemos un enfoque firme en la accesibilidad (a11y) y la optimización SEO. El objetivo es ofrecer no solo un sitio web atractivo, sino también una plataforma accesible y eficiente que conecte con los usuarios de manera fluida y personalizada.",
+    etiquetas: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "View Transitions",
+      "Animaciones CSS",
+      "a11y",
+      "SEO",
+    ],
+    codigoURL: "https://github.com/tomasild/angin-next",
+    demoURL: "",
+  },
+  {
     title: "SwapItUp",
     subtitle: "Simulación laboral de NoCountry",
     imagen: "/swap1.webp",
@@ -101,34 +128,6 @@ export const projectsData = [
     codigoURL: "https://github.com/MatiasCV27/C18-41-n-Java-React",
     demoURL: "",
   },
-  {
-    title: "Angin",
-    subtitle: "Destiladora de Gin",
-    imagen: "/angin1.jpg",
-    imagen2: "/angin2.jpg",
-    imagen3: "/angin3.jpg",
-    bgClass: "bg-angin",
-    preview:
-      "Desarrollo en curso del sitio web para esta destilería artesanal de gin ubicada en el valle del Marga-Marga, Chile. El proyecto emplea tecnologías modernas como Next.js, TypeScript, Tailwind CSS, View Transitions y Animaciones CSS, con un enfoque especial en accesibilidad (a11y) y SEO.",
-    descripcion1:
-      "Mi trabajo en Angin se centra en la creación de un sitio web que refleje fielmente la identidad de esta destilería artesanal de gin. Utilizando Next.js y tecnologías relacionadas, el proyecto busca mejorar la presencia en línea mediante un diseño optimizado y una navegación fluida. Además, se ha implementado un enfoque en accesibilidad (a11y) para garantizar que todos los usuarios puedan disfrutar del contenido.",
-    descripcion2:
-      "El proyecto incorpora una estrategia de storytelling para representar el producto de manera auténtica y personalizada. Esto se logra a través de una presentación visual y narrativa que conecta con los visitantes y refleja la esencia de la destilería. Además, estamos optimizando la estructura SEO del sitio para asegurar su visibilidad y alcance en los motores de búsqueda.",
-    descripcion4:
-      "Actuamente me encuentro trabajando con el equipo de Angin para perfeccionar la experiencia digital, asegurándonos de que cada detalle esté alineado con la esencia y los valores de la destilería artesanal. En este proceso, se están implementando mejoras en la interacción visual, el contenido y la integración de animaciones, mientras mantenemos un enfoque firme en la accesibilidad (a11y) y la optimización SEO. El objetivo es ofrecer no solo un sitio web atractivo, sino también una plataforma accesible y eficiente que conecte con los usuarios de manera fluida y personalizada.",
-    etiquetas: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "View Transitions",
-      "Animaciones CSS",
-      "a11y",
-      "SEO",
-    ],
-    codigoURL: "https://github.com/tomasild/angin-next",
-    demoURL: "",
-  },
-
   {
     title: "Proesthetic Fit",
     subtitle: "Clínica estética integral",
